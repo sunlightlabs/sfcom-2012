@@ -1,0 +1,25 @@
+#searchform label { display: none; }
+#mailinglistform label { display: none; }
+
+.carousel {
+	overflow: hidden;
+	border: 1px solid red;
+	height: 160px;
+	width: 500px;
+}
+
+.carousel ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 1000px;
+}
+
+.carousel ul li {
+	left: -500px;
+	position: relative;
+	float: left;
+	padding: 10px;
+	height: 140px;
+	width: 480px;
+}

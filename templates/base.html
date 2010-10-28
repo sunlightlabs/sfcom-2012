@@ -1,0 +1,288 @@
+<!doctype html>  
+{% load media %}
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>{% block title %}{% endblock %}</title>
+	<meta name="description" content="{% block metadescription %}{% endblock %}">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="{% media_url %}/favicon.ico">
+	<link rel="apple-touch-icon" href="{% media_url %}/apple-touch-icon.png">
+	{% css "styles/thefoundation.css" %}
+	{% js "scripts/modernizr-1.6.min.js" %}
+</head>
+<body class="{% block bodyclass %}thefoundation{% endblock %}">
+	
+	<div id="container">
+		
+		<header>
+			<h1>Sunlight Foundation</h1>
+			<form action="#" method="post" id="searchform">
+				{% csrf_token %}
+				<label for="id_q">Search SunlightFoundation.com</label>
+				<input type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com">
+				<button type="submit"></button>
+			</form>
+			<nav>
+				<ul>
+					<li class="nav-about"><a href="#">About</a></li>
+					<li class="nav-blog"><a href="#">Blog</a></li>
+					<li class="nav-policy"><a href="#">Policy</a></li>
+					<li class="nav-press"><a href="#">Press</a></li>
+					<li class="nav-reporting"><a href="#">Reporting</a></li>
+					<li class="nav-labs"><a href="#">Labs</a></li>
+					<li class="nav-projects"><a href="#">Projects</a></li>
+					<li class="nav-takeaction"><a href="#">Take Action</a></li>
+					<li class="nav-contact"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<p id="slogan">Making government transparent &amp; accountable</p>
+		
+		<div>
+			<div>
+				<p>Open up your government &amp; help us get to our yearly goal of 1,500 donations.</p>
+				<a href="#">Donate now</a>
+			</div>
+			<div>
+				<a href="#" class="carousel-previous">Previous</a>
+				<div class="carousel">
+					<ul>
+						<li>
+							<img src="http://dummyimage.com/50x50/999/fff.png&amp;text=icon">
+							<p>Be a campaign monitor. Report political ads you've seen recently.</p>
+							<p>Help us find out how much companies are giving to politicians by monitoring political ads.</p>
+							<a href="#" class="morelink">Tell me more</a>
+						</li>
+						<li>
+							<img src="http://dummyimage.com/50x50/999/fff.png&amp;text=icon">
+							<p>Find the unlimited money</p>
+							<p>Dig through independent expenditures.</p>
+							<a href="#" class="morelink">Tell me more</a>
+						</li>
+						<li>
+							<p>Crap, I need a third.</p>
+							<a href="#" class="morelink">Tell me more</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="carousel-next">Next</a>
+			</div>
+		</div>
+		
+		<div>
+			
+			<div>
+				<p>Become a part of the open government community and get updates on what we're up to by <b>signing up below</b></p>
+				<form action="#" method="post" id="mailinglistform">
+					{% csrf_token %}
+					<ul>
+						<li>
+							<label for="id_email">Email</label>
+							<input type="email" name="email" id="id_email" placeholder="enter your email address">
+						</li>
+						<li>
+							<label for="id_zipcode">ZIP Code</label>
+							<input type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
+						</li>
+						<li><button type="submit"></button></li>
+					</ul>
+				</form>
+			</div>
+			
+			<div>
+				<!-- not sure how these are going to be marked up or managed -->
+				<p><strong>Reach out to your community</strong> by hosting a screening of Casino Jack</p>
+				<a href="#" class="morelink">Learn more</a>
+			</div>
+			
+		</div>
+		
+		<div id="main">
+			
+			<div id="content">
+				
+				<div id="featured-posts" class="hfeed">
+				
+					<article class="hentry">
+						<header>
+							<h1 class="entry-title">
+								<a href="#" class="bookmark">Finance Regulator Crafts New Derivative Rules with Outside Help</a>
+							</h1>
+							<address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
+							<time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+						</header>
+						<div class="entry-summary">
+							<p>The Commodity Futures Trading Commission (CFTC) has been tasked, along with the Securities and Exchange Commission (SEC), with setting new rules governing the transparent trading of derivatives for the first time.</p>
+							<p>On July 26, 2010, five days after President Barack Obama signed the most sweeping reform of the financial sector into law, the CFTC was already meeting with industry groups to hash out new rules for the trading of the complex financial instruments known as over-the-counter derivatives.</p>
+						</div>
+						<a href="#" class="morelink">Tell me more</a>
+					</article>
+				
+					<article class="hentry">
+						<header>
+							<h1 class="entry-title">
+								<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
+							</h1>
+							<address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
+							<time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+						</header>
+						<div class="entry-summary">
+							<img src="http://dummyimage.com/240x60/999/fff.png&amp;text=article+image">
+							<p>Today we learned what we knew all week: White House Chief of Staff Rahm Emanuel is leaving the White House to pursue a bid to be the next Mayor of Chicago. Emanuel leaves behind him one of the most powerful positions in national politics, one which his presence made even more important.</p>
+							<p>The contacts that he made while in the White House won’t be leaving him behind. In fact, they’re saved on the Internet thanks to the White House’s policy of disclosing their visitor logs. Who visited Emanuel and what could that mean for his future–and the White House’s?</p>
+						</div>
+						<a href="#" class="morelink">Tell me more</a>
+					</article>
+				
+				</div>
+				
+				<div>
+					<h2>Popular Tags</h2>
+					<ul>
+						<li><a href="#">daily disclosures</a></li>
+						<li><a href="#">congressional ethics</a></li>
+						<li><a href="#">rep. charlie rangel</a></li>
+					</ul>
+				</div>
+				
+				<div id="recent-posts" class="hfeed">
+					
+					<article class="hentry">
+						<header>
+							<h1 class="entry-title">
+								<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
+							</h1>
+							<address class="author vcard">
+								<span class="fn">Paul Blumenthal</span>
+								<a href="#" class="url">
+									<img class="photo" src="http://dummyimage.com/40x40/999/fff.png&amp;text=author">
+								</a>
+							</address>
+						</header>
+						<div class="entry-summary">
+							<p><a href="#">Sunlight Reporting Group</a> - Today we learned what we knew all week: White House Chief of Staff Rahm Emanuel is leaving the White House to pursue a bid to be the next Mayor of Chicago. Emanuel leaves behind him one of the most powerful positions in national politics, one which his presence made even more important.</p>
+						</div>
+					</article>
+					<a href="#" class="morelink">View older posts</a>
+				</div>
+				
+			</div>
+			
+			<div id="sidebar">
+
+				<div id="mission-statement">
+					<p>The Sunlight Foundation uses cutting-edge technology and ideas to make government transparent and accountable.</p>
+					<p>Underlying all of our efforts is a fundamental belief that increased transparency will improve the public's confidence in government.</p>
+				</div>
+				
+				<h2>Explore our projects</h2>
+				<ul>
+					<li>
+						<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
+						<h3>Influence Explorer</h3>
+						<a href="#">Campaign Finance</a>
+						<p><b>Connect the dots of political contributions</b> on the federal and state level in this new site that allows you to track influence by lawmaker, company, or prominent individual.</p>
+					</li>
+					<li>
+						<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
+						<h3>Influence Explorer</h3>
+						<a href="#">Campaign Finance</a>
+						<p><b>Connect the dots of political contributions</b> on the federal and state level in this new site that allows you to track influence by lawmaker, company, or prominent individual.</p>
+					</li>
+				</ul>
+				<a href="#" class="morelink">View all projects</a>
+				
+				<h2>Explore our projects</h2>
+				<p>Follow every post, project, or video on our way to a more transparency government</p>
+				<ul class="social-links">
+					<li class="social-facebook">
+						<a href="http://www.facebook.com/sunlightfoundation" rel="me">Facebook</a>
+					</li>
+					<li class="social-twitter">
+						<a href="http://twitter.com/#!/sunfoundation" rel="me">Twitter</a>
+					</li>
+					<li class="social-flickr">
+						<a href="http://www.flickr.com/sunlightfoundation" rel="me">Flickr</a>
+					</li>
+					<li class="social-youtube">
+						<a href="http://www.youtube.com/sunlightfoundation" rel="me">YouTube</a>
+					</li>
+					<li class="social-delicious">
+						<a href="http://delicious.com/sunlight_foundation" rel="me">Delicious</a>
+					</li>
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+		<footer>
+			
+			<div>
+				<h2>Contact Us</h2>
+				<address class="vcard">
+					<p class="fn org">
+						<a href="http://sunlightfoundation.com" class="url">Sunlight Foundation</a>
+					</p>
+					<p class="adr">
+						<span class="street-address">1818 N Street NW</span>
+					 	<span class="extended-address">Suite 300</span>
+					 	<span class="locality">Washington</span>,
+					 	<span class="region" title="District of Columbia">DC</span>
+					 	<span class="postal-code">20036</span>
+					</p>
+					<a href="tel:1-202-742-1520" class="tel">202-742-1520</a>
+				</address>
+			</div>
+			
+			<div>
+				<h2>About Sunlight</h2>
+				<ul>
+					<li><a href="#">Our Mission</a></li>
+					<li><a href="#">Board &amp; Advisory Board</a></li>
+					<li><a href="#">Our Team</a></li>
+					<li><a href="#">How We're Funded</a></li>
+				</ul>
+			</div>
+			
+			<small>
+				<p>The Site may contain links to Internet sites that are not operated by Sunlight Foundation. These links are provided as a service and do not imply any endorsement of the activities or content of these sites, nor any association with their operators. Sunlight Foundation does not control these Internet sites and is not responsible for their content, security, or privacy practices. We urge you to review the privacy policy posted on web sites you visit before using the site or providing personal information.</p>
+				<p>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sunlightfoundation.com" property="cc:attributionName" rel="cc:attributionURL">Sunlight Foundation</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+			</small>
+			
+		</footer>
+		
+	</div>
+	
+	{% js "scripts/jquery-1.4.2.min.js" %}
+	{% js "scripts/thefoundation.js" %}
+	{% block scripts %}{% endblock %}
+
+	<!--[if lt IE 7 ]>
+	{% js "scripts/dd_belatedpng.js" %}
+	<script>
+		//DD_belatedPNG.fix('img, .png_bg');
+	</script>
+	<![endif]-->
+
+	<script>
+		var _gaq = [['_setAccount', 'UA-1265484-1'], ['_trackPageview']];
+		(function(d, t) {
+			var g = d.createElement(t),
+				s = d.getElementsByTagName(t)[0];
+			g.async = true;
+			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g, s);
+		})(document, 'script');
+	</script>
+  
+</body>
+</html>

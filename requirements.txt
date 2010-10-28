@@ -1,0 +1,6 @@
+django==1.2.3
+django-debug-toolbar
+
+boto
+slimmer
+-e git+git@github.com:sunlightlabs/django-mediasync.git#egg=mediasync
