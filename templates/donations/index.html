@@ -1,0 +1,57 @@
+{% extends "base_full.html" %}
+
+{% block title %}Donate to the Sunlight Foundation{% endblock %}
+
+{% block content %}
+
+	<h2>{% block campaignheader %}Support the Sunlight Foundation with a Donation{% endblock %}</h2>
+
+	<div class="googlecheckout">
+		
+		<form action="https://checkout.google.com/cws/v2/Donations/548702786961191/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+			
+			<input name="item_name_1" type="hidden" value="Support the Sunlight Foundation with a Donation"/>
+			<input name="item_description_1" type="hidden" value="The Sunlight Foundation is a non-profit, nonpartisan organization that uses the power of the Internet to catalyze greater government openness and transparency and to provide new tools and resources for media and individuals alike."/>
+			<input name="item_quantity_1" type="hidden" value="1"/>
+			<input name="item_currency_1" type="hidden" value="USD"/>
+			<input name="item_is_modifiable_1" type="hidden" value="true"/>
+			<input name="item_min_price_1" type="hidden" value="0.01"/>
+			<input name="item_max_price_1" type="hidden" value="25000.0"/>
+			<input name="_charset_" type="hidden" value="utf-8"/>
+			
+			<input id="item_price_1" name="item_price_1" type="text" value="10.00" placeholder="donation amount"/>
+			
+			<button class="donatebutton" type="submit">
+				<span>Donate</span>
+			</button>
+			
+		</form>
+		
+	</div>
+	
+	{% block campaigncontent %}		
+		<p>The Sunlight Foundation is a non-profit, nonpartisan organization that uses the power of the Internet to catalyze greater government openness and transparency and to provide new tools and resources for media and individuals alike. We engage citizens and communities to demand policies that will enable all of us to hold government accountable.</p>
+		<p>At Sunlight, we develop and encourage new government policies to make it more open and transparent, build tools and websites to enable easy access to public information, engage in advocacy for 21st century laws to require that government make data available in real time and train thousands of journalists and citizens in using data and the Web to watchdog Washington.</p>
+		<p><strong>Please make a contribution to help make our government more open and accountable.</strong></p>
+		<p>The Sunlight Foundation is a 501 (c)(3) nonprofit, nonpartisan organization. All contributions are tax-deductible.</p>
+	{% endblock %}
+	
+{% endblock %}
+
+{% block js %}
+	<script>
+		$().ready(function() {
+			var amountField = $('#item_price_1');
+			$('#BB_BuyButtonForm').submit(function() {
+				var amt = amountField.val();
+				if (amt.match( /^[0-9]+(\.([0-9]+))?$/)) {
+					return true;
+				} else {
+					alert('You must enter a valid donation.');
+					amountField.focus();
+					return false;
+				}
+			});
+		});
+	</script>
+{% endblock %}

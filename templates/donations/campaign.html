@@ -1,0 +1,6 @@
+{% extends "donations/index.html" %}
+{% load markup %}
+
+{% block campaignheader %}{{ campaign.header }}{% endblock %}
+
+{% block campaigncontent %}{{ campaign.content|markdown }}{% endblock %}
