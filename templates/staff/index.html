@@ -1,0 +1,41 @@
+{% extends "staff/base.html" %}
+
+{% block content %}
+
+	{% if user and user.is_staff %}
+	
+		<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_{{ user.username }}.jpg" class="avatar"/>
+	
+		<h2>Hello, {{ user.first_name }}!</h2>
+		
+		{% if recent_posts %}
+		
+			<h3>Your recent blog posts</h3>
+			
+			{% with recent_posts as entries %}
+			
+    			<ul id="recent-posts">
+					{% for entry in entries %}
+						<li>
+							<abbr class="published" title="{{ entry.date_published.isoformat }}">
+								{{ entry.date_published|date:"M j, Y" }}
+							</abbr>
+							<a href="{{ entry.link }}">{{ entry.title|safe }}</a>
+						</li>
+					{% endfor %}
+    			</ul>
+
+			{% endwith %}
+			
+    	{% endif %}	
+		
+	{% else %}
+	
+		<h2>Sunlight Foundation Staff</h2>
+		
+		<p>Hi there, please login with your SunlightFoundation.com email account.</p>
+		<a href="{% url googleauth_login %}" id="staff-login">Login</a>
+		
+	{% endif %}
+
+{% endblock %}

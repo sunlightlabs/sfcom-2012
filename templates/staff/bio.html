@@ -1,0 +1,23 @@
+{% extends "staff/base.html" %}
+
+{% block content %}
+
+	{% if messages or not messages %}
+		<ul class="messages">
+		    {% for message in messages %}
+		    	<li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|safe }}</li>
+		    {% endfor %}
+		</ul>
+	{% endif %}
+	
+	<h2>Your public profile</h2>
+	
+	<form action="{% url staff_profile %}" method="post">
+		<ul>
+			{% csrf_token %}
+			{{ form.as_ul }}
+			<li><input type="submit" value="Save"></li>
+		</ul>
+	</form>
+	
+{% endblock %}
