@@ -4,3 +4,32 @@ django-debug-toolbar
 boto
 slimmer
 -e git+git@github.com:sunlightlabs/django-mediasync.git#egg=mediasync
+
+# sunlight apps
+feedparser
+-e git://github.com/sunlightlabs/django-feedinator.git#egg=feedinator
+
+# search
+whoosh==1.2.3
+django-haystack==1.0.2-final
+
+#-e svn+http://django-morsels.googlecode.com/svn/trunk/#egg=morsels
+
+# blog
+Markdown==2.0.1
+docutils==0.5
+textile==2.1.3
+-e git://github.com/jamesturk/django-markupfield.git#egg=markupfield
+
+# staff auth
+python-openid
+#-e git+git@git.sunlightlabs.com:django-sfauth.git#egg=sfauth
+# use new googleauth instead
+
+gunicorn
+
+# from old
+# feedparser
+# -e git://github.com/sunlightlabs/django-feedinator.git#egg=feedinator
+# -e git://github.com/sunlightlabs/django-failwhale.git#egg=failwhale
+# python-twitter

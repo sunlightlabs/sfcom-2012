@@ -24,11 +24,6 @@ DATABASES = {
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
 TIME_ZONE = 'America/New_York'
 
 # Language code for this installation. All choices can be found here:
@@ -75,6 +70,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'thefoundation.urls'
@@ -84,15 +80,38 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.flatpages',
+    'django.contrib.markup',
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
-    'django.contrib.admin',
     'debug_toolbar',
     'mediasync',
+    'sunlightfoundation.presscenter',
+    'sunlightfoundation.policy',
+    'sunlightfoundation.spammer',
+    'sunlightfoundation.com',
+    'sunlightfoundation.donations',
+    'sunlightfoundation.earmarkdisclosures',
+    'sunlightfoundation.fortune535',
+    'sunlightfoundation.signups',
+    'gunicorn',
 )
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
+AUTH_PROFILE_MODULE = "com.UserProfile"
+AUTHENTICATION_BACKENDS = (
+    'googleauth.backends.GoogleAuthBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+GOOGLEAUTH_IS_STAFF = True
+GOOGLEAUTH_DOMAIN = 'sunlightfoundation.com'
+#GOOGLEAUTH_REALM = 'should be set using the Sites framework'
 
 INTERNAL_IPS = ('127.0.0.1',)
 DEBUG_TOOLBAR_CONFIG = {
@@ -122,6 +141,22 @@ MEDIASYNC = {
         ),
     },
 }
+
+HAYSTACK_SITECONF = 'sunlightfoundation.com.search_sites'
+HAYSTACK_SEARCH_ENGINE = 'whoosh'
+HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_ROOT, 'whoosh.index')
+
+SF_PRESSRELEASE_LIFETIME = 14
+
+MAILINGLIST_SUBSCRIBED_URL = "/join/thankyou/"
+MAILINGLIST_REQUIRED_FIELDS = {
+    "email": u"A valid email address is required",
+}
+
+CONTACT_FORM_RECIPIENTS = ['contact@sunlightfoundation.com',]
+GRANT_APPLICATION_RECIPIENTS = ['swells@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com','habdullah@sunlightfoundation.com']
+
+SIGNUPS_FROM_EMAIL = 'contact@sunlightfoundation.com'
 
 try:
     from local_settings import *
