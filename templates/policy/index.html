@@ -1,0 +1,40 @@
+{% extends "base_sidebar.html" %}
+{% load media %}
+
+{% block title %}Policy Center - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+	<h2>Sunlight Foundation Policy Center</h2>
+	<p>The Sunlight Foundation's policy team is helping to create a more open, transparent government.</p>
+	<p>Our policy work joins issue expertise with an open, innovative approach to advocacy, bringing technology to analysis and lobbying, and adding substantive detail to our vision for digitally empowered governance and citizenship.</p>
+
+	<p>For policy inquiries, please contact:</p>
+	<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_jwonderlich.jpg" class="section_avatar">
+	<div class="hcard">
+		<a href="/people/jwonderlich/" class="fn url">John Wonderlich</a>
+		<br />Policy Director
+		(202) 742-1520 ext 234
+	</div>
+
+	<h3>Featured Resource</h3>
+	<ul id="policy_feature">
+		<li>
+			<a href="{{ feature_resource.url }}">{{ feature_resource.title }}</a>
+			<p>{{ feature_resource.summary }}</p>
+		</li>
+	</ul>
+
+	<h3>Recent Policy Documents</h3>
+	{% for feature_document in feature_documents %} 
+		<ul id="document_link">
+			<li>
+				<a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a>
+				<p>{{ feature_document.summary }}</p>
+			</li>
+		</ul>
+	{% endfor %}
+
+	<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
+
+{% endblock %}
