@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block container %}
+	
+	<header>
+		<h1>Sunlight Foundation</h1>
+	</header>
+	
+	<div id="main">
+		{% block content %}{% endblock %}
+	</div>
+	
+	<footer>
+		
+		<div>
+			<h2>Contact Us</h2>
+			<address class="vcard">
+				<p class="fn org">
+					<a href="http://sunlightfoundation.com" class="url">Sunlight Foundation</a>
+				</p>
+				<p class="adr">
+					<span class="street-address">1818 N Street NW</span>
+				 	<span class="extended-address">Suite 300</span>
+				 	<span class="locality">Washington</span>,
+				 	<span class="region" title="District of Columbia">DC</span>
+				 	<span class="postal-code">20036</span>
+				</p>
+				<a href="tel:1-202-742-1520" class="tel">202-742-1520</a>
+			</address>
+		</div>
+		
+	</footer>
+	
+{% endblock %}
