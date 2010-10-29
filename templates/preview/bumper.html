@@ -1,0 +1,28 @@
+{% extends "base_full.html" %}
+
+{% block css %}
+	<style>
+		#feature_list li { float: left; margin: 10px 20px; }
+		{% for bumper in bumpers %}
+			#feature_list li a.project-{{ bumper.slug }} {
+				background-image: url({{ bumper.image_url }});
+				background-repeat: no-repeat;
+				display: block;
+				height: 140px;
+				width: 180px;
+			}
+			#feature_list li a.project-{{ bumper.slug }} { background-position:0 0;}
+			#feature_list li a:hover.project-{{ bumper.slug }} { background-position:0px -142px;}
+		{% endfor %}
+	</style>
+{% endblock %}
+
+{% block content %}
+	<ul>
+		{% for bumper in bumpers %}
+			<li>
+				<a class="project-{{ bumper.slug }}" href="{{ bumper.url }}" title="{{ bumper.name }}"></a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
