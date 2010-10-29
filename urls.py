@@ -40,6 +40,16 @@ urlpatterns += patterns('sunlightfoundation.com.views',
     url(r'^preview/bumpers/$', 'preview_bumpers', name='preview_bumpers'),
 )
 
+# flatpages - migrate from flatpages to static files, temporarily?
+urlpatterns += patterns('django.views.generic.simple',
+    url(r'^about/$', 'direct_to_template', {"template": "about/index.html"}),
+    url(r'^about/board/$', 'direct_to_template', {"template": "about/board.html"}),
+    url(r'^about/funding/$', 'direct_to_template', {"template": "about/funding.html"}),
+    url(r'^about/grants/$', 'direct_to_template', {"template": "about/grants.html"}),
+    url(r'^about/history/$', 'direct_to_template', {"template": "about/history.html"}),
+)
+
+
 # primary redirects
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^contact/thanks/$', 'direct_to_template', {"template": "contact_thanks.html"}),
