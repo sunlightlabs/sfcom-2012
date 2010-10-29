@@ -1,0 +1,27 @@
+{% extends "base_sidebar.html" %}
+
+{% block title %}Contact Us - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+	<h2>Contact Sunlight Foundation</h2>
+    
+	<div class="vcard">
+		<div class="fn org">Sunlight Foundation</div>
+       	<div class="adr">
+           	<div class="street-address">1818 N Street NW, Suite 300</div>
+           	<span class="locality">Washington</span>, <span class="region">DC</span>, <span class="postal-code">20036</span>
+       		</div>
+       	<div class="tel">202-742-1520</div>
+   	</div>
+		
+	<form action="/contact/" method="post" id="contactform">
+		{% csrf_token %}
+		<fieldset>
+			<legend>Send us an Email</legend>
+			{{ form.as_ul }}
+			<input type="submit" value="Send Your Messsage to Sunlight Foundation">
+		</fieldset>		
+	</form>
+	
+{% endblock %}
