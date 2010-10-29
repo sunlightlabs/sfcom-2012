@@ -1,0 +1,45 @@
+{% extends "base_press.html" %}
+
+{% block title %} - Press Center - {{ object.headline }}{% endblock %}
+
+{% block content %}
+	<script type="text/javascript" src="http://assets.sunlightfoundation.com/scripts/anarchy_media/anarchy.js"></script>
+
+	<div class="press_content">
+
+	<p class="right sub printme">
+		(<a href="/presscenter/{{ pub_type }}/{{ object.publication_date|date:"Y/m/d" }}/{{ object.slug }}/print/">print version</a>)
+	</p>
+	
+    <h2 class="press_headline">{{ object.headline }}</h2>
+    	{% if object.sub_headline %}<h3 class="press_subhead">{{ object.sub_headline }}</h3>{% endif %}
+
+    <p class="press_publication">Publication: <a href="{{object.url}}">{{ object.publication }}</a></p>
+    
+	<p>{{ object.author }}{% if object.publication_date %}<br />{{ object.publication_date|date:"F j, Y" }}{% endif %}</p>
+
+    {% if object.from_drupal %}
+        {{ object.body|safe }}    
+    {% else %}
+    
+        {% autoescape off %}{{ object.body|linebreaks }}{% endautoescape %}
+        
+    {% endif %}
+
+
+	{% if is_paginated %}
+        <p id="pagination">
+        {% if page_obj.has_next %}
+            <a href="{% url PressArticle %}?page={{ page_obj.next_page_number }}" class="next">Next</a>
+        {% endif %}
+        {% if page_obj.has_previous %}
+            <a href="{% url PressArticle %}?page={{ page_obj.previous_page_number }}" class="previous">Previous</a>
+        {% endif %}
+        </p>
+    {% endif %}
+
+
+
+</div>
+
+{% endblock %}

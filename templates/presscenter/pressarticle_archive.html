@@ -1,0 +1,48 @@
+{% extends "base_sidebar.html" %}
+{% load press %}
+
+{% block title %}Press Articles - Press Center - {{ block.super }}{% endblock %}
+
+{% block content %}
+ 
+	{% if only_editorials %}
+		<h2>Press Editorials</h2>
+	{% else %}
+		{% if only_oped %}
+			<h2>Op-Eds</h2>
+		{% else %}	
+			<h2>Press Articles &amp; Mentions Archives</h2>
+			{% endif %}
+	{% endif %}
+	
+
+    {% article_navigation only_editorials %}
+
+	{% if latest %}
+	
+		{% if only_editorials %}
+			<h3>Recent Press Editorials</h3>
+		{% else %}
+			{% if only_oped %}
+				<h3>Recent Op-Eds</h3>
+			{% else %}
+				<h3>Recent Press Articles &amp; Mentions</h3>	
+			{% endif %}	
+		{% endif %}	
+	
+		<ul>
+			{% for object in latest %}
+				<li
+				{% if object.article_type %}
+				class="press_type_icon_{{ object.get_article_type_display }}"{% endif %}>
+					<h4><a href="{{ object.get_absolute_url }}">{{ object.publication }} - {{ object.headline }}</a></h4>
+					<div>{{ object.teaser|safe }}</div>
+				</li>
+			{% endfor %}
+		</ul>
+		
+	{% endif %}
+
+	{% include "includes/pagination.html" %}
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends "base_sidebar.html" %}
+
+{% block title %}Press Center - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+	<h2>Sunlight Foundation Press Center</h2>
+
+	<div id="press_contact">
+	<p class="press_contact_head">For media inquiries, please contact:</p>
+	<div id="section_avatar">
+		<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_gschneider.jpg" class="section_avatar">
+		<div id="section_contact"><a href="/people/gschneider/">Gabriela Schneider</a><br />Communications Director<br /> (202) 742-1520 ext 236</div>
+	</div>
+	</div>
+
+	<h3>Recent Sunlight Foundation Press Articles</h3>
+ 	<ul>
+    	{% for press_articles in press_articles  %}
+			<li
+			{% if press_articles.article_type %}
+			class="{{ press_articles.get_article_type_display }}"{% endif %} >
+				<a href="{{ press_articles.get_absolute_url }}">{{ press_articles.publication }} - {{ press_articles.headline }}</a>
+				<p>{{ press_articles.teaser|safe }}</p>
+			</li>
+		{% endfor %}	
+	</ul>
+
+	<a href="/presscenter/articles/" class="morelink">All press mentions</a>
+	
+	<h3>Recent Sunlight Foundation Press Releases</h3>
+ 	<ul>
+    	{% for press_release in press_releases %}
+			<li>
+				<div>
+					<a href="{{ press_release.get_absolute_url }}">{{ press_release.headline }}</a>
+					<p>{{ press_release.publication_date|date:"F j, Y" }} - {{ press_release.teaser|safe }}</p>
+				</div>
+			</li>
+		{% endfor %}	
+	</ul>
+
+	<a href="/presscenter/releases/" class="morelink">All press releases</a>
+
+{% endblock %}

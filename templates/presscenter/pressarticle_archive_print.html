@@ -1,0 +1,25 @@
+{% extends "base_print.html" %}
+
+{% block title %} - Press Center - {{ object.headline }}{% endblock %}
+
+{% block content %}
+<div class="press_content">
+<p><a href="/press/">Back to Press Center</a></p>	
+
+<h2>{{ object.headline }}</h2>
+    {% if object.sub_headline %}<h4>{{ object.sub_headline }}</h4>{% endif %}
+    
+    <p>Publication: <a href="{{object.url}}">{{ object.publication }}</a></p>
+    <p>{{ object.author }}{% if object.publication_date %}<br />{{ object.publication_date|date:"F j, Y" }}{% endif %}</p>
+    {% if object.from_drupal %}
+    
+        {{ object.body|safe }}
+    
+    {% else %}
+    
+        {% autoescape off %}{{ object.body|linebreaks }}{% endautoescape %}
+        
+    {% endif %}
+</div>
+
+{% endblock %}

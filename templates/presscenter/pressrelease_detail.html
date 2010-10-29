@@ -1,0 +1,37 @@
+{% extends "base_press.html" %}
+
+{% block title %}{{ object.headline }}{% endblock %}
+
+{% block content %}
+<div class="press_content">
+    <h3>{{ object.headline }}</h3>
+    {% if object.sub_headline %}
+    
+    <h4><i>{{ object.sub_headline }}</i></h4>
+    
+    {% endif %}
+    
+    {% if object.release_type %}<p>{{ object.get_release_type_display }}</p>{% endif %}
+    
+    
+    {% if object.publication_date %}<p>{{ object.publication_date|date:"F j, Y" }}</p>{% endif %}
+    
+    
+    <p>Contact: {{ object.contact_name }} {{ object.contact_number }}</p>
+    
+    {% if object.from_drupal %}
+    
+        {{ object.body|safe }}
+    
+    {% else %}
+        {% autoescape off %}
+        {{ object.teaser|linebreaks }}
+        {{ object.body|linebreaks }}
+        {% endautoescape %}
+    {% endif %}
+    
+</div>
+
+
+
+{% endblock %}
