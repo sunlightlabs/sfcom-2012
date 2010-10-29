@@ -1,0 +1,44 @@
+{% extends "base_sidebar.html" %}
+
+{% block title %}{{ person.get_full_name }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+	<h2>Sunlight Foundation Staff</h2>
+
+    {% with person.get_profile as profile %}
+
+		<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_{{ person.username }}.jpg">
+	
+		{% if profile.twitter_username %}
+			<a href="http://twitter.com/{{ profile.twitter_username }}">
+				<img src="http://assets.sunlightfoundation.com/images/blog/social_icons/help/twitter.png">
+			</a>
+		{% endif %}
+		
+		<h3>{{ person.get_full_name }}</h3> 
+		<p>{{ profile.bio|safe }}</p>
+
+		{% if recent_posts %}
+		
+            <h3>Recent blog contributions from {{ person.first_name }} {{ person.last_name }}</h3>
+        
+    		{% with recent_posts as entries %}
+            	{% if entries %}
+    				<ul class="hfeed">
+    		    		{% for entry in entries %}
+    		    			<li class="hentry">
+    		        			<a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
+    		        			<abbr class="published" title="{{ entry.date_published.isoformat }}"> {{ entry.date_published|date:"F j, Y" }}</abbr>
+    		        			<span class="vcard author"><span class="fn">{{ entry.author_name }}</span></span>
+    		    			</li>
+    		    		{% endfor %}
+    				</ul>
+    			{% endif %}
+			{% endwith %}
+			
+		{% endif %}
+		
+    {% endwith %}
+
+{% endblock %}

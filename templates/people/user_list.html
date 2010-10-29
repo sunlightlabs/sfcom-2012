@@ -1,0 +1,124 @@
+{% extends "base_sidebar.html" %}
+
+{% block title %}The Sunlight Foundation Team - {{ block.super }}{% endblock %}
+
+{% block js %}
+	<script type="text/javascript" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0011/1949.js"> </script>
+{% endblock %}
+
+{% block content %}
+
+	{% if interns %}
+		<h2>Sunlight Foundation Interns</h2>
+	{% else %}
+		<h2>The Sunlight Foundation Team</h2>
+	{% endif %}
+	
+    <ul>
+
+        {% if founders %}
+        <li>
+            <h3>Sunlight's Co-Founders</h3>
+            <ol>
+                {% for person in founders %}
+                <li>
+                    <a href="/people/{{ person.username }}/">
+						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
+						<span>{{ person.first_name }} {{ person.last_name }}</span>
+					</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+        {% endif %}
+
+        {% if general_staff %}
+        <li>
+            <h3>Sunlight Staff</h3>
+            <ol>
+                {% for person in general_staff %}
+                <li>
+                    <a href="/people/{{ person.username }}/">
+						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
+						<span>{{ person.first_name }} {{ person.last_name }}</span>
+					</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+        {% endif %}
+    
+        {% if strategic_consultants %}
+        <li>
+            <h3>Senior Technology Advisors</h3>
+            <ol>
+                {% for person in strategic_consultants %}
+                <li>
+                    <a href="/people/{{ person.username }}/">
+						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
+						<span>{{ person.first_name }} {{ person.last_name }}</span>
+					</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+        {% endif %}
+    
+        {% if consultants %}
+        <li>
+            <h3>Sunlight Consultants</h3>
+            <ol>
+                {% for person in consultants %}
+                <li>
+                    <a href="/people/{{ person.username }}/">
+						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
+						<span>{{ person.first_name }} {{ person.last_name }}</span>
+					</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+        {% endif %}
+
+        {% if interns %}
+        <li>
+            <ol>
+                {% for person in interns %}
+                <li>
+                    <a href="/people/{{ person.username }}/">
+						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
+						<span>{{ person.first_name }} {{ person.last_name }}</span>
+					</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+        {% endif %}
+
+        {% if inactive_people %}
+        <li>
+            <h3>Former Sunlighters</h3>
+            <ol>
+                {% for person in inactive_people %}
+                <li>
+                    <a href="/people/{{ person.username }}/">
+						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
+						<span>{{ person.first_name }} {{ person.last_name }}</span>
+					</a>
+                </li>
+                {% endfor %}
+            </ol>
+        </li>
+        {% endif %}
+    
+    </ul>
+
+    <p>
+		{% if interns %}
+	        Photos by <a href="http://sunlightfoundation.com/people/lmccann/">Laurenellen McCann</a>.
+		{% else %}
+	        Most photos (on solid backgrounds) by <a href="http://sunlightfoundation.com/people/lmccann/">Laurenellen McCann</a> and <a href="http://www.flickr.com/photos/avelino_maestas/">Avelino Maestas</a>.
+		{% endif %}
+    </p>
+
+{% endblock %}
