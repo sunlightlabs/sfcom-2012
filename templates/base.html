@@ -22,70 +22,74 @@
 	
 	<div id="container">
 		
-		<header>
-			<h1>Sunlight Foundation</h1>
-			<form action="/search/" method="post" id="searchform">
-				{% csrf_token %}
-				<label for="id_q">Search</label>
-				<input type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com">
-				<button type="submit"></button>
-			</form>
-			<nav>
-				<ul>
-					<li class="nav-about"><a href="#">About</a></li>
-					<li class="nav-blog"><a href="/blog/">Blog</a></li>
-					<li class="nav-policy"><a href="/policy/">Policy</a></li>
-					<li class="nav-press"><a href="/press/">Press</a></li>
-					<li class="nav-reporting"><a href="/reporting/">Reporting</a></li>
-					<li class="nav-labs"><a href="/labs/">Labs</a></li>
-					<li class="nav-projects"><a href="#">Projects</a></li>
-					<li class="nav-takeaction"><a href="#">Take Action</a></li>
-					<li class="nav-contact"><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
+		{% block container %}
 		
-		{% block splash %}{% endblock %}
+			<header>
+				<h1>Sunlight Foundation</h1>
+				<form action="/search/" method="post" id="searchform">
+					{% csrf_token %}
+					<label for="id_q">Search</label>
+					<input type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com">
+					<button type="submit"></button>
+				</form>
+				<nav class="clearfix">
+					<ul>
+						<li class="nav-about"><a href="#">About</a></li>
+						<li class="nav-blog"><a href="/blog/">Blog</a></li>
+						<li class="nav-policy"><a href="/policy/">Policy</a></li>
+						<li class="nav-press"><a href="/press/">Press</a></li>
+						<li class="nav-reporting"><a href="/reporting/">Reporting</a></li>
+						<li class="nav-labs"><a href="/labs/">Labs</a></li>
+						<li class="nav-projects"><a href="#">Projects</a></li>
+						<li class="nav-takeaction"><a href="#">Take Action</a></li>
+						<li class="nav-contact"><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
 		
-		<div id="main">
-			{% block main %}{% endblock %}
-		</div>
+			{% block splash %}{% endblock %}
 		
-		<footer>
-			
-			<div>
-				<h2>Contact Us</h2>
-				<address class="vcard">
-					<p class="fn org">
-						<a href="http://sunlightfoundation.com" class="url">Sunlight Foundation</a>
-					</p>
-					<p class="adr">
-						<span class="street-address">1818 N Street NW</span>
-					 	<span class="extended-address">Suite 300</span>
-					 	<span class="locality">Washington</span>,
-					 	<span class="region" title="District of Columbia">DC</span>
-					 	<span class="postal-code">20036</span>
-					</p>
-					<a href="tel:1-202-742-1520" class="tel">202-742-1520</a>
-				</address>
+			<div id="main">
+				{% block main %}{% endblock %}
 			</div>
+		
+			<footer>
 			
-			<div>
-				<h2>About Sunlight</h2>
-				<ul>
-					<li><a href="#">Our Mission</a></li>
-					<li><a href="#">Board &amp; Advisory Board</a></li>
-					<li><a href="#">Our Team</a></li>
-					<li><a href="#">How We're Funded</a></li>
-				</ul>
-			</div>
+				<div>
+					<h2>Contact Us</h2>
+					<address class="vcard">
+						<p class="fn org">
+							<a href="http://sunlightfoundation.com" class="url">Sunlight Foundation</a>
+						</p>
+						<p class="adr">
+							<span class="street-address">1818 N Street NW</span>
+						 	<span class="extended-address">Suite 300</span>
+						 	<span class="locality">Washington</span>,
+						 	<span class="region" title="District of Columbia">DC</span>
+						 	<span class="postal-code">20036</span>
+						</p>
+						<a href="tel:1-202-742-1520" class="tel">202-742-1520</a>
+					</address>
+				</div>
 			
-			<small>
-				<p>The Site may contain links to Internet sites that are not operated by Sunlight Foundation. These links are provided as a service and do not imply any endorsement of the activities or content of these sites, nor any association with their operators. Sunlight Foundation does not control these Internet sites and is not responsible for their content, security, or privacy practices. We urge you to review the privacy policy posted on web sites you visit before using the site or providing personal information.</p>
-				<p>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sunlightfoundation.com" property="cc:attributionName" rel="cc:attributionURL">Sunlight Foundation</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
-			</small>
+				<div>
+					<h2>About Sunlight</h2>
+					<ul>
+						<li><a href="#">Our Mission</a></li>
+						<li><a href="#">Board &amp; Advisory Board</a></li>
+						<li><a href="#">Our Team</a></li>
+						<li><a href="#">How We're Funded</a></li>
+					</ul>
+				</div>
 			
-		</footer>
+				<small>
+					<p>The Site may contain links to Internet sites that are not operated by Sunlight Foundation. These links are provided as a service and do not imply any endorsement of the activities or content of these sites, nor any association with their operators. Sunlight Foundation does not control these Internet sites and is not responsible for their content, security, or privacy practices. We urge you to review the privacy policy posted on web sites you visit before using the site or providing personal information.</p>
+					<p>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sunlightfoundation.com" property="cc:attributionName" rel="cc:attributionURL">Sunlight Foundation</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+				</small>
+			
+			</footer>
+		
+		{% endblock %}
 		
 	</div>
 	
