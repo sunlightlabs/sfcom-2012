@@ -1,6 +1,4 @@
-{% extends "base_sidebar.html" %}
-
-{% block title %}Press Center - {{ block.super }}{% endblock %}
+{% extends "presscenter/base.html" %}
 
 {% block content %}
 
@@ -17,9 +15,7 @@
 	<h3>Recent Sunlight Foundation Press Articles</h3>
  	<ul>
     	{% for press_articles in press_articles  %}
-			<li
-			{% if press_articles.article_type %}
-			class="{{ press_articles.get_article_type_display }}"{% endif %} >
+			<li class="{{ press_articles.get_article_type_display }}">
 				<a href="{{ press_articles.get_absolute_url }}">{{ press_articles.publication }} - {{ press_articles.headline }}</a>
 				<p>{{ press_articles.teaser|safe }}</p>
 			</li>

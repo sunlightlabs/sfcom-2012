@@ -1,7 +1,7 @@
-{% extends "base_sidebar.html" %}
+{% extends "presscenter/base.html" %}
 {% load press %}
 
-{% block title %}Press Articles - Press Center - {{ block.super }}{% endblock %}
+{% block title %}Press Articles &amp; Mentions - {{ block.super }}{% endblock %}
 
 {% block content %}
  
@@ -32,11 +32,9 @@
 	
 		<ul>
 			{% for object in latest %}
-				<li
-				{% if object.article_type %}
-				class="press_type_icon_{{ object.get_article_type_display }}"{% endif %}>
+				<li class="{{ object.get_article_type_display }}">
 					<h4><a href="{{ object.get_absolute_url }}">{{ object.publication }} - {{ object.headline }}</a></h4>
-					<div>{{ object.teaser|safe }}</div>
+					<p>{{ object.teaser|safe }}</p>
 				</li>
 			{% endfor %}
 		</ul>

@@ -1,24 +1,24 @@
-{% extends "base_press.html" %}
+{% extends "presscenter/base.html" %}
 {% load press %}
-{% block title %}Press Center - Press Releases{% endblock %}
+
+{% block title %}{{ month|date:"F Y" }} Press Releases - {{ block.super }}{% endblock %}
 
 {% block content %}
-<div class="press_content">
+
 	<h2>Sunlight Foundation Press Release Archive</h2>
 
     {% release_navigation %}
 
 	{% if object_list %}
-	<h3>Press Releases for {{ month|date:"F Y" }}</h3>			
-	<ul id="document_link">
-		{% for object in object_list %}
-			<li>
-				<h4 class="press_headline"><a href="{{ object.get_absolute_url }}">{{ object.headline }}</a></h4>
-				<p class="press_teaser">{{ object.teaser|safe }}</p>	
-			</li>
-		{% endfor %}
-	</ul>
+		<h3>Press Releases for {{ month|date:"F Y" }}</h3>			
+		<ul>
+			{% for object in object_list %}
+				<li>
+					<h4><a href="{{ object.get_absolute_url }}">{{ object.headline }}</a></h4>
+					<p>{{ object.teaser|safe }}</p>	
+				</li>
+			{% endfor %}
+		</ul>
 	{% endif %}
 
-</div>
 {% endblock %}
