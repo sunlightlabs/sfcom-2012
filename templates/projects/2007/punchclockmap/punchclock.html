@@ -1,0 +1,64 @@
+{% extends "base_full.html" %}
+
+{% block title %}Punch Clock Map (2007-2008) - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+	<img src="http://media.sunlightprojects.org/punchclockmap/images/punchclock_logo.gif" />
+	
+	<h2>Punch Clock Map</h2>
+	
+	<h3>Project Details</h3>
+	
+	<dl>
+		
+		<dt>Project lifespan</dt>
+		<dd>September '07 - October '08</dd>
+		
+		<dt>Data</dt>
+		<dd><a href="http://assets.sunlightfoundation.com/projects/punchclockmap/dump_csv.tar.gz">CSV</a> / <a href="http://assets.sunlightfoundation.com/projects/punchclockmap/dump_mysql.tar.gz">SQL</a></dd>
+	
+	</dl>
+	
+	<img src="http://media.sunlightprojects.org/punchclockmap/images/mapping_header.gif">
+	<img src="http://media.sunlightprojects.org/punchclockmap/images/generic_map.jpg" alt="Map of plotted meetings" />
+	
+	<p><strong>Beginning in 2006</strong>, the Sunlight Foundation <a href="http://www.sunlightfoundation.com/presscenter/releases/2006/09/22/sunlight-launches-congress-in-30-seconds-contest/">launched</a> the Punch Clock Campaign, asking all candidates for congressional office - challengers and incumbents - to promise, if elected, to post their daily schedules on the Internet.  Lawmakers who agree to share their schedules, including who they’ve met with and why, show that they are responsive, open, transparent and above all accountable, leading to greater public trust.</p>
+	<p>Inspired by the 60 percent of Americans who 'punch a clock' to account for their time at work, Sunlight asked why members of Congress should not also account for their time to their employers: the citizens they represent. With the aid of ordinary people across the country, Sunlight asked candidates to sign a pledge to post their schedules on the Internet once elected. One member who took the pledge was elected; to date, seven other members of Congress have agreed to post the daily schedules of their meetings and activities on and off Capitol Hill.</p>
+	<p>The Punch Clock Map was an extension of the Punch Clock Campaign. It provided a visual representation of the meetings detailed in each member's schedule, to make it easy for everyone to see whom lawmakers have met with and how they serve their district's needs. Each point on the map represented the home-base location of the person or organization with whom a member of Congress had met, not where the meeting took place. The site also provided weekly updated RSS feeds of the schedules for each member.</p>
+	<p>Not included on the map were staff meetings, personal meetings, votes, committee hearings, caucus events, meetings with constituents who lack easily identifiable addresses, or meetings with other current members of Congress.</p>
+
+	<h3>Research Methodology for Plotting Member Meetings</h3>
+	
+	<h4>How does Sunlight determine how to plot meetings conducted by members of Congress?</h4>
+	<p>Sunlight researchers reviewed the schedules posted by members of Congress on an ongoing basis. After archiving a week's worth of <a href="http://www.sourcewatch.org/index.php?title=Members_of_Congress_posting_schedules_online">schedules on Congresspedia.org</a>, the researchers analyzed them and used Google searches and other online resources to provide additional information about the individuals and organizations that members were meeting. The only meetings that were plotted were those with individuals representing outside interests. Meetings with individuals who did not appear to be representing any particular group, or who have no ascertainable home-base location, were not included on the map. No official congressional business – (meeting aides and staff, attending committee hearings, voting or speaking in a floor debate, or meeting with other sitting members of Congress) was plotted on the map.</p>
+	<p>Ideally, the lawmakers' schedules would show the name of the person they met with and their affiliated organization, as well as that organization's headquarters location. However, not every member provides this level of detail for every meeting. When an entry on a schedule listed the name and location of an attendee but did not include the name of a business, Sunlight staff attempted to determine if the individual was affiliated with a local business, nonprofit, university, civic organization or trade group.  If an entry did not list the name of the meeting attendee, but did name an organization represented at the meeting, Sunlight staff linked to that organization's Web site. When plotting the meetings, Sunlight's research team looked for local connections—if a national organization has chapters, branches, subsidiaries or facilities in a member’s district or state, we provide the local or home state address. However, if the organization or individual does not represent an organization with a local presence, then the headquarters of the organization is listed.</p>
+	<p>Below is a detailed explanation of how Sunlight staff research and plot such meetings:</p>
+	            
+	<ol>
+		<li>
+			<p>For example, this is a meeting Sen. Max Baucus held on September 20, 2007:</p>
+			<div>2:15 P.M. Meeting with Brad Heckerman of Missoula, MT</div>
+			<p>First, Sunlight staff note that no business or organization name is provided.</p>
+		</li>
+		<li>
+			<p>This entry does say that the attendee, Brad Heckerman, is from Missoula, MT. From that information, Sunlight researchers conduct a Google search using this information to try to identify the organization Brad Heckerman represents. The first link from this Google search shows a Brad Heckerman with a Missoula, MT address.</p>
+			<img src="http://media.sunlightprojects.org/punchclockmap/images/figure_01.png" alt="Google search results from Brad Heckerman of Missoula, MT" />
+		</li>
+		<li>
+			<p>Sunlight researchers follow the link to a page on the Montana Manufacturing Center Web site.  From the Web site, the researchers learn that the Montana Manufacturing Center is a business consulting organization.</p>
+			<p><img src="http://media.sunlightprojects.org/punchclockmap/images/figure_02.png" alt="Montana Manufacturing Center web site listing Brad Heckerman as the President of American Eagle Instruments" /></p>
+		</li>
+		<li>
+			<p>Mr. Heckerman is listed as President of American Eagle Instruments. Sunlight researchers then visit the American Eagle Instruments home page, to verify that he is still listed as President.  Sunlight researchers also make note that American Eagle Instruments is also located in Missoula, MT.</p>
+			<p><img src="http://media.sunlightprojects.org/punchclockmap/images/figure_03.png" alt="American Eagle Instruments web site listing Brad Heckerman as President" /></p>
+			<p><small>Side Note: If Sunlight researchers do not find search results for a Brad Heckerman of Missoula, MT that link him to an organization, they plot his meeting in Missoula, MT and only list the meeting as one with Brad Heckerman of Missoula, MT.</small></p>
+		</li>
+		<li>
+			<p>From their research, Sunlight researchers verify that Brad Heckerman is, in fact, the president of a Missoula-based company. They also know that he served on the Montana Manufacturing Center’s Advisory Board.</p>
+			<p>The next step is to find the company’s address, located under the “Contact Us” link, and input both the address and a link to the American Eagle Instruments home page into the scheduled meeting making it appear in our schedule database, which is linked to the Punch Clock Map, like this:</p>
+			<p><img src="http://media.sunlightprojects.org/punchclockmap/images/figure_04.png" alt="meeting plotted on Google Maps" /></p>
+		</li>
+	</ol>
+
+{% endblock %}
