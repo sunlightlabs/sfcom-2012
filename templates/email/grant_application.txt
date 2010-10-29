@@ -1,0 +1,14 @@
+Full Name:          {{ full_name }}
+Email:              {{ email }}
+Primary Contact:    {{ primary_contact }}
+Secondary Contact:  {{ secondary_contact }}
+
+Address:
+    {{ address }}{% if address_extra %}; {{ address_extra }}{% endif %}
+    {{ city }}, {{ state }} {{ zip_code }}
+    
+Proposal:
+    {{ proposal }}
+    
+Budget:
+    {{ budget }}
