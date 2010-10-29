@@ -131,6 +131,8 @@ MEDIASYNC = {
         'styles/thefoundation.css': (
             'styles/style.css',
             'styles/handheld.css',
+            'styles/carousel.css',
+            'styles/dev.css',       # remove this !!!!!!!!!!!!!!!!!!
             'styles/screen.css',
         ),
         'scripts/thefoundation.js': (
