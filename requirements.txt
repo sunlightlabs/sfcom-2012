@@ -3,7 +3,7 @@ django-debug-toolbar
 
 boto
 slimmer
--e git+git@github.com:sunlightlabs/django-mediasync.git#egg=mediasync
+-e git://github.com/sunlightlabs/django-mediasync.git#egg=mediasync
 
 # sunlight apps
 feedparser
@@ -23,8 +23,7 @@ textile==2.1.3
 
 # staff auth
 python-openid
-#-e git+git@git.sunlightlabs.com:django-sfauth.git#egg=sfauth
-# use new googleauth instead
+-e git://github.com/jcarbaugh/django-googleauth.git#egg=googleauth
 
 gunicorn
 
