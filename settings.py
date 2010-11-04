@@ -102,11 +102,14 @@ INSTALLED_APPS = (
     'sunlightfoundation.earmarkdisclosures',
     'sunlightfoundation.fortune535',
     'sunlightfoundation.signups',
-    'gunicorn',
 	'wordpress',
+	'disqus',
+    'gunicorn',
 )
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
+CACHE_BACKEND = 'locmem:///'
 
 AUTH_PROFILE_MODULE = "com.UserProfile"
 AUTHENTICATION_BACKENDS = (
@@ -149,6 +152,9 @@ MEDIASYNC = {
 
 WP_TABLE_PREFIX = 'sf' 
 WP_PER_PAGE = 10
+
+DISQUS_API_KEY = '***REMOVED***'
+DISQUS_WEBSITE_SHORTNAME = 'sunlightfoundation'
 
 HAYSTACK_SITECONF = 'sunlightfoundation.com.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'

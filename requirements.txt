@@ -16,6 +16,7 @@ django-haystack==1.0.2-final
 #-e svn+http://django-morsels.googlecode.com/svn/trunk/#egg=morsels
 
 # blog
+-e git://github.com/arthurk/django-disqus.git#egg=disqus
 -e git://github.com/sunlightlabs/django-wordpress.git#egg=wordpress
 Markdown==2.0.1
 docutils==0.5
