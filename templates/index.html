@@ -99,17 +99,17 @@
 	<div id="popularTags">
 		<h2>Popular Tags</h2>
 		<ul>
-			<li><a href="#">daily disclosures</a></li>
-			<li><a href="#">congressional ethics</a></li>
-			<li><a href="#">rep. charlie rangel</a></li>
+		    {% for topic in featured_topics %}
+		        <li><a href="{{ topic.url }}">{{ topic.title }}</a></li>
+		    {% endfor %}
 		</ul>
 		<div class="clear"></div>
 	</div>
 	
 	<div id="recent-posts" class="hfeed">
 	    
- 		{% headlines "sunlightfoundation,partytime,sunlightlabs,reporting" 6 %}
-		<a href="#" class="morelink">View older posts</a>
+        {% headlines "sunlightfoundation,partytime,sunlightlabs,reporting" 6 %}
+		<!-- <a href="#" class="morelink">View older posts</a> -->
 		
 	</div>
 {% endblock %}

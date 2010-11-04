@@ -11,7 +11,7 @@
     				<a href="{{ entry.link }}" class="bookmark">{{ entry.title|safe }}</a>
     			</h1>
     		</header>
-    		<p><a class="specificBlog" href="{{ entry.feed.url }}">{{ entry.feed }}</a> - {{ entry.content|truncatewords:30|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe }}</p>
+    		<p><a class="specificBlog" href="{{ entry.feed.link }}">{{ entry.feed }}</a> - {{ entry.content|truncatewords:30|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe }}</p>
     	</div>
     	<div class="clear"></div>
     </article>
