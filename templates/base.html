@@ -12,6 +12,16 @@
 	<meta name="description" content="{% block metadescription %}{% endblock %}">
 	<meta name="author" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block opengraph %}
+	    <meta name="og:site_name" content="Sunlight Foundation">
+	    <meta name="og:title" content="Sunlight Foundation">
+        <meta name="og:description" content="">
+        <meta name="og:type" content="non_profit">
+        <meta name="og:url" content="http://sunlightfoundation.com/">
+        <meta name="og:email" content="contact@sunlightfoundation.com">
+        <meta name="og:phone_number" content="202-742-1520">
+        <meta name="fb:admins" content="7812952"> 
+	{% endblock %}
 	<link rel="shortcut icon" href="{% media_url %}/favicon.ico">
 	<link rel="apple-touch-icon" href="{% media_url %}/apple-touch-icon.png">
 	{% css "styles/thefoundation.css" %}

@@ -1,5 +1,19 @@
 {% extends "wordpress/base.html" %}
 {% load markup %}
+{% load media %}
+
+{% block title %}{{ post.title }} - {{ block.super }}{% endblock %}
+
+{% block metadescription %}{{ post.content|striptags|truncatewords:50 }}{% endblock %}
+
+{% block opengraph %}
+    <meta name="og:site_name" content="Sunlight Foundation Blog">
+    <meta name="og:title" content="{{ post.title }}">
+    <meta name="og:description" content="{{ post.content|striptags|truncatewords:50 }}">
+    <meta name="og:type" content="article">
+    <meta name="og:url" content="{{ post_url }}">
+    <meta name="fb:admins" content="7812952">
+{% endblock %}
 
 {% block content %}
 
@@ -20,13 +34,39 @@
         </div>
     
         <footer>
+            
+            Share:
+            <ul class="share-links">
+                <li class="share-facebook">
+                    <a href="http://www.facebook.com/sharer.php?u={{ post_url|urlencode }}&amp;t={{ post.title|urlencode }}">Facebook</a>
+                </li>
+                <li class="share-twitter">
+                    <a href="http://twitter.com/share?url={{ post_url|urlencode }}&amp;via=sunfoundation&amp;text={{ post.title|urlencode }}">Twitter</a>
+                </li>
+                <li class="share-reddit">
+                    <a href="http://reddit.com/submit?url={{ post_url|urlencode }}">Reddit</a>
+                </li>
+                <li class="share-delicious">
+                    <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Delicious</a>
+                </li>
+                <li class="share-digg">
+                    <a href="http://digg.com/submit?url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Digg</a>
+                </li>
+                <li class="share-buzz">
+                    <a href="http://www.google.com/buzz/post?url={{ post_url|urlencode }}">Google Buzz</a>
+                </li>
+            </ul>
+            
+            
             {% if post.tags %}
+                Tags:
                 <ul>
                     {% for tag in post.tags %}
                         <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
                     {% endfor %}
                 </ul>
             {% endif %}
+            
         </footer>
 
     </article>
