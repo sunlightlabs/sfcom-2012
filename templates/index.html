@@ -38,17 +38,17 @@
 	<div id="outreachBlock_wrapper">
 		<div id="outreachBlock">
 		    <div id="join">
-    			<p>Become a part of the open government community and get updates on what we're up to by <b>signing up below</b></p>
+    			<p>Become a part of the open government community <span class="tip">and get updates on what we're up to by</span> <b>signing up below</b></p>
     			<form action="#" method="post" id="mailinglistform">
     				{% csrf_token %}
     				<ul>
     					<li>
     						<label for="id_email">Email</label>
-    						<input type="email" name="email" id="id_email" placeholder="enter your email address">
+    						<input class="transparent" type="email" name="email" id="id_email" placeholder="enter your email address">
     					</li>
     					<li>
     						<label for="id_zipcode">ZIP Code</label>
-    						<input type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
+    						<input class="transparent" type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
     					</li>
     					<li>
     					    <button id="joinBtn" type="submit">
@@ -60,7 +60,7 @@
     		</div>
     		<div id="events">
     			<!-- not sure how these are going to be marked up or managed -->
-    			<p><strong>Reach out to your community</strong> by hosting a screening of Casino Jack</p>
+    			<p><strong>Reach out to your community</strong> <span class="tip">by hosting a screening of Casino Jack</span></p>
     			<a href="#" class="morelink">Learn more</a>
     		</div>
 		</div>
@@ -185,5 +185,6 @@
     			<a href="http://delicious.com/sunlight_foundation" rel="me">Delicious</a>
     		</li>
     	</ul>
+    	<div class="clear"></div>
     </div>
 {% endblock %}
