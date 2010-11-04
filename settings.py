@@ -22,6 +22,10 @@ DATABASES = {
     }
 }
 
+DATABASE_ROUTERS = [
+    'thefoundation.routers.WordpressRouter',
+]
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 TIME_ZONE = 'America/New_York'
@@ -99,6 +103,7 @@ INSTALLED_APPS = (
     'sunlightfoundation.fortune535',
     'sunlightfoundation.signups',
     'gunicorn',
+	'wordpress',
 )
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
@@ -143,6 +148,9 @@ MEDIASYNC = {
         ),
     },
 }
+
+WP_TABLE_PREFIX = 'sf' 
+WP_PER_PAGE = 10
 
 HAYSTACK_SITECONF = 'sunlightfoundation.com.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'

@@ -1,0 +1,9 @@
+{% extends "wordpress/base.html" %}
+
+{% block content %}
+    <h3>{{ day|date:"l, F j, Y" }}</h3>
+    {% for post in post_list %}
+        {% include "wordpress/post_summary.html" %}
+    {% endfor %}
+    {% include "includes/pagination.html" %}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "wordpress/base.html" %}
+{% load markup %}
+
+{% block content %}
+
+    <article class="hentry">
+        
+        <header>
+            <h1 class="entry-title">{{ post.title }}</h1>
+            <abbr class="published" title="{{ post.post_date.isoformat }}">{{ post.post_date }}</abbr>
+            <address class="vcard author">
+                <a class="url fn" href="/people/{{ post.author.username }}/">
+                    {{ post.author.display_name }}
+                </a>
+            </address>
+        </header>
+        
+        <div class="entry-content">
+            {{ post.content|safe|markdown }}
+        </div>
+    
+        <footer>
+            {% if post.tags %}
+                <ul>
+                    {% for tag in post.tags %}
+                        <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </footer>
+
+    </article>
+
+{% endblock %}

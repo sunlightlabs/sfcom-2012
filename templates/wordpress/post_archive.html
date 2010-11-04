@@ -1,0 +1,12 @@
+{% extends "wordpress/base.html" %}
+
+{% block content %}
+
+    <h3>This is the blog index!</h3>
+
+    {% for post in post_list %}
+        {% include "wordpress/post_summary.html" %}
+    {% endfor %}
+    {% include "includes/pagination.html" %}
+    
+{% endblock %}
