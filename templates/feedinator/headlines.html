@@ -1,0 +1,18 @@
+{% load users %}
+
+{% for entry in entries %}
+    <article class="hentry">
+        <a class="photo" href="/people/{% authoravatarname entry.author_name %}/">
+            <img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{% authoravatarname entry.author_name %}.jpg" alt="photo of {{ entry.author_name }}">
+        </a>
+    	<div class="hentry_content">
+    		<header>
+    			<h1 class="entry-title">
+    				<a href="{{ entry.link }}" class="bookmark">{{ entry.title|safe }}</a>
+    			</h1>
+    		</header>
+    		<p><a class="specificBlog" href="{{ entry.feed.url }}">{{ entry.feed }}</a> - {{ entry.content|truncatewords:30|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe }}</p>
+    	</div>
+    	<div class="clear"></div>
+    </article>
+{% endfor %}

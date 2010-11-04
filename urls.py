@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     url(r'^staff/', include('sunlightfoundation.staff.urls')),
     url(r'^', include('mediasync.urls')),
     url(r'^', include('thefoundation.legacy.urls')),
-    url(r'^$', direct_to_template, {'template': 'index.html'}),
+    url(r'^$', 'thefoundation.views.index', name='index'),
 )
 
 # top level navigation redirects
