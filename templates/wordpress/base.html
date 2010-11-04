@@ -1,4 +1,5 @@
 {% extends "base_sidebar.html" %}
+{% load cache %}
 {% load wp %}
 
 {% block bodyclass %}blog{% endblock %}
@@ -17,20 +18,21 @@
         <li><a href="http://sunlightfoundation.com/projects/expenditures/">House Expenditure Reports</a></li>
     </ul>
     
-    <h3>Recent Blog Posts</h3>
-    <ul>
-        {% recentposts 5 %}
-            <li>
-                {{ post.title }}
-            </li>
-        {% endrecentposts %}
-    </ul>
+    {% cache 600 recentposts %}
+        <h3>Recent Blog Posts</h3>
+        <ul>
+            {% recentposts 5 %}
+                <li>
+                    {{ post.title }}
+                </li>
+            {% endrecentposts %}
+        </ul>
+    {% endcache %}
     
-    <h3>Recent Comments</h3>
-    <p>Is this necessary? Can we get it from disqus?</p>
-    
-    <h3>Popular Tags / Topics</h3>
-    <p>Need a cached template tag for this</p>
+    {% cache 3600 populartags %}
+        <h3>Popular Tags / Topics</h3>
+        <p>Need a cached template tag for this</p>
+    {% endcache %}
     
     <h3>Explore Our Other Blogs</h3>
     <ul>

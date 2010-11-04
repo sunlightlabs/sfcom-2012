@@ -109,6 +109,8 @@ INSTALLED_APPS = (
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
+CACHE_BACKEND = 'locmem:///'
+
 AUTH_PROFILE_MODULE = "com.UserProfile"
 AUTHENTICATION_BACKENDS = (
     'googleauth.backends.GoogleAuthBackend',
