@@ -48,6 +48,8 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^about/funding/$', 'direct_to_template', {"template": "about/funding.html"}),
     url(r'^about/grants/$', 'direct_to_template', {"template": "about/grants.html"}),
     url(r'^about/history/$', 'direct_to_template', {"template": "about/history.html"}),
+    url(r'^legal/privacy/$', 'direct_to_template', {"template": "legal/privacy.html"}),
+    url(r'^legal/terms/$', 'direct_to_template', {"template": "legal/terms.html"}),
 )
 
 
