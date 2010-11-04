@@ -1,15 +1,15 @@
 {% extends "base_sidebar.html" %}
 
 {% block splash %}
-	
-	<p id="slogan">Making government transparent &amp; accountable</p>
-	
-	<div>
-		<div>
+	<div id="featureBox">
+	    <div id="sloganBlock">
+	        <p id="slogan">Making government transparent &amp; accountable</p>
+        </div>
+		<div id="donateBlock">
 			<p>Open up your government &amp; help us get to our yearly goal of 1,500 donations.</p>
-			<a href="/donate/">Donate now</a>
+			<a class="buttonLink" id="donateBtn" href="/donate/">Donate now</a>
 		</div>
-		<div>
+		<div id="carouselBlock">
 			<a href="#" class="carousel-previous">Previous</a>
 			<div class="carousel">
 				<ul>
@@ -33,34 +33,38 @@
 			</div>
 			<a href="#" class="carousel-next">Next</a>
 		</div>
+		<div class="clear"></div>
 	</div>
-	
-	<div>
-		
-		<div>
-			<p>Become a part of the open government community and get updates on what we're up to by <b>signing up below</b></p>
-			<form action="#" method="post" id="mailinglistform">
-				{% csrf_token %}
-				<ul>
-					<li>
-						<label for="id_email">Email</label>
-						<input type="email" name="email" id="id_email" placeholder="enter your email address">
-					</li>
-					<li>
-						<label for="id_zipcode">ZIP Code</label>
-						<input type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
-					</li>
-					<li><button type="submit"></button></li>
-				</ul>
-			</form>
+	<div id="outreachBlock_wrapper">
+		<div id="outreachBlock">
+		    <div id="join">
+    			<p>Become a part of the open government community and get updates on what we're up to by <b>signing up below</b></p>
+    			<form action="#" method="post" id="mailinglistform">
+    				{% csrf_token %}
+    				<ul>
+    					<li>
+    						<label for="id_email">Email</label>
+    						<input type="email" name="email" id="id_email" placeholder="enter your email address">
+    					</li>
+    					<li>
+    						<label for="id_zipcode">ZIP Code</label>
+    						<input type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
+    					</li>
+    					<li>
+    					    <button id="joinBtn" type="submit">
+    					        <span>Join</span>
+    					    </button>
+    				    </li>
+    				</ul>
+    			</form>
+    		</div>
+    		<div id="events">
+    			<!-- not sure how these are going to be marked up or managed -->
+    			<p><strong>Reach out to your community</strong> by hosting a screening of Casino Jack</p>
+    			<a href="#" class="morelink">Learn more</a>
+    		</div>
 		</div>
-		
-		<div>
-			<!-- not sure how these are going to be marked up or managed -->
-			<p><strong>Reach out to your community</strong> by hosting a screening of Casino Jack</p>
-			<a href="#" class="morelink">Learn more</a>
-		</div>
-		
+
 	</div>
 	
 {% endblock %}
@@ -70,11 +74,13 @@
 	
 		<article class="hentry">
 			<header>
-				<h1 class="entry-title">
+				<h1 class="entry-title withTip">
 					<a href="#" class="bookmark">Finance Regulator Crafts New Derivative Rules with Outside Help</a>
 				</h1>
-				<address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
-				<time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+				<div class="entryMetaData">
+				    <address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
+				    <time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+				</div>
 			</header>
 			<div class="entry-summary">
 				<p>The Commodity Futures Trading Commission (CFTC) has been tasked, along with the Securities and Exchange Commission (SEC), with setting new rules governing the transparent trading of derivatives for the first time.</p>
@@ -88,8 +94,10 @@
 				<h1 class="entry-title">
 					<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
 				</h1>
-				<address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
-				<time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+				<div class="entryMetaData">
+    				<address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
+    				<time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+    			</div>
 			</header>
 			<div class="entry-summary">
 				<img src="http://dummyimage.com/240x60/999/fff.png&amp;text=article+image">
@@ -101,77 +109,81 @@
 	
 	</div>
 	
-	<div>
+	<div id="popularTags">
 		<h2>Popular Tags</h2>
 		<ul>
 			<li><a href="#">daily disclosures</a></li>
 			<li><a href="#">congressional ethics</a></li>
 			<li><a href="#">rep. charlie rangel</a></li>
 		</ul>
+		<div class="clear"></div>
 	</div>
 	
 	<div id="recent-posts" class="hfeed">
 		
 		<article class="hentry">
-			<header>
-				<h1 class="entry-title">
-					<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
-				</h1>
-				<address class="author vcard">
-					<span class="fn">Paul Blumenthal</span>
-					<a href="#" class="url">
-						<img class="photo" src="http://dummyimage.com/40x40/999/fff.png&amp;text=author">
-					</a>
-				</address>
-			</header>
-			<div class="entry-summary">
-				<p><a href="#">Sunlight Reporting Group</a> - Today we learned what we knew all week: White House Chief of Staff Rahm Emanuel is leaving the White House to pursue a bid to be the next Mayor of Chicago. Emanuel leaves behind him one of the most powerful positions in national politics, one which his presence made even more important.</p>
+		    <a class="photo" href="#"><img src="http://dummyimage.com/40x40/999/fff.png&amp;text=author"></a>
+			<div class="hentry_content">
+    			<header>
+    				<h1 class="entry-title">
+    					<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
+    				</h1>
+    			</header>
+				<p><a class="specificBlog" href="#">Sunlight Reporting Group</a> - Today we learned what we knew all week: White House Chief of Staff Rahm Emanuel is leaving the White House to pursue a bid to be the next Mayor of Chicago. Emanuel leaves behind him one of the most powerful positions in national politics, one which his presence made even more important.</p>
 			</div>
+			<div class="clear"></div>
 		</article>
 		<a href="#" class="morelink">View older posts</a>
 	</div>
 {% endblock %}
 
 {% block sidebar %}
-	<div id="mission-statement">
+	<div id="mission-statement" class="module">
 		<p>The Sunlight Foundation uses cutting-edge technology and ideas to make government transparent and accountable.</p>
-		<p>Underlying all of our efforts is a fundamental belief that increased transparency will improve the public's confidence in government.</p>
 	</div>
-	
-	<h2>Explore our projects</h2>
-	<ul>
-		<li>
-			<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
-			<h3>Influence Explorer</h3>
-			<a href="#">Campaign Finance</a>
-			<p><b>Connect the dots of political contributions</b> on the federal and state level in this new site that allows you to track influence by lawmaker, company, or prominent individual.</p>
-		</li>
-		<li>
-			<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
-			<h3>Influence Explorer</h3>
-			<a href="#">Campaign Finance</a>
-			<p><b>Connect the dots of political contributions</b> on the federal and state level in this new site that allows you to track influence by lawmaker, company, or prominent individual.</p>
-		</li>
-	</ul>
-	<a href="#" class="morelink">View all projects</a>
-	
-	<h2>Explore our projects</h2>
-	<p>Follow every post, project, or video on our way to a more transparency government</p>
-	<ul class="social-links">
-		<li class="social-facebook">
-			<a href="http://www.facebook.com/sunlightfoundation" rel="me">Facebook</a>
-		</li>
-		<li class="social-twitter">
-			<a href="http://twitter.com/#!/sunfoundation" rel="me">Twitter</a>
-		</li>
-		<li class="social-flickr">
-			<a href="http://www.flickr.com/sunlightfoundation" rel="me">Flickr</a>
-		</li>
-		<li class="social-youtube">
-			<a href="http://www.youtube.com/sunlightfoundation" rel="me">YouTube</a>
-		</li>
-		<li class="social-delicious">
-			<a href="http://delicious.com/sunlight_foundation" rel="me">Delicious</a>
-		</li>
-	</ul>
+	<div class="module" id="exploreProjects">
+	    <h2><a href="#">Explore our projects</a></h2>
+    	<ul>
+    		<li>
+    			<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
+    			<div class="projectDetails">
+        			<h3><a href="#">Influence Explorer</a></h3>
+        			<a class="toolCategory" href="#">Campaign Finance</a>
+        			<p><b>Connect the dots of political contributions</b> on the federal and state level in this new site that allows you to track influence by lawmaker, company, or prominent individual.</p>
+        		</div>
+        		<div class="clear"></div>
+    		</li>
+    		<li>
+    			<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
+    			<div class="projectDetails">
+        			<h3><a href="#">Influence Explorer</a></h3>
+        			<a class="toolCategory" href="#">Campaign Finance</a>
+        			<p><b>Connect the dots of political contributions</b> on the federal and state level in this new site that allows you to track influence by lawmaker, company, or prominent individual.</p>
+        		</div>
+            	<div class="clear"></div>
+    		</li>
+    	</ul>
+    	<a href="#" class="morelink">View all projects</a>
+	</div>
+	<div class="module">
+    	<h2 class="withTip">Join Us</h2>
+    	<p class="tip">Follow every post, project, or video on our way to a more transparency government</p>
+    	<ul class="social-links">
+    		<li class="social-facebook">
+    			<a href="http://www.facebook.com/sunlightfoundation" rel="me">Facebook</a>
+    		</li>
+    		<li class="social-twitter">
+    			<a href="http://twitter.com/#!/sunfoundation" rel="me">Twitter</a>
+    		</li>
+    		<li class="social-flickr">
+    			<a href="http://www.flickr.com/sunlightfoundation" rel="me">Flickr</a>
+    		</li>
+    		<li class="social-youtube">
+    			<a href="http://www.youtube.com/sunlightfoundation" rel="me">YouTube</a>
+    		</li>
+    		<li class="social-delicious">
+    			<a href="http://delicious.com/sunlight_foundation" rel="me">Delicious</a>
+    		</li>
+    	</ul>
+    </div>
 {% endblock %}
