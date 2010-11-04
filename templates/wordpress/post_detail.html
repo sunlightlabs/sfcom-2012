@@ -1,4 +1,5 @@
 {% extends "wordpress/base.html" %}
+{% load disqus_tags %}
 {% load markup %}
 {% load media %}
 
@@ -35,6 +36,15 @@
     
         <footer>
             
+            {% if post.tags %}
+                Tags:
+                <ul>
+                    {% for tag in post.tags %}
+                        <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
             Share:
             <ul class="share-links">
                 <li class="share-facebook">
@@ -57,18 +67,28 @@
                 </li>
             </ul>
             
-            
-            {% if post.tags %}
-                Tags:
-                <ul>
-                    {% for tag in post.tags %}
-                        <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            
         </footer>
 
     </article>
+    
+    <div id="disqus_thread"></div>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=">comments powered by Disqus.</a></noscript>
 
+{% endblock %}
+
+
+{% block js %}
+    {% disqus_dev %}
+    <script> 
+        /* <![CDATA[ */
+        var disqus_shortname = 'sunlightfoundation';
+        var disqus_domain = 'disqus.com';
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.' + disqus_domain + '/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+        /* ]]> */
+    </script> 
 {% endblock %}
