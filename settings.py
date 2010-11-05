@@ -160,7 +160,7 @@ DISQUS_WEBSITE_SHORTNAME = 'sunlightfoundation'
 
 HAYSTACK_SITECONF = 'thefoundation.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
-HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_ROOT, 'whoosh.index')
+HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_ROOT, 'index_whoosh')
 
 SF_PRESSRELEASE_LIFETIME = 14
 
