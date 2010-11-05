@@ -1,0 +1,2 @@
+<!--{{ object.title }}-->
+{{ object.content|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe }}

@@ -1,0 +1,61 @@
+{% extends 'base_sidebar.html' %}
+{% block title %}Search {% endblock %}
+
+{% block content %}
+
+	<h2>Search the Sunlight Transparency Ecosystem</h2>
+	
+	<form action="/search/" method="post" id="searchresultform">
+		{% csrf_token %}
+		<label for="id_q">Search</label>
+		<input class="transparent" type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com">
+		<button type="submit">
+		   <span>Search</span>
+		</button>
+	</form>
+			
+	{% if query %}
+		<h3>Search Results for &#8220;{{ query }}&#8221;</h3>
+		<ul id="search_results">
+			{% for result in page.object_list %}
+				{% if result.object.is_public %}
+					{% comment %}this is for press center results.{% endcomment %}
+					<li>
+						<a href="{{ result.object.get_absolute_url }}" class="searchTitle">{{ result.title|safe }}</a>
+						{{ result.summary|truncatewords:20|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe }}
+					</li>
+				{% endif %}
+				{% if result.object.last_fetched %}
+					{% comment %}this is for feedinator results.{% endcomment %}
+					<li> <a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a>
+						{% autoescape on %}
+							{{ result.text|truncatewords:20|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe}}
+						{% endautoescape %}
+					</li>
+				{% endif %}
+				{% if result.object.sites %}
+					{% comment %}this is for flatpages results.{% endcomment %}
+					<li>
+						<a href="{{ result.link }}" class="searchTitle">{{ result.title|safe }}</a>
+					</li>
+				{% endif %}
+			{% empty %}
+				<li>No results found.</li>
+			{% endfor %}
+		</ul>
+		<div class="pagination">
+			<span class="step-links">
+				{% if page.has_previous %}
+					<a href="?q={{ query }}&page={{ page.previous_page_number }}">previous</a>
+				{% endif %}
+				<span class="current">Page {{ page.number }} of {{ paginator.num_pages }}.</span>
+				{% if page.has_next %}
+					<a href="?q={{ query }}&page={{ page.next_page_number }}">next</a>
+				{% endif %}
+			</span>
+		</div>
+	{% else %}
+		{# Show some example queries to run, maybe query syntax, something else? #}
+	{% endif %}
+			
+{% endblock %}
