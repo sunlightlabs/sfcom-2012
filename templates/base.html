@@ -85,21 +85,21 @@
     						 	<span class="region" title="District of Columbia">DC</span>
     						 	<span class="postal-code">20036</span>
     						</span>
-    						<span href="tel:1-202-742-1520" class="tel">202-742-1520</span>
+    						<a href="tel:1-202-742-1520" class="tel">202-742-1520</a>
     					</address>
 					</div>
 					<div id="aboutSunlight">
     					<h2>About Sunlight</h2>
     					<ul>
-    						<li><a href="#">Our Mission</a></li>
-    						<li><a href="#">Board &amp; Advisory Board</a></li>
-    						<li><a href="#">Our Team</a></li>
-    						<li><a href="#">How We're Funded</a></li>
+    						<li><a href="/about/">Our Mission</a></li>
+    						<li><a href="/about/board/">Board &amp; Advisory Board</a></li>
+    						<li><a href="/about/funding/">How We're Funded</a></li>
+    						<li><a href="/people/">Our Team</a></li>
     					</ul>
     				</div>
     				<div id="privacyPolicy">
-    				    <p>The Site may contain links to Internet sites that are not operated by Sunlight Foundation. These links are provided as a service and do not imply any endorsement of the activities or content of these sites, nor any association with their operators. Sunlight Foundation does not control these Internet sites and is not responsible for their content, security, or privacy practices. We urge you to review the privacy policy posted on web sites you visit before using the site or providing personal information.</p>
-    					<p>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.sunlightfoundation.com" property="cc:attributionName" rel="cc:attributionURL">Sunlight Foundation</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
+    				    <p>Our <a href="/legal/privacy/">privacy policy</a> details how personally identifiable information that is collected on our web sites is handled. Read our <a href="/legal/terms/">terms of service</a>.</p>
+    					<p>This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://sunlightfoundation.com" property="cc:attributionName" rel="cc:attributionURL">Sunlight Foundation</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.</p>
     				</div>
     				<div class="clear"></div>
 				</div>
@@ -120,16 +120,18 @@
 	</script>
 	<![endif]-->
 
-	<script>
-		var _gaq = [['_setAccount', 'UA-1265484-1'], ['_trackPageview']];
-		(function(d, t) {
-			var g = d.createElement(t),
-				s = d.getElementsByTagName(t)[0];
-			g.async = true;
-			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			s.parentNode.insertBefore(g, s);
-		})(document, 'script');
-	</script>
+    {% block analytics %}
+    	<script>
+    		var _gaq = [['_setAccount', 'UA-1265484-1'], ['_trackPageview']];
+    		(function(d, t) {
+    			var g = d.createElement(t),
+    				s = d.getElementsByTagName(t)[0];
+    			g.async = true;
+    			g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    			s.parentNode.insertBefore(g, s);
+    		})(document, 'script');
+    	</script>
+	{% endblock %}
   
 </body>
 </html>
