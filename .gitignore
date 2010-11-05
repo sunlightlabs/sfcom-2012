@@ -2,4 +2,5 @@
 *.pyc
 local_settings.py
 sunlightfoundation
+solr/
 whoosh.index/
