@@ -105,6 +105,7 @@ INSTALLED_APPS = (
     'feedinator',
 	'wordpress',
 	'disqus',
+	'haystack',
     'gunicorn',
 )
 
@@ -157,7 +158,7 @@ WP_PER_PAGE = 10
 DISQUS_API_KEY = '***REMOVED***'
 DISQUS_WEBSITE_SHORTNAME = 'sunlightfoundation'
 
-HAYSTACK_SITECONF = 'sunlightfoundation.com.search_sites'
+HAYSTACK_SITECONF = 'thefoundation.search_sites'
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
 HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_ROOT, 'whoosh.index')
 
