@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block main %}
-    <div id="mainContent">
-    	<div id="content">
-    		{% block content %}{% endblock %}
-    	</div>
-	
-    	<div id="sidebar">
-    	    <div id="sidebarInterior">
-    		    {% block sidebar %}{% endblock %}
-    		</div>
-    	</div>
-    	<div class="clear"></div>
+
+	<div id="content">
+		{% block content %}{% endblock %}
 	</div>
+
+	<div id="sidebar">
+	    <div id="sidebarInterior">
+		    {% block sidebar %}{% endblock %}
+		</div>
+	</div>
+	
+	<div class="clear"></div>
 	
 {% endblock %}

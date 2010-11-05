@@ -131,6 +131,7 @@ h2 { text-transform: uppercase; font-size: 180%; margin-bottom: 25px; line-heigh
 h3 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 150%; font-weight: normal;}
 
 #content { width: 560px; float: left; margin-right: 30px; padding: 50px 0; }
+#content-full { width: 100%; margin-right: 30px; padding: 50px 0; }
 #sidebar {  float: left; background: url(../images/sideColumn_middle.png) center top repeat-y; width: 360px;}
 #sidebarInterior { background: url(../images/sideColumn_bottom.jpg) center bottom no-repeat; padding: 50px 30px 98px;  width: 300px;}
 

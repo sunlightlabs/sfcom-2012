@@ -1,4 +1,6 @@
 {% extends "base_sidebar.html" %}
+{% load feeds %}
+{% load markup %}
 
 {% block splash %}
 	<div id="featureBox">
@@ -72,68 +74,43 @@
 {% block content %}
 	<div id="featured-posts" class="hfeed">
 	
-		<article class="hentry">
-			<header>
-				<h1 class="entry-title withTip">
-					<a href="#" class="bookmark">Finance Regulator Crafts New Derivative Rules with Outside Help</a>
-				</h1>
-				<div class="entryMetaData">
-				    <address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
-				    <time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
-				</div>
-			</header>
-			<div class="entry-summary">
-				<p>The Commodity Futures Trading Commission (CFTC) has been tasked, along with the Securities and Exchange Commission (SEC), with setting new rules governing the transparent trading of derivatives for the first time.</p>
-				<p>On July 26, 2010, five days after President Barack Obama signed the most sweeping reform of the financial sector into law, the CFTC was already meeting with industry groups to hash out new rules for the trading of the complex financial instruments known as over-the-counter derivatives.</p>
-			</div>
-			<a href="#" class="morelink">Tell me more</a>
-		</article>
-	
-		<article class="hentry">
-			<header>
-				<h1 class="entry-title">
-					<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
-				</h1>
-				<div class="entryMetaData">
-    				<address class="author vcard"><a href="#" class="url fn">Paul Blumenthal</a></address>
-    				<time datetime="2010-10-07T10:32" class="published" pubdate>10/07/10 @ 10:32am</time>
+	    {% for feature in featured_posts %}
+    		<article class="hentry">
+    			<header>
+    				<h1 class="entry-title withTip">
+    					<a href="{{ feature.url }}" class="bookmark">{{ feature.title }}</a>
+    				</h1>
+    				<div class="entryMetaData">
+    				    <address class="author">{{ feature.get_category_display }}</address>
+    				    <time datetime="{{ feature.date_published.isoformat }}" class="published" pubdate>
+    				        {{ feature.date_published|date:"m/d/y @ g:iA"|lower }}
+    				    </time>
+    				</div>
+    			</header>
+    			<div class="entry-summary">
+    				{{ feature.summary|markdown|safe }}
     			</div>
-			</header>
-			<div class="entry-summary">
-				<img src="http://dummyimage.com/240x60/999/fff.png&amp;text=article+image">
-				<p>Today we learned what we knew all week: White House Chief of Staff Rahm Emanuel is leaving the White House to pursue a bid to be the next Mayor of Chicago. Emanuel leaves behind him one of the most powerful positions in national politics, one which his presence made even more important.</p>
-				<p>The contacts that he made while in the White House won’t be leaving him behind. In fact, they’re saved on the Internet thanks to the White House’s policy of disclosing their visitor logs. Who visited Emanuel and what could that mean for his future–and the White House’s?</p>
-			</div>
-			<a href="#" class="morelink">Tell me more</a>
-		</article>
+    			<a href="{{ feature.url }}" class="morelink">Tell me more</a>
+    		</article>
+		{% endfor %}
 	
 	</div>
 	
 	<div id="popularTags">
 		<h2>Popular Tags</h2>
 		<ul>
-			<li><a href="#">daily disclosures</a></li>
-			<li><a href="#">congressional ethics</a></li>
-			<li><a href="#">rep. charlie rangel</a></li>
+		    {% for topic in featured_topics %}
+		        <li><a href="{{ topic.url }}">{{ topic.title }}</a></li>
+		    {% endfor %}
 		</ul>
 		<div class="clear"></div>
 	</div>
 	
 	<div id="recent-posts" class="hfeed">
+	    
+        {% headlines "sunlightfoundation,partytime,sunlightlabs,reporting" 6 %}
+		<!-- <a href="#" class="morelink">View older posts</a> -->
 		
-		<article class="hentry">
-		    <a class="photo" href="#"><img src="http://dummyimage.com/40x40/999/fff.png&amp;text=author"></a>
-			<div class="hentry_content">
-    			<header>
-    				<h1 class="entry-title">
-    					<a href="#" class="bookmark">Rahm Emanuel’s White House visitor trail</a>
-    				</h1>
-    			</header>
-				<p><a class="specificBlog" href="#">Sunlight Reporting Group</a> - Today we learned what we knew all week: White House Chief of Staff Rahm Emanuel is leaving the White House to pursue a bid to be the next Mayor of Chicago. Emanuel leaves behind him one of the most powerful positions in national politics, one which his presence made even more important.</p>
-			</div>
-			<div class="clear"></div>
-		</article>
-		<a href="#" class="morelink">View older posts</a>
 	</div>
 {% endblock %}
 

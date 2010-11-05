@@ -48,7 +48,7 @@
 				<nav class="clearfix">
 					{% block nav %}
 						<ul>
-							<li class="nav-about"><a href="#">About</a></li>
+							<li class="nav-about"><a href="/about/">About</a></li>
 							<li class="nav-blog"><a href="/blog/">Blog</a></li>
 							<li class="nav-policy"><a href="/policy/">Policy</a></li>
 							<li class="nav-press"><a href="/press/">Press</a></li>
@@ -65,7 +65,9 @@
 			{% block splash %}{% endblock %}
 		
 			<div id="main">
-				{% block main %}{% endblock %}
+			    <div id="mainContent">
+				    {% block main %}{% endblock %}
+				</div>
 			</div>
 		
 			<footer>

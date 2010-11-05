@@ -102,6 +102,7 @@ INSTALLED_APPS = (
     'sunlightfoundation.earmarkdisclosures',
     'sunlightfoundation.fortune535',
     'sunlightfoundation.signups',
+    'feedinator',
 	'wordpress',
 	'disqus',
     'gunicorn',
