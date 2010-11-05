@@ -36,8 +36,7 @@
 		
 			<header>
 				<h1 id="logo"><a href="/">Sunlight Foundation</a></h1>
-				<form action="/search/" method="post" id="searchform">
-					{% csrf_token %}
+				<form action="/search/" method="get" id="searchform">
 					<label for="id_q">Search</label>
 					<input class="transparent" type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com">
 					<button type="submit">
