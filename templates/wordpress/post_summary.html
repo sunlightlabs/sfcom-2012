@@ -4,12 +4,12 @@
     
     <header>
         <h1 class="entry-title"><a class="bookmark" href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
-        <abbr class="published" title="{{ post.post_date.isoformat }}">{{ post.post_date }}</abbr>
-        <address class="vcard author">
-            <a class="url fn" href="/people/{{ post.author.username }}/">
-                {{ post.author.display_name }}
-            </a>
-        </address>
+        <div class="entryMetaData">
+		    <address class="author"><a class="url fn" href="/people/{{ post.author.username }}/">{{ post.author.display_name }}</a></address>
+		    <time datetime="{{ feature.date_published.isoformat }}" class="published" pubdate>
+		        {{ post.post_date }}
+		    </time>
+		</div>
     </header>
     
     {% if post.excerpt %}
@@ -21,15 +21,5 @@
             {{ post.content|safe|markdown }}
         </div>
     {% endif %}
-
-    <footer>
-        {% if post.tags %}
-            <ul>
-                {% for tag in post.tags %}
-                    <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </footer>
 
 </article>
