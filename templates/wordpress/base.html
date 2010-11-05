@@ -1,4 +1,5 @@
 {% extends "base_sidebar.html" %}
+{% load media %}
 {% load cache %}
 {% load wp %}
 
@@ -6,40 +7,73 @@
 
 {% block sidebar %}
 
-    <h3>Recent Sunlight Foundation Projects</h3>
-    <ul>
-        <li><a href="http://publicequalsonline.com">Public=Online</a></li>
-        <li><a href="http://sunlightlabs.com/contests/designforamerica/">Design For America</a></li>
-        <li><a href="http://sunlightfoundation.com/live/">Sunlight Live</a></li>
-        <li><a href="http://realtimecongress.org">Real Time Congress iPhone App</a></li>
-        <li><a href="http://sunlightfoundation.com/android/congress/">Congress: The Android App</a></li>
-        <li><a href="http://sunlightfoundation.com/WhiteHouseVisitors/">White House Visitor Logs</a></li>
-        <li><a href="http://sunlightfoundation.com/opengovernmentdirective/">Open Government Directive</a></li>
-        <li><a href="http://sunlightfoundation.com/projects/expenditures/">House Expenditure Reports</a></li>
-    </ul>
-    
-    {% cache 600 recentposts %}
-        <h3>Recent Blog Posts</h3>
-        <ul>
-            {% recentposts 5 %}
+    <div class="module">
+        {% cache 600 recentposts %}
+            <h3>Recent Blog Posts</h3>
+            <ul>
+                {% recentposts 5 %}
+                    <li>
+                        {{ post.title }}
+                    </li>
+                {% endrecentposts %}
+            </ul>
+        {% endcache %}
+        </div>
+        <div class="module">
+            {% cache 3600 populartags %}
+        
+            <h3>Popular Tags / Topics</h3>
+            <p>Need a cached template tag for this</p>
+            {% endcache %}
+        </div>
+        <div class="module" id="explore">
+            <h3>Explore Our Other Blogs</h3>
+            <ul>
                 <li>
-                    {{ post.title }}
+                    <img alt="reporting icon" src="{% media_url %}/images/icon_reporting.png"/>
+                    <div class="projectDetails">
+                        <h4><a href="#">Reporting Group</a></h4>
+                        <span>Digging into data and disclosures</span>
+                    </div>
+                    <div class="clear"></div>
                 </li>
-            {% endrecentposts %}
-        </ul>
-    {% endcache %}
-    
-    {% cache 3600 populartags %}
-        <h3>Popular Tags / Topics</h3>
-        <p>Need a cached template tag for this</p>
-    {% endcache %}
-    
-    <h3>Explore Our Other Blogs</h3>
-    <ul>
-        <li><a href="#">Reporting Group</a><span>Digging into data and disclosures</span></li>
-        <li><a href="#">Sunlight Labs</a><span>Developers opening America's government</span></li>
-        <li><a href="#">Party Time</a><span>Tracking the congressional fundraising circuit</span></li>
-        <li><a href="#">Open Congress Blog</a><span>Everyone can be an insider</span></li>
-    </ul>
-    
+                <li>
+                    <img alt="Sunlight Labs icon" src="{% media_url %}/images/icon_labs.png"/>
+                    <div class="projectDetails">
+                        <h4><a href="#">Sunlight Labs</a></h4>
+                        <span>Developers opening America's government</span>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <img alt="Party Time icon" src="{% media_url %}/images/icon_partyTime.png"/>
+                    <div class="projectDetails">
+                        <h4><a href="#">Party Time</a></h4>
+                        <span>Tracking the congressional fundraising circuit</span>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+                <li>
+                    <img alt="Open Congress icon" src="{% media_url %}/images/icon_openCongress.png"/>
+                    <div class="projectDetails">
+                        <h4><a href="#">Open Congress Blog</a></h4>
+                        <span>Everyone can be an insider</span>
+                    </div>
+                    <div class="clear"></div>
+                </li>
+            </ul>
+        </div>
+        <div class="module">
+            <h3>Recent Sunlight Foundation Projects</h3>
+            <ul>
+                <li><a href="http://publicequalsonline.com">Public=Online</a></li>
+                <li><a href="http://sunlightlabs.com/contests/designforamerica/">Design For America</a></li>
+                <li><a href="http://sunlightfoundation.com/live/">Sunlight Live</a></li>
+                <li><a href="http://realtimecongress.org">Real Time Congress iPhone App</a></li>
+                <li><a href="http://sunlightfoundation.com/android/congress/">Congress: The Android App</a></li>
+                <li><a href="http://sunlightfoundation.com/WhiteHouseVisitors/">White House Visitor Logs</a></li>
+                <li><a href="http://sunlightfoundation.com/opengovernmentdirective/">Open Government Directive</a></li>
+                <li><a href="http://sunlightfoundation.com/projects/expenditures/">House Expenditure Reports</a></li>
+            </ul>    
+        </div>
 {% endblock %}

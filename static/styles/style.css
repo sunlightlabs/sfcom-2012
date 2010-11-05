@@ -28,7 +28,7 @@ table { border-collapse:collapse; border-spacing:0; }
 hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
 input, select { vertical-align:middle; }
 
-body { font:13px/1.231 sans-serif; *font-size:small; color: #494442; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 20px;} 
+body { color: #494442; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; line-height: 22px; font-size: 13px; } 
 select, input, textarea, button { font: 99% sans-serif; }
 pre, code, kbd, samp { font-family: monospace, sans-serif; }
 p { margin-bottom: 1em;}
@@ -37,14 +37,14 @@ html { overflow-y: scroll; }
 
 a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #2f4867; }
-a:hover { color: #1d3654; }
+a:hover { color: #15283f; }
 
 /* #mainContent ul, #mainContent ol { margin-left: 1.8em; } */
 ol { list-style-type: decimal; }
 
 nav ul, nav li { margin: 0; } 
 small { font-size: 85%; }
-strong, th { font-weight: bold; }
+strong, th, b { font-weight: bold; }
 td, td img { vertical-align: top; } 
 sub { vertical-align: sub; font-size: smaller; }
 sup { vertical-align: super; font-size: smaller; }
@@ -122,13 +122,17 @@ input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-bo
 #id_zipcode { width: 80px;}
 
 article header { padding: 0; width: auto; margin: 0 0 30px;}
-#recent-posts header { margin: 0;}
+#recent-posts header { margin: 0 0 5px;}
+#recent-posts article { margin-bottom: 30px;}
 .entry-title { font-size: 220%; line-height: 32px;}
 h1 a, h2 a, h3 a, h4 a { text-decoration: none;}
-#recent-posts .entry-title { font-size: 160%;}
+#recent-posts .entry-title { font-size: 160%; line-height:25px;}
 .withTip { margin-bottom: 5px;}
 h2 { text-transform: uppercase; font-size: 180%; margin-bottom: 25px; line-height: 25px;}
-h3 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 150%; font-weight: normal;}
+h3 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 160%; font-weight: normal; margin-bottom: 20px; line-height: 25px;}
+h4 { font-size: 140%;}
+
+li { margin-bottom: 15px;}
 
 #content { width: 560px; float: left; margin-right: 30px; padding: 50px 0; }
 #content-full { width: 100%; margin-right: 30px; padding: 50px 0; }
@@ -140,7 +144,8 @@ h3 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 150%; fon
 .morelink { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; background: url(../images/icon_viewMore.png) left 4px no-repeat; padding-left: 20px; font-size: 130%; text-decoration: none; margin-top: 30px; display: block;}
 
 .entryMetaData, .specificBlog, .toolCategory, .tip { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; }
-address { float: left; margin-right: 10px; font-style: normal;}
+address { float: left; margin-right: 10px; }
+footer address { font-style: normal;}
 .toolCategory { margin-bottom: 10px; display: block;}
 
 article { margin-bottom: 50px;}
@@ -149,7 +154,7 @@ article { margin-bottom: 50px;}
 #popularTags { background: url(../images/popularTags.jpg) center bottom no-repeat; padding: 15px 25px;  margin-bottom: 30px;}
 
 #popularTags h2 { float: left; margin-right: 15px; text-transform: uppercase; font-size: 120%; margin-bottom: 0;}
-#popularTags li { float: left; margin-right: 10px;}
+#popularTags li { float: left; margin-right: 10px; margin-bottom: 0;}
 #popularTags a { text-decoration: none;}
 
 .hentry img { border: 2px solid #d4cfc2;}
@@ -159,7 +164,8 @@ article { margin-bottom: 50px;}
 
 .module { margin-bottom: 50px;}
 
-#exploreProjects img { width: 45px; margin-right: 15px; float: left;}
+#explore img { width: 45px; margin-right: 15px; float: left;}
+#explore h3 { margin-bottom: 0;}
 .projectDetails { float: left; width: 240px;}
 .social-links li { float: left; height: 16px; padding-left: 25px; margin-bottom: 15px; width: 120px;}
 .social-links li a { text-decoration: none; font-size: 110%;  }
@@ -182,12 +188,23 @@ article { margin-bottom: 50px;}
 .social-delicious { background: url(../images/social_sprites.png) left -120px no-repeat; }
 .social-delicious:hover { background: url(../images/social_sprites.png) left -18px no-repeat; }
 
-footer { background: url(../images/footer.jpg) bottom center repeat-x; color: #c7c2c2; height: 176px; padding-top: 35px;}
+#mainFooter{ background: url(../images/footer.jpg) bottom center repeat-x; color: #c7c2c2; height: 176px; padding-top: 35px;}
 #contact, #aboutSunlight { float: left; width: 170px; margin-right: 25px; padding-right: 25px; border-right: 1px dashed #5c5755; height: 155px; font-size: 110%;}
 #privacyPolicy { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 92%; line-height: 17px; float: left; width: 480px;}
-footer h2 { font-size: 130%; margin-bottom: 10px; color: #fcfcfc; font-weight: normal;}
-footer a:link, footer a:active, footer a:visited { color: #c7c2c2; }
-footer a:hover { color: #fcfcfc; }
+#mainFooter h2 { font-size: 130%; margin-bottom: 10px; color: #fcfcfc; font-weight: normal;}
+#mainFooter a:link, footer a:active, footer a:visited { color: #c7c2c2; }
+#mainFooter a:hover { color: #fcfcfc; }
 #aboutSunlight li { margin-bottom: 10px;}
 .adr { display: block; margin-bottom: 8px;}
 .org { font-size: 110%; margin-bottom: 5px; display: block;}
+
+.share-links li{ text-indent: -9999em; display: block; width: 14px; height: 14px;}
+.share-facebook { background: url(../images/icons);}
+
+/*blog styles*/
+.entry-content ol { list-style-type: decimal;}
+.entry-content footer { }
+#tags { margin-bottom: 15px; }
+#tags li{ float: left; margin-right: 7px; margin-bottom: 0px; }
+.smallTitle { float: left; margin-right: 15px; font-weight: bold;}
+footer { padding-top: 20px; }

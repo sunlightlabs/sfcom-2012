@@ -22,12 +22,12 @@
         
         <header>
             <h1 class="entry-title">{{ post.title }}</h1>
-            <abbr class="published" title="{{ post.post_date.isoformat }}">{{ post.post_date }}</abbr>
-            <address class="vcard author">
-                <a class="url fn" href="/people/{{ post.author.username }}/">
-                    {{ post.author.display_name }}
-                </a>
-            </address>
+            <div class="entryMetaData">
+                <address class="author"><a class="url fn" href="/people/{{ post.author.username }}/">{{ post.author.display_name }}</a></address>
+    		    <time datetime="{{ feature.date_published.isoformat }}" class="published" pubdate>
+    		        {{ post.post_date }}
+    		    </time>
+            </div>
         </header>
         
         <div class="entry-content">
@@ -37,35 +37,39 @@
         <footer>
             
             {% if post.tags %}
-                Tags:
+            <div id="tags" class="tip">
+                <span class="smallTitle">Tags:</span>
                 <ul>
                     {% for tag in post.tags %}
                         <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
                     {% endfor %}
                 </ul>
+                <div class="clear"></div>
+            </div>
             {% endif %}
-            
-            Share:
-            <ul class="share-links">
-                <li class="share-facebook">
-                    <a href="http://www.facebook.com/sharer.php?u={{ post_url|urlencode }}&amp;t={{ post.title|urlencode }}">Facebook</a>
-                </li>
-                <li class="share-twitter">
-                    <a href="http://twitter.com/share?url={{ post_url|urlencode }}&amp;via=sunfoundation&amp;text={{ post.title|urlencode }}">Twitter</a>
-                </li>
-                <li class="share-reddit">
-                    <a href="http://reddit.com/submit?url={{ post_url|urlencode }}">Reddit</a>
-                </li>
-                <li class="share-delicious">
-                    <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Delicious</a>
-                </li>
-                <li class="share-digg">
-                    <a href="http://digg.com/submit?url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Digg</a>
-                </li>
-                <li class="share-buzz">
-                    <a href="http://www.google.com/buzz/post?url={{ post_url|urlencode }}">Google Buzz</a>
-                </li>
-            </ul>
+            <div id="share">
+                <span class="smallTitle">Share:</span>
+                <ul class="share-links">
+                    <li class="share-facebook">
+                        <a href="http://www.facebook.com/sharer.php?u={{ post_url|urlencode }}&amp;t={{ post.title|urlencode }}">Facebook</a>
+                    </li>
+                    <li class="share-twitter">
+                        <a href="http://twitter.com/share?url={{ post_url|urlencode }}&amp;via=sunfoundation&amp;text={{ post.title|urlencode }}">Twitter</a>
+                    </li>
+                    <li class="share-reddit">
+                        <a href="http://reddit.com/submit?url={{ post_url|urlencode }}">Reddit</a>
+                    </li>
+                    <li class="share-delicious">
+                        <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Delicious</a>
+                    </li>
+                    <li class="share-digg">
+                        <a href="http://digg.com/submit?url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Digg</a>
+                    </li>
+                    <li class="share-buzz">
+                        <a href="http://www.google.com/buzz/post?url={{ post_url|urlencode }}">Google Buzz</a>
+                    </li>
+                </ul>
+            </div>
             
         </footer>
 
