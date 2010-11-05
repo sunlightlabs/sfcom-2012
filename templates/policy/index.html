@@ -5,16 +5,17 @@
 {% block content %}
 
 	<h2>Sunlight Foundation Policy Center</h2>
+	<div id="sectionContact">
+    	<h3>Contact</h3>
+    	<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_jwonderlich.jpg" class="section_avatar">
+    	<div class="hcard">
+    		<a href="/people/jwonderlich/" class="fn url">John Wonderlich</a>
+    		<span class="title">Policy Director</span>
+    		<span class="tel">(202) 742-1520 ext 234</span>
+    	</div>
+    </div>
 	<p>The Sunlight Foundation's policy team is helping to create a more open, transparent government.</p>
 	<p>Our policy work joins issue expertise with an open, innovative approach to advocacy, bringing technology to analysis and lobbying, and adding substantive detail to our vision for digitally empowered governance and citizenship.</p>
-
-	<p>For policy inquiries, please contact:</p>
-	<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_jwonderlich.jpg" class="section_avatar">
-	<div class="hcard">
-		<a href="/people/jwonderlich/" class="fn url">John Wonderlich</a>
-		<br />Policy Director
-		(202) 742-1520 ext 234
-	</div>
 
 	<h3>Featured Resource</h3>
 	<ul id="policy_feature">
@@ -36,4 +37,18 @@
 
 	<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
 
+{% endblock %}
+{% block sidebar %}
+<nav class="withContact interiorNav">
+	<ul>
+		<li><a href="/about/">About Sunlight</a></li>
+		<li><a href="/about/board/">Board and Advisors</a></li>
+		<li><a href="/people/">Our Team</a></li>
+		<li><a href="/people/interns/">Our Interns</a></li>
+		<li><a href="/about/funding/">How We're Funded</a></li>
+		<li><a href="/about/grants/">Who We Fund</a></li>
+		<li><a href="/about/history/">A Brief History...</a></li>
+		<li><a href="/donate/">Donate to Sunlight</a></li>
+	</ul>
+</nav>
 {% endblock %}

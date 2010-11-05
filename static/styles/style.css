@@ -163,6 +163,13 @@ article { margin-bottom: 50px;}
 .social-links li { float: left; height: 16px; padding-left: 25px; margin-bottom: 15px; width: 120px;}
 .social-links li a { text-decoration: none; font-size: 110%;  }
 
+#sectionContact { background: url(../images/bg_contact.png) top right no-repeat; position: relative; width: 940px; height: 118px;}
+#sectionContact img { width: 50px; }
+.withContact { margin-top: 100px;}
+
+.interiorNav li { float: none;}
+.interiorNav { height: auto;}
+
 .social-facebook { background: url(../images/social_sprites.png) left -188px no-repeat; }
 .social-facebook:hover { background: url(../images/social_sprites.png) left -52px no-repeat; }
 .social-twitter { background: url(../images/social_sprites.png) left -103px no-repeat; }
