@@ -9,6 +9,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('wordpress.urls')),
+    url(r'^contact/', 'thefoundation.views.contact', name='contact'),
     url(r'^donate/', include('sunlightfoundation.donations.urls')),
     url(r'^earmarkdisclosures/', include('sunlightfoundation.earmarkdisclosures.urls')),
     url(r'^f/', include('sunlightfoundation.signups.urls')),
@@ -33,7 +34,6 @@ urlpatterns += patterns('django.views.generic.simple',
 
 # sunlightfoundation.com module
 urlpatterns += patterns('sunlightfoundation.com.views',
-    url(r'^contact/', 'contact', name='contact'),
     url(r'^grants/application/$', 'grant_application', name='grant_application'),
     url(r'^people/$', 'people_index', name='people_list'),
     url(r'^people/interns/$', 'people_interns', name='people_interns_list'),

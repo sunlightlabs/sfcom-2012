@@ -152,6 +152,22 @@ MEDIASYNC = {
     },
 }
 
+# mail related stuff
+
+EMAIL_BACKEND = 'postmark.django_backend.EmailBackend'
+
+POSTMARK_API_KEY = '***REMOVED***'
+POSTMARK_SENDER = 'contact@sunlightfoundation.com'
+
+MAILINGLIST_SUBSCRIBED_URL = "/join/thankyou/"
+MAILINGLIST_REQUIRED_FIELDS = {
+    "email": u"A valid email address is required",
+}
+
+SIGNUPS_FROM_EMAIL = 'contact@sunlightfoundation.com'
+
+# other stuff
+
 WP_TABLE_PREFIX = 'sf' 
 WP_PER_PAGE = 10
 
@@ -164,15 +180,8 @@ HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_ROOT, 'index_whoosh')
 
 SF_PRESSRELEASE_LIFETIME = 14
 
-MAILINGLIST_SUBSCRIBED_URL = "/join/thankyou/"
-MAILINGLIST_REQUIRED_FIELDS = {
-    "email": u"A valid email address is required",
-}
-
 CONTACT_FORM_RECIPIENTS = ['contact@sunlightfoundation.com',]
 GRANT_APPLICATION_RECIPIENTS = ['swells@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com','habdullah@sunlightfoundation.com']
-
-SIGNUPS_FROM_EMAIL = 'contact@sunlightfoundation.com'
 
 try:
     from local_settings import *
