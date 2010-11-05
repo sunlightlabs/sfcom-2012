@@ -82,10 +82,11 @@ button, .buttonLink { width: auto; text-indent: -9999em; display: block; border:
 h1#logo { width: 363px; height: 66px; padding-top: 25px; float: left;}
 h1#logo a { display: block; text-indent: -9999em; width: 363px; height: 66px; background: url(../images/logo.png) top left no-repeat;}
 
-nav { background: url(../images/nav_bar.png) top center no-repeat; height: 28px; padding-top: 10px; }
+nav { background: url(../images/nav_bar.png) top center no-repeat; height: 38px; overflow: hidden;}
 nav a:link, nav a:active, nav a:visited { text-transform: uppercase; color: #494442; text-decoration: none; text-indent: center;}
 nav li:hover a { color: #2F4867; font-weight: bold; text-indent: center;}
-nav li { float: left; padding: 0 22px; text-indent: center; font-size: 110%;}
+nav li { float: left; padding: 10px 22px 7px; text-indent: center; font-size: 110%;}
+nav li.nav-about { background-color: #F3F1EC;}
 
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto;}
@@ -112,6 +113,8 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #joinBtn { background: url(../images/btn_join.png) top center no-repeat; width: 76px; height: 30px;}
 #joinBtn:hover { background: url(../images/btn_join.png) bottom center no-repeat; }
 #searchform button { background: url(../images/magnifier.png) 1px 6px no-repeat; float: right; margin-left: -30px; position: relative; padding: 5px 10px;}
+#dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 30px;}
+#dsq-content .dsq-post-footer #dsq-post-button:hover { background: url(../images/btn_comment.png) bottom center no-repeat;}
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
@@ -198,13 +201,20 @@ article { margin-bottom: 50px;}
 .adr { display: block; margin-bottom: 8px;}
 .org { font-size: 110%; margin-bottom: 5px; display: block;}
 
-.share-links li{ text-indent: -9999em; display: block; width: 14px; height: 14px;}
-.share-facebook { background: url(../images/icons);}
+.share-links li{ text-indent: -9999em; display: block; width: 16px; height: 16px;}
+.share-facebook { background: url(../images/icons/16/facebook.png) top left no-repeat;}
+.share-twitter { background: url(../images/icons/16/twitter.png) top left no-repeat;}
+.share-reddit { background: url(../images/icons/16/reddit.png) top left no-repeat;}
+.share-delicious { background: url(../images/icons/16/delicious.png) top left no-repeat;}
+.share-digg { background: url(../images/icons/16/digg.png) top left no-repeat;}
+.share-buzz { background: url(../images/icons/16/google-buzz.png) top left no-repeat;}
 
 /*blog styles*/
 .entry-content ol { list-style-type: decimal;}
 .entry-content footer { }
 #tags { margin-bottom: 15px; }
-#tags li{ float: left; margin-right: 7px; margin-bottom: 0px; }
+#tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
-footer { padding-top: 20px; }
+footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #e5e4db;}
+.left { float: left; margin-right: 25px;}
+.right { float: right; margin-left: 25px;}
