@@ -83,10 +83,10 @@ h1#logo { width: 363px; height: 66px; padding-top: 25px; float: left;}
 h1#logo a { display: block; text-indent: -9999em; width: 363px; height: 66px; background: url(../images/logo.png) top left no-repeat;}
 
 nav { background: url(../images/nav_bar.png) top center no-repeat; height: 38px; overflow: hidden;}
-nav a:link, nav a:active, nav a:visited { text-transform: uppercase; color: #494442; text-decoration: none; text-indent: center;}
-nav li:hover a { color: #2F4867; font-weight: bold; text-indent: center;}
+nav a:link, nav a:active, nav a:visited { text-transform: uppercase; color: #494442; text-decoration: none; text-align: center;}
+nav li:hover a { color: #2F4867; font-weight: bold; text-align: center;}
 nav li { float: left; padding: 10px 22px 7px; text-indent: center; font-size: 110%;}
-nav li.nav-about { background-color: #F3F1EC;}
+body.about nav li.nav-about, body.blog nav li.nav-blog, body.policy nav li.nav-policy, body.press nav li.nav-press, body.projects nav li.nav-projects, body.action nav li.nav-takeaction, body.contact nav li.nav-contact  { background-color: #F3F1EC; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; padding: 6px 22px 7px; margin-top: 4px; -moz-opacity: 0.7 !important; -webkit-opacity: 0.7!important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" !important; filter: alpha(opacity=70) !important; opacity: 0.7 !important; color: #2F4867; font-weight: bold;}
 
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto;}
