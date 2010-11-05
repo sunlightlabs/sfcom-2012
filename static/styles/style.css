@@ -82,11 +82,20 @@ button, .buttonLink { width: auto; text-indent: -9999em; display: block; border:
 h1#logo { width: 363px; height: 66px; padding-top: 25px; float: left;}
 h1#logo a { display: block; text-indent: -9999em; width: 363px; height: 66px; background: url(../images/logo.png) top left no-repeat;}
 
-nav { background: url(../images/nav_bar.png) top center no-repeat; height: 38px; overflow: hidden;}
-nav a:link, nav a:active, nav a:visited { text-transform: uppercase; color: #494442; text-decoration: none; text-align: center;}
-nav li:hover a { color: #2F4867; font-weight: bold; text-align: center;}
-nav li { float: left; padding: 10px 22px 7px; text-indent: center; font-size: 110%;}
-body.about nav li.nav-about, body.blog nav li.nav-blog, body.policy nav li.nav-policy, body.press nav li.nav-press, body.projects nav li.nav-projects, body.action nav li.nav-takeaction, body.contact nav li.nav-contact  { background-color: #F3F1EC; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; padding: 6px 22px 7px; margin-top: 4px; -moz-opacity: 0.7 !important; -webkit-opacity: 0.7!important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" !important; filter: alpha(opacity=70) !important; opacity: 0.7 !important; color: #2F4867; font-weight: bold;}
+header nav { background: url(../images/nav_bar.png) top center no-repeat; height: 38px; overflow: hidden; margin-top: 15px;}
+.thefoundation header nav { margin-top: 5px;}
+header nav a:link, header nav a:active, header nav a:visited { text-transform: uppercase; color: #494442; text-decoration: none; text-align: center;}
+header nav li:hover a { color: #2F4867; font-weight: bold; text-align: center;}
+header nav li { float: left; padding: 10px 22px 7px; text-indent: center; font-size: 110%;}
+body.about nav li.nav-about, body.blog nav li.nav-blog, body.policy nav li.nav-policy, body.press nav li.nav-press, body.projects nav li.nav-projects, body.action nav li.nav-takeaction, body.contact nav li.nav-contact  { background-color: #F3F1EC; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; -webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; padding: 6px 22px 7px; margin-top: 4px; -moz-opacity: 0.7 !important; -webkit-opacity: 0.7!important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)" !important; filter: alpha(opacity=70) !important; opacity: 0.7 !important; color: #2F4867; font-weight: bold; }
+
+.interiorNav li.active { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+.interiorNav li.active a { color: #fff; }
+.interiorNav li:hover a { font-weight: bold;}
+.interiorNav li { margin-bottom:0;}
+.interiorNav a { text-decoration: none; text-transform: uppercase; font-size: 110%; margin-bottom: 15px; display: block;}
+.interiorNav { height: auto;}
+
 
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto;}
@@ -177,9 +186,6 @@ article { margin-bottom: 50px;}
 #sectionContact img { width: 50px; }
 .withContact { margin-top: 100px;}
 
-.interiorNav li { float: none;}
-.interiorNav { height: auto;}
-
 .social-facebook { background: url(../images/social_sprites.png) left -188px no-repeat; }
 .social-facebook:hover { background: url(../images/social_sprites.png) left -52px no-repeat; }
 .social-twitter { background: url(../images/social_sprites.png) left -103px no-repeat; }
@@ -191,7 +197,7 @@ article { margin-bottom: 50px;}
 .social-delicious { background: url(../images/social_sprites.png) left -120px no-repeat; }
 .social-delicious:hover { background: url(../images/social_sprites.png) left -18px no-repeat; }
 
-#mainFooter{ background: url(../images/footer.jpg) bottom center repeat-x; color: #c7c2c2; height: 176px; padding-top: 35px;}
+#mainFooter { background: url(../images/footer.jpg) bottom center repeat-x; color: #c7c2c2; height: 176px; padding: 35px 0 0; margin-top: 0;}
 #contact, #aboutSunlight { float: left; width: 170px; margin-right: 25px; padding-right: 25px; border-right: 1px dashed #5c5755; height: 155px; font-size: 110%;}
 #privacyPolicy { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 92%; line-height: 17px; float: left; width: 480px;}
 #mainFooter h2 { font-size: 130%; margin-bottom: 10px; color: #fcfcfc; font-weight: normal;}
