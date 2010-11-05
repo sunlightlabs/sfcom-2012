@@ -2,4 +2,4 @@
 *.pyc
 local_settings.py
 sunlightfoundation
-whoosh.index/
+index_whoosh/

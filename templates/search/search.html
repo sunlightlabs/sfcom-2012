@@ -3,12 +3,11 @@
 
 {% block content %}
 
-	<h2>Search the Sunlight Transparency Ecosystem</h2>
+	<h2>Search for Sunlight</h2>
 	
-	<form action="/search/" method="post" id="searchresultform">
-		{% csrf_token %}
+	<form action="/search/" method="get" id="searchresultform">
 		<label for="id_q">Search</label>
-		<input class="transparent" type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com">
+		<input class="transparent" type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com" value="{{ query }}">
 		<button type="submit">
 		   <span>Search</span>
 		</button>
@@ -18,27 +17,29 @@
 		<h3>Search Results for &#8220;{{ query }}&#8221;</h3>
 		<ul id="search_results">
 			{% for result in page.object_list %}
-				{% if result.object.is_public %}
-					{% comment %}this is for press center results.{% endcomment %}
-					<li>
-						<a href="{{ result.object.get_absolute_url }}" class="searchTitle">{{ result.title|safe }}</a>
-						{{ result.summary|truncatewords:20|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe }}
-					</li>
-				{% endif %}
-				{% if result.object.last_fetched %}
-					{% comment %}this is for feedinator results.{% endcomment %}
-					<li> <a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a>
-						{% autoescape on %}
-							{{ result.text|truncatewords:20|removetags:"script link i blockquote img embed param object div a p b h1 h2 h3 h4 h5 strong em hr table tr td span xml ul li"|safe}}
-						{% endautoescape %}
-					</li>
-				{% endif %}
-				{% if result.object.sites %}
-					{% comment %}this is for flatpages results.{% endcomment %}
-					<li>
-						<a href="{{ result.link }}" class="searchTitle">{{ result.title|safe }}</a>
-					</li>
-				{% endif %}
+			
+				<li class="{{ result.type }}">
+    				{% if result.type == 'post' %}
+    					<!-- wordpress post -->
+    					<a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a>    
+    					<p>{{ result.text|striptags|truncatewords:20 }}</p>
+    				{% endif %}
+    				{% if result.type == 'feed' %}
+    					<!-- feedinator -->
+    					<a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a>
+    					<p>{{ result.text|striptags|truncatewords:20 }}</p>
+    				{% endif %}
+    				{% if result.type == 'page' %}
+    					<!-- flatpage -->
+    					<a href="{{ result.link }}" class="searchTitle">{{ result.title|safe }}</a>
+    				{% endif %}
+    				{% if result.type == 'press_article' or result.type == 'press_release' %}
+    				    <!-- press center -->
+    					<a href="{{ result.object.get_absolute_url }}" class="searchTitle">{{ result.title|safe }}</a>
+    					<p>{{ result.summary|striptags|truncatewords:20 }}</p>
+    				{% endif %}
+				</li>
+				
 			{% empty %}
 				<li>No results found.</li>
 			{% endfor %}

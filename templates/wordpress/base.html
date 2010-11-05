@@ -13,7 +13,7 @@
             <ul>
                 {% recentposts 5 %}
                     <li>
-                        {{ post.title }}
+                        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
                     </li>
                 {% endrecentposts %}
             </ul>
@@ -30,35 +30,43 @@
             <h3>Explore Our Other Blogs</h3>
             <ul>
                 <li>
-                    <img alt="reporting icon" src="{% media_url %}/images/icon_reporting.png"/>
-                    <div class="projectDetails">
-                        <h4><a href="#">Reporting Group</a></h4>
-                        <span>Digging into data and disclosures</span>
-                    </div>
+                    <a href="#">
+                        <img alt="reporting icon" src="{% media_url %}/images/icon_reporting.png"/>
+                        <div class="projectDetails">
+                            <h4>Reporting Group</h4>
+                            <span>Digging into data and disclosures</span>
+                        </div>
+                    </a>
                     <div class="clear"></div>
                 </li>
                 <li>
-                    <img alt="Sunlight Labs icon" src="{% media_url %}/images/icon_labs.png"/>
-                    <div class="projectDetails">
-                        <h4><a href="#">Sunlight Labs</a></h4>
-                        <span>Developers opening America's government</span>
-                    </div>
+                    <a href="#">
+                        <img alt="Sunlight Labs icon" src="{% media_url %}/images/icon_labs.png"/>
+                        <div class="projectDetails">
+                            <h4>Sunlight Labs</h4>
+                            <span>Developers opening America's government</span>
+                        </div>
+                    </a>
                     <div class="clear"></div>
                 </li>
                 <li>
-                    <img alt="Party Time icon" src="{% media_url %}/images/icon_partyTime.png"/>
-                    <div class="projectDetails">
-                        <h4><a href="#">Party Time</a></h4>
-                        <span>Tracking the congressional fundraising circuit</span>
-                    </div>
+                    <a href="#">
+                        <img alt="Party Time icon" src="{% media_url %}/images/icon_partyTime.png"/>
+                        <div class="projectDetails">
+                            <h4>Party Time</h4>
+                            <span>Tracking the congressional fundraising circuit</span>
+                        </div>
+                    </a>
                     <div class="clear"></div>
                 </li>
                 <li>
-                    <img alt="Open Congress icon" src="{% media_url %}/images/icon_openCongress.png"/>
-                    <div class="projectDetails">
-                        <h4><a href="#">Open Congress Blog</a></h4>
-                        <span>Everyone can be an insider</span>
-                    </div>
+                    <a href="#">
+                        <img alt="Open Congress icon" src="{% media_url %}/images/icon_openCongress.png"/>
+                        <div class="projectDetails">
+                            <h4>Open Congress Blog</h4>
+                            <span>Everyone can be an insider</span>
+                        </div>
+                    </a>
                     <div class="clear"></div>
                 </li>
             </ul>

@@ -10,6 +10,7 @@ from wordpress.models import Post
 #
 
 class WordPressIndex(indexes.SearchIndex):
+    type = indexes.CharField(default='post')
     text = indexes.CharField(document=True, model_attr='content', use_template=True)
     summary = indexes.CharField(model_attr='excerpt')
     title = indexes.CharField(model_attr='title') 
@@ -22,9 +23,11 @@ site.register(Post, WordPressIndex)
 # django feedinator
 #
 
-EXCLUDED_FEEDS = ('delicious-sunlightmedia','congresspedia','delicious-sunlightnewswatch','opensecrets','reporting')
+EXCLUDED_FEEDS = ('delicious-sunlightmedia','congresspedia','delicious-sunlightnewswatch',
+                  'opensecrets','reporting','sunlightfoundation')
 
 class FeedEntryIndex(indexes.SearchIndex):
+    type = indexes.CharField(default='feed')
     text = indexes.CharField(document=True, model_attr='content', use_template=True)
     summary = indexes.CharField(model_attr='summary')
     feed = indexes.CharField(model_attr='feed')
@@ -40,6 +43,7 @@ site.register(FeedEntry, FeedEntryIndex)
 #
 
 class FlatPageIndex(indexes.SearchIndex):
+    type = indexes.CharField(default='page')
     text = indexes.CharField(document=True, model_attr='content')
     title = indexes.CharField(model_attr='title') 
     link = indexes.CharField(model_attr='url') 
@@ -52,6 +56,7 @@ site.register(FlatPage, FlatPageIndex)
 #
 
 class PressArticleIndex(indexes.SearchIndex):
+    type = indexes.CharField(default='press_article')
     text = indexes.CharField(document=True, model_attr='body')
     title = indexes.CharField(model_attr='headline') 
     link = indexes.CharField(model_attr='get_absolute_url')
@@ -61,6 +66,7 @@ class PressArticleIndex(indexes.SearchIndex):
 site.register(PressArticle, PressArticleIndex)
 
 class PressReleaseIndex(indexes.SearchIndex):
+    type = indexes.CharField(default='press_release')
     text = indexes.CharField(document=True, model_attr='body')
     title = indexes.CharField(model_attr='headline') 
     link = indexes.CharField(model_attr='get_absolute_url')
