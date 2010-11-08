@@ -14,7 +14,7 @@
 		<h2>The Sunlight Foundation Team</h2>
 	{% endif %}
 	
-    <ul>
+    <ul id="sunlightStaff">
 
         {% if founders %}
         <li>
@@ -29,6 +29,7 @@
                 </li>
                 {% endfor %}
             </ol>
+            <div class="clear"></div>
         </li>
         {% endif %}
 
@@ -37,7 +38,7 @@
             <h3>Sunlight Staff</h3>
             <ol>
                 {% for person in general_staff %}
-                <li>
+                <li class="{% cycle 'one' 'two' 'three' 'four' %}">
                     <a href="/people/{{ person.username }}/">
 						<img src="http://assets.sunlightfoundation.com/images/blog/avatars/100/100x100_{{ person.username }}.jpg" border="0">
 						<span>{{ person.first_name }} {{ person.last_name }}</span>
@@ -45,6 +46,7 @@
                 </li>
                 {% endfor %}
             </ol>
+            <div class="clear"></div>
         </li>
         {% endif %}
     
@@ -61,6 +63,7 @@
                 </li>
                 {% endfor %}
             </ol>
+            <div class="clear"></div>
         </li>
         {% endif %}
     
@@ -77,6 +80,7 @@
                 </li>
                 {% endfor %}
             </ol>
+            <div class="clear"></div>
         </li>
         {% endif %}
 
@@ -92,6 +96,7 @@
                 </li>
                 {% endfor %}
             </ol>
+            <div class="clear"></div>
         </li>
         {% endif %}
 
@@ -108,12 +113,13 @@
                 </li>
                 {% endfor %}
             </ol>
+            <div class="clear"></div>
         </li>
         {% endif %}
     
     </ul>
 
-    <p>
+    <p class="tip">
 		{% if interns %}
 	        Photos by <a href="http://sunlightfoundation.com/people/lmccann/">Laurenellen McCann</a>.
 		{% else %}
