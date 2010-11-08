@@ -4,24 +4,30 @@
 {% block bodyclass %}contact{% endblock %}
 {% block content %}
 
-	<h2>Contact Us</h2>
-    
-	<div class="vcard">
-		<div class="fn org">Sunlight Foundation</div>
+	<h2 withTip>Contact Us</h2>
+	<p class="tip">We'd love to hear from you. Whether you have a question about our products, mission or would like to become part of our community, drop us a line below and we'll do our best to get back to you right away.</p>
+		
+	<form action="/contact/" method="post" id="contactform" class="normalForm">
+	    <ul>
+		    {% csrf_token %}
+		    {{ form.as_ul }}
+		    <li>
+		        <button class="sendbutton" type="submit">
+    				<span>Send</span>
+    			</button>
+		    </li>
+		</ul>
+	</form>
+	
+{% endblock %}
+
+{% block sidebar %}
+    <div class="vcard">
+    	<div class="fn org">Sunlight Foundation</div>
        	<div class="adr">
            	<div class="street-address">1818 N Street NW, Suite 300</div>
            	<span class="locality">Washington</span>, <span class="region">DC</span>, <span class="postal-code">20036</span>
        		</div>
        	<div class="tel">202-742-1520</div>
-   	</div>
-		
-	<form action="/contact/" method="post" id="contactform">
-		{% csrf_token %}
-		<fieldset>
-			<legend>Send us an Email</legend>
-			{{ form.as_ul }}
-			<input type="submit" value="Send Your Messsage to Sunlight Foundation">
-		</fieldset>		
-	</form>
-	
+    </div>
 {% endblock %}

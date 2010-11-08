@@ -58,6 +58,10 @@ input:invalid, textarea:invalid { border-radius: 1px;  -moz-box-shadow: 0px 0px 
 .no-boxshadow input:invalid, 
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
+.normalForm label { width: 120px; display: block; float: left; text-transform: uppercase; font-weight: bold;}
+.normalForm input, .normalForm textarea { width: 300px;}
+.normalForm { margin-top: 30px;}
+
 ::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
 ::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
 a:link { -webkit-tap-highlight-color: #FF5E99; } 
@@ -122,6 +126,9 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 30px;}
 #dsq-content .dsq-post-footer #dsq-post-button:hover { background: url(../images/btn_comment.png) bottom center no-repeat;}
 .donatebutton { background: url(../images/btn_donate_google.png) top center no-repeat; width: 240px; height: 54px;}
+.donatebutton:hover { background: url(../images/btn_donate_google.png) bottom center no-repeat; }
+.sendbutton { background: url(../images/btn_send.png) top center no-repeat; width: 111px; height: 45px; margin-left: 120px; }
+.sendbutton:hover { background: url(../images/btn_send.png) bottom center no-repeat;}
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
