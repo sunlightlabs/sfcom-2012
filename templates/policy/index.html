@@ -4,21 +4,23 @@
 {% block bodyclass %}policy{% endblock %}
 {% block content %}
 
-	<h2>Policy</h2>
-	<div id="sectionContact">
+	<h2 >Policy</h2>
+	<p>The Sunlight Foundation's policy team is helping to create a more open, transparent government.</p>
+	<p>Our policy work joins issue expertise with an open, innovative approach to advocacy, bringing technology to analysis and lobbying, and adding substantive detail to our vision for digitally empowered governance and citizenship.</p>
+    <div id="sectionContact">
     	<h3>Contact</h3>
     	<img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_jwonderlich.jpg" class="section_avatar">
     	<div class="hcard">
-    		<a href="/people/jwonderlich/" class="fn url">John Wonderlich</a>
-    		<span class="title">Policy Director</span>
-    		<span class="tel">(202) 742-1520 ext 234</span>
+    		<a href="/people/jwonderlich/" class="fn url">John <br />Wonderlich</a>
+    		<div class="contactDetails">
+    		    <span class="title">Policy Director</span>
+    		    <span class="tel">(202) 742-1520 ext 234</span>
+    		</div>
     	</div>
     </div>
-	<p>The Sunlight Foundation's policy team is helping to create a more open, transparent government.</p>
-	<p>Our policy work joins issue expertise with an open, innovative approach to advocacy, bringing technology to analysis and lobbying, and adding substantive detail to our vision for digitally empowered governance and citizenship.</p>
-
+    
 	<h3>Featured Resource</h3>
-	<ul id="policy_feature">
+	<ul id="policy_feature" class="docs">
 		<li>
 			<a href="{{ feature_resource.url }}">{{ feature_resource.title }}</a>
 			<p>{{ feature_resource.summary }}</p>
@@ -26,20 +28,20 @@
 	</ul>
 
 	<h3>Recent Policy Documents</h3>
+	<ul id="document_link" class="docs">
 	{% for feature_document in feature_documents %} 
-		<ul id="document_link">
 			<li>
 				<a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a>
 				<p>{{ feature_document.summary }}</p>
 			</li>
-		</ul>
 	{% endfor %}
+	</ul>
 
 	<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
 
 {% endblock %}
 {% block sidebar %}
-<nav class="withContact interiorNav">
+<nav class="interiorNav">
 	<ul>
 		<li><a href="/about/">About Sunlight</a></li>
 		<li><a href="/about/board/">Board and Advisors</a></li>

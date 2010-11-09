@@ -113,7 +113,7 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #outreachBlock { background: url(../images/featureBar.jpg) top center no-repeat; height: 108px; padding-top: 10px; color: #fefefe;}
 #outreachBlock p { font-size:130%; line-height: 23px; margin-bottom:10px;}
 #events { float: left; width: 444px;}
-#events strong { text-transform: uppercase; font-size: 120%;}
+#events strong { text-transform: uppercase; font-size: 120%; margin-top: 3px; display: block;}
 #events .morelink { color: #fff; margin-top: 20px;}
 #main { background: #F8F6EC url(../images/below_green_bg.png) top center repeat-x; border-top:3px solid #F3F1EC;}
 .home #main { border: none; }
@@ -195,9 +195,15 @@ article { margin-bottom: 50px;}
 .social-links li { float: left; height: 16px; padding-left: 25px; margin-bottom: 15px; width: 120px;}
 .social-links li a { text-decoration: none; font-size: 110%;  }
 
-#sectionContact { background: url(../images/bg_contact.png) top right no-repeat; position: relative; width: 940px; height: 118px;}
-#sectionContact img { width: 50px; }
-.withContact { margin-top: 100px;}
+#sectionContact { background: url(../images/bg_contact.png) top right no-repeat; height: 76px; margin-right: -41px; margin-top: -10px; padding: 32px 20px 20px 230px; margin-bottom: 20px;}
+#sectionContact img { width: 70px; float: left; border: 2px solid #d4cfc2; margin-right: 15px;}
+#sectionContact h3 { display: none;}
+#sectionContact .hcard { float: left; width: 300px; padding-top: 10px;}
+#sectionContact a { font-size: 160%; display: block; float: left; line-height: 27px; height: 60px; border-right: 1px dashed #CDCDC9; padding-right: 20px; margin-right: 20px; text-decoration: none;}
+#sectionContact .title { border-bottom: 1px dashed #e2e2de; padding-bottom: 5px; margin-bottom: 5px; display: block; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique;}
+.contactDetails { float: left;}
+
+.docs li { background: url(../images/document_icon.png) left 2px no-repeat; padding-left: 30px; }
 
 .social-facebook { background: url(../images/social_sprites.png) left -188px no-repeat; }
 .social-facebook:hover { background: url(../images/social_sprites.png) left -52px no-repeat; }
