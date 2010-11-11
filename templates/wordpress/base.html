@@ -10,7 +10,7 @@
     <div class="module">
         {% cache 600 recentposts %}
             <h3>Recent Blog Posts</h3>
-            <ul>
+            <ul class="listMarker">
                 {% recentposts 5 %}
                     <li>
                         <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>

@@ -129,6 +129,11 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 .donatebutton:hover { background: url(../images/btn_donate_google.png) bottom center no-repeat; }
 .sendbutton { background: url(../images/btn_send.png) top center no-repeat; width: 111px; height: 45px; margin-left: 120px; }
 .sendbutton:hover { background: url(../images/btn_send.png) bottom center no-repeat;}
+#dsq-submit-guest { background: url(../images/btn_postComment.png) top center no-repeat; width: 177px; height: 26px; border: none;}
+#dsq-submit-guest:hover { background: url(../images/btn_postComment.png) bottom center no-repeat; }
+#dsq-openid-submit-button { background: url(../images/btn_signin.png) top center no-repeat; width: 104px; height: 26px; border: none;}
+#dsq-openid-submit-button:hover { background: url(../images/btn_signin.png) bottom center no-repeat; }
+.dsq-popup-title .dsq-popup-close { background: url(../images/delete_16.png) top right no-repeat; border: none; width: 16px;}
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
@@ -148,7 +153,7 @@ article header { padding: 0; width: auto; margin: 0 0 30px;}
 #recent-posts article { margin-bottom: 30px;}
 .entry-title { font-size: 220%; line-height: 32px;}
 h1 a, h2 a, h3 a, h4 a { text-decoration: none;}
-#recent-posts .entry-title { font-size: 160%; line-height:25px;}
+#recent-posts .entry-title { font-size: 160%; line-height: 25px; }
 .withTip { margin-bottom: 5px;}
 h2 { text-transform: uppercase; font-size: 180%; margin-bottom: 25px; line-height: 25px;}
 h3 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 160%; font-weight: normal; margin-bottom: 20px; line-height: 25px;}
@@ -191,9 +196,10 @@ article { margin-bottom: 50px;}
 
 #explore img { width: 45px; margin-right: 15px; float: left;}
 #explore h3 { margin-bottom: 0;}
-.projectDetails { float: left; width: 240px;}
+.projectDetails { float: left; width: 180px;}
 .social-links li { float: left; height: 16px; padding-left: 25px; margin-bottom: 15px; width: 120px;}
 .social-links li a { text-decoration: none; font-size: 110%;  }
+#sidebarInterior li a { text-decoration: none; }
 
 #sectionContact { background: url(../images/bg_contact.png) top right no-repeat; height: 76px; margin-right: -41px; margin-top: -10px; padding: 32px 20px 20px 230px; margin-bottom: 20px;}
 #sectionContact img { width: 70px; float: left; border: 2px solid #d4cfc2; margin-right: 15px;}
@@ -219,9 +225,18 @@ article { margin-bottom: 50px;}
 #sunlightStaff ol, #funders ol, #funders, #whowefund ol, #whowefund { list-style-type: none;}
 #sunlightStaff ol li { float: left; margin-bottom: 15px; margin-right: 20px; width: 120px;}
 #sunlightStaff li { margin-bottom: 30px;}
-#sunlightStaff li.four { clear: both;}
+#sunlightStaff li.one { clear: both;}
 #sunlightStaff img { border: 2px solid #d1ccbf; margin-left: 10px; }
 #sunlightStaff span { display: block; width: 120px; text-align: center;}
+.staffPhoto img.staffIndividual  { width: 100px; border: 2px solid #d1ccbf; }
+.staffPhoto { float: left; margin-right: 25px; width: 100px;}
+.staffDetails { float: left; width: 475px;}
+.individualTwitter { text-decoration: none; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; text-align: center; display: block;}
+.individualTwitter span { margin-left: 5px;}
+
+#individualPosts .entry-title { font-size: 120%; text-decoration: none; line-height:25px;}
+#individualPosts .entryMetaData { display: inline; margin-left: 5px;}
+#individualPosts li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px; }
 
 #funders ol { margin-left: 25px; width: 500px;}
 #whowefund ol { width: 560px; margin-left: 25px;}
@@ -264,3 +279,5 @@ article { margin-bottom: 50px;}
 footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #e5e4db;}
 .left { float: left; margin-right: 25px;}
 .right { float: right; margin-left: 25px;}
+
+.listMarker li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px;}

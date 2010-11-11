@@ -106,6 +106,7 @@ INSTALLED_APPS = (
 	'wordpress',
 	'disqus',
 	'haystack',
+	'simplepay',
     'gunicorn',
 )
 
