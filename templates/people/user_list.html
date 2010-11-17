@@ -2,17 +2,15 @@
 
 {% block title %}The Sunlight Foundation Team - {{ block.super }}{% endblock %}
 
+{% block navclass %}{{ block.super }} staff{% endblock %}
+
 {% block js %}
 	<script type="text/javascript" src="http://dnn506yrbagrg.cloudfront.net/pages/scripts/0011/1949.js"> </script>
 {% endblock %}
 
 {% block content %}
 
-	{% if interns %}
-		<h2>Sunlight Foundation Interns</h2>
-	{% else %}
-		<h2>The Sunlight Foundation Team</h2>
-	{% endif %}
+	<h2>The Sunlight Foundation Team</h2>
 	
     <ul id="sunlightStaff">
 
@@ -86,6 +84,7 @@
 
         {% if interns %}
         <li>
+            <h3>Interns</h3>
             <ol>
                 {% for person in interns %}
                 <li>
@@ -120,11 +119,7 @@
     </ul>
 
     <p class="tip">
-		{% if interns %}
-	        Photos by <a href="http://sunlightfoundation.com/people/lmccann/">Laurenellen McCann</a>.
-		{% else %}
-	        Most photos (on solid backgrounds) by <a href="http://sunlightfoundation.com/people/lmccann/">Laurenellen McCann</a> and <a href="http://www.flickr.com/photos/avelino_maestas/">Avelino Maestas</a>.
-		{% endif %}
+		Photos by <a href="http://sunlightfoundation.com/people/lmccann/">Laurenellen McCann</a> and <a href="http://www.flickr.com/photos/avelino_maestas/">Avelino Maestas</a>.
     </p>
 
 {% endblock %}

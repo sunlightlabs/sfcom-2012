@@ -2,6 +2,8 @@
 
 {% block title %}{{ person.get_full_name }} - {{ block.super }}{% endblock %}
 
+{% block navclass %}{{ block.super }} staff{% endblock %}
+
 {% block content %}
 
 	<h2>Sunlight Foundation Staff</h2>

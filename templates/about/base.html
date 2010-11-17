@@ -3,16 +3,15 @@
 {% block bodyclass %}about{% endblock %}
 
 {% block sidebar %}
-	<nav class="interiorNav">
+	<nav class="{% block navclass %}interiorNav{% endblock %}">
 		<ul>
-			<li class="active"><a href="/about/">About Sunlight</a></li>
-			<li><a href="/about/board/">Board and Advisors</a></li>
-			<li><a href="/people/">Our Team</a></li>
-			<li><a href="/people/interns/">Our Interns</a></li>
-			<li><a href="/about/funding/">How We're Funded</a></li>
-			<li><a href="/about/grants/">Who We Fund</a></li>
-			<li><a href="/about/history/">A Brief History...</a></li>
-			<li><a href="/donate/">Donate to Sunlight</a></li>
+			<li class="about"><a href="/about/">About Sunlight</a></li>
+			<li class="board"><a href="/about/board/">Board and Advisors</a></li>
+			<li class="staff"><a href="/people/">Our Team</a></li>
+			<li class="funding"><a href="/about/funding/">How We're Funded</a></li>
+			<li class="grants"><a href="/about/grants/">Who We Fund</a></li>
+			<li class="history"><a href="/about/history/">A Brief History...</a></li>
+			<li class="donate"><a href="/donate/">Donate to Sunlight</a></li>
 		</ul>
 	</nav>
 {% endblock %}

@@ -37,7 +37,6 @@ urlpatterns += patterns('django.views.generic.simple',
 urlpatterns += patterns('sunlightfoundation.com.views',
     url(r'^grants/application/$', 'grant_application', name='grant_application'),
     url(r'^people/$', 'people_index', name='people_list'),
-    url(r'^people/interns/$', 'people_interns', name='people_interns_list'),
     url(r'^people/(?P<username>[\w-]+)/$', 'people_detail', name="people_detail"),
     url(r'^preview/bumpers/$', 'preview_bumpers', name='preview_bumpers'),
 )
