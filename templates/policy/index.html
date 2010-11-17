@@ -1,7 +1,7 @@
-{% extends "base_sidebar.html" %}
+{% extends "policy/base.html" %}
 
-{% block title %}Policy Center - {{ block.super }}{% endblock %}
-{% block bodyclass %}policy{% endblock %}
+{% block subnavclass %}{{ block.super }} policy{% endblock %}
+
 {% block content %}
 
 	<h2 >Policy</h2>
@@ -39,18 +39,4 @@
 
 	<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
 
-{% endblock %}
-{% block sidebar %}
-<nav class="interiorNav">
-	<ul>
-		<li><a href="/about/">About Sunlight</a></li>
-		<li><a href="/about/board/">Board and Advisors</a></li>
-		<li><a href="/people/">Our Team</a></li>
-		<li><a href="/people/interns/">Our Interns</a></li>
-		<li><a href="/about/funding/">How We're Funded</a></li>
-		<li><a href="/about/grants/">Who We Fund</a></li>
-		<li><a href="/about/history/">A Brief History...</a></li>
-		<li><a href="/donate/">Donate to Sunlight</a></li>
-	</ul>
-</nav>
 {% endblock %}

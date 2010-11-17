@@ -1,6 +1,8 @@
-{% extends "base_sidebar.html" %}
+{% extends "policy/base.html" %}
 
 {% block title %}The Public Online Information Act - {{ block.super }}{% endblock %}
+
+{% block subnavclass %}{{ block.super }} poia{% endblock %}
 
 {% block content %}
 
@@ -13,13 +15,13 @@
 				Read The Bill: [<a href="http://hdl.loc.gov/loc.uscongress/legislation.111hr4858">House</a>, <a href="http://tester.senate.gov/Legislation/upload/public_online_information_act.pdf">Senate</a>]
 			</li>
 			<li>
-				<a href="http://www.sunlightfoundation.com/policy/documents/summary-public-online-information-act">Summary of POIA</a>
+				<a href="/policy/documents/summary-public-online-information-act">Summary of POIA</a>
 			</li>
 			<li>
-				<a href="http://www.sunlightfoundation.com/policy/documents/plain-language-poia">POIA in plain language</a>
+				<a href="/policy/documents/plain-language-poia">POIA in plain language</a>
 			</li>
 			<li>
-				<a href="http://www.sunlightfoundation.com/policy/documents/coalition-organizations-calls-for-hearings">Orgs. call for hearings</a>
+				<a href="/policy/documents/coalition-organizations-calls-for-hearings">Orgs. call for hearings</a>
 			</li>
 		</ul>
 	</aside>
@@ -62,6 +64,7 @@
 {% endblock %}
 
 {% block sidebar %}
+	{{ block.super }}
 	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 	<script>
 		new TWTR.Widget({
