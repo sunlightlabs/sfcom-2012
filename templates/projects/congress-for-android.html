@@ -1,0 +1,70 @@
+{% extends "base_full.html" %}
+
+{% block css %}
+	<style type="text/css">
+		<!--
+		.description { margin-bottom: 100px; }
+		.screenshots { float: right; margin: 0 0 0 30px; width: 350px; }
+		.screenshots li { float: left; margin: 10px 20px; }
+		.features { float: left; width: 450px; }
+		.features h3 { border-bottom: 1px solid #DAD2BA; }
+		.features li { list-style-type: disc; margin-left: 20px; }
+		.reviews { float: right; width: 450px; }
+		.reviews h3 { border-bottom: 1px solid #DAD2BA; }
+		img.icon-large { float: left; margin: 0 20px 20px 0; width: 200px; }
+		img.qrcode { float: right; margin: 0 20px 0 40px; width: 120px; }
+		blockquote { font-style: italic; margin: 0 0 30px 20px; }
+		-->
+	</style>
+{% endblock %}
+
+{% block content %}
+
+	<div class="description">
+
+		<ul class="screenshots">
+			<li><a href="http://assets.sunlightlabs.com/blog/android/legislator.png"><img src="http://assets.sunlightlabs.com/blog/android/legislator-thumb.png" width="125"></a></li>
+			<li><a href="http://assets.sunlightlabs.com/blog/android/bill.png"><img src="http://assets.sunlightlabs.com/blog/android/bill-thumb.png" width="125"></a></li>
+			<li><a href="http://assets.sunlightlabs.com/blog/android/roll.png"><img src="http://assets.sunlightlabs.com/blog/android/roll-thumb.png" width="125"></a></li>
+			<li><a href="http://assets.sunlightlabs.com/blog/android/menu.png"><img src="http://assets.sunlightlabs.com/blog/android/menu-thumb.png" width="125"></a></li>
+		</ul>
+		
+		<img src="http://assets.sunlightfoundation.com.s3.amazonaws.com/images/Android_Congress.png" class="icon-large">
+
+		<h2>Congress for your Android Phone!</h2>
+
+		<p>'Congress' is a free pocket directory that allows you to quickly get detailed information on your members of Congress, and what they're up to.  Follow the latest bills and laws, see recent votes, and read about your legislators in the news.</p>
+		<p>From the palm of their hands, concerned citizens can better engage with their government, and Capitol Hill regulars can finally ditch those hefty yellow books.</p>
+		<p>The application is built on the <a href="http://services.sunlightlabs.com/docs/Sunlight_Congress_API/" target="_blank">Sunlight Congress API</a> and <a href="http://govtrack.us">GovTrack.us</a>.  Like all Sunlight projects, 'Congress' is open source software, and we encourage developers to play and reuse the code on <a href="http://github.com/sunlightlabs/congress">Github</a>. For iPhone users, check out the Sunlight Foundation’s <a href="http://realtimecongress.org/" target="_blank">Real Time Congress</a> application that allows users to	 access government documents and activity as they go live.</p>
+
+		<img src="http://assets.sunlightlabs.com/blog/android/congress-market-qrcode.png" class="qrcode">
+
+		<p>Computerworld named 'Congress' one of the  '<a href="http://www.computerworld.com/s/article/9178832/10_free_Android_apps_for_staying_in_the_know?taxonomyId=77&amp;pageNumber=2" target="_blank">10 free Android apps  for staying in the know</a>'. The app has also been previously featured on the Android Market at large, and T-Mobile's Market channel.</p>
+		<p>Download the app from the Android Market, or scan this QR Code.</p>
+		
+	</div>
+
+	<div class="features">
+		<h3>Features</h3>
+		<ul>
+			<li>Read the latest bills and laws, and see how the votes were cast.</li>
+			<li>Find and call your members of Congress by using your phone's location, a zipcode, a last name, a state, or by committee.</li>
+			<li>Real-time notifications of votes, laws, and all sorts of other Congressional activities.</li>
+			<li>View your lawmakers' latest votes, committee memberships, or a map of their district.</li>
+			<li>Read tweets and watch videos from lawmakers' Twitter and YouTube accounts, or follow them in the news.</li>
+			<li>Easily share interesting bills across your social networks.</li>
+			<li>Add favorite lawmakers or bills to your dashboard, or create shortcuts on your Android home screen.</li>
+		</ul>
+	</div>
+
+
+	<div class="reviews">
+		<h3>Reviews</h3>
+		<blockquote>"Final Verdict: Yes, I’m skipping over the pros and cons mostly because I think this app is absolutely fantastic. If you’re an activist or are simply interested in political issues, you owe it to yourself and, dare I say it, your country, to download this app." - <a href="http://androidandme.com/2010/05/applications/congress-for-android-social-activism-just-got-a-bit-more-mobile/">Android and Me</a></blockquote>
+		<blockquote>"This application is very useful and informative, in today’s society  understanding and staying aware of what our elected officials are doing  is very vital. If you’re the type of person who is concerned or just	 curious to see what’s going on with Capitol Hill then this is the app	for you!" - <a href="http://www.androidtapp.com/congress/" target="_blank">Android Tapp</a></blockquote>
+		<blockquote>"With this kind of information in our hands, mobile applications like Congress	could signal the beginning of a new era of citizen interest and	 participation in government, too. I hope so.  Thanks, Sunlight Labs, for producing this." - <a href="http://blog.richardposey.com/2010/05/congress-in-palm-of-my-hand.html" target="_blank">Richard Posey</a></blockquote>
+	</div>
+	
+	<div class="clear"></div>
+	
+{% endblock %}

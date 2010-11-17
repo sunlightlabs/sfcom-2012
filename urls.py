@@ -54,9 +54,14 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^legal/terms/$', 'direct_to_template', {"template": "legal/terms.html"}),
 )
 
+# projects - to be made into a real django app
+urlpatterns += patterns('django.views.generic.simple',
+    url(r'^projects/congress-for-android/$', 'direct_to_template', {"template": "projects/congress-for-android.html"}),
+)
 
 # primary redirects
 urlpatterns += patterns('django.views.generic.simple',
+    url(r'^android/congress/', 'redirect_to', {'url': '/projects/congress-for-android/'}),
     url(r'^contact/thanks/$', 'direct_to_template', {"template": "contact_thanks.html"}),
     url(r'^financial-reform/', 'redirect_to', {'url': '/projects/2010/financial-reform/'}),
     url(r'^grants/application/thanks/$', 'direct_to_template', {"template": "grant_application_thanks.html"}),
