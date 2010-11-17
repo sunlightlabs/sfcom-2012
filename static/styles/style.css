@@ -97,6 +97,22 @@ body.about nav li.nav-about, body.blog nav li.nav-blog, body.policy nav li.nav-p
 .interiorNav a { text-decoration: none; text-transform: uppercase; font-size: 110%; margin-bottom: 15px; display: block;}
 .interiorNav { height: auto;}
 
+/* interiorNav for about pages */
+nav.about li.about { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.about li.about a { color: #fff; }
+nav.board li.board { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.board li.board a { color: #fff; }
+nav.staff li.staff { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.staff li.staff a { color: #fff; }
+nav.funding li.funding { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.funding li.funding a { color: #fff; }
+nav.grants li.grants { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.grants li.grants a { color: #fff; }
+nav.history li.history { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.history li.history a { color: #fff; }
+nav.donate li.donate { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.donate li.donate a { color: #fff; }
+
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto; min-height: 800px;}
 #searchform { float: right; margin-top: 40px;}
