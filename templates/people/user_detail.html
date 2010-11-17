@@ -6,47 +6,64 @@
 
 	<h2>Sunlight Foundation Staff</h2>
 
-    {% with person.get_profile as profile %}
-    <div class="module">
-        <div class="staffPhoto">
-            <img class="staffIndividual" src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_{{ person.username }}.jpg">
+	{% with person.get_profile as profile %}
 	
-            {% if profile.twitter_username %}
-                <a class="individualTwitter" href="http://twitter.com/{{ profile.twitter_username }}">
-                    <img src="http://assets.sunlightfoundation.com/images/blog/social_icons/help/twitter.png">
-                    <span>Follow Me</span>
-                </a>
-            {% endif %}
-    	</div>
-		<div class="staffDetails">
-		    <h3>{{ person.get_full_name }}</h3> 
-		    <p>{{ profile.bio|safe }}</p>
+		<div class="module">
+			<div class="staffPhoto">
+				<img class="staffIndividual" src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_{{ person.username }}.jpg">
+				{% if profile.twitter_username %}
+					<a class="individualTwitter" href="http://twitter.com/{{ profile.twitter_username }}">
+						<img src="http://assets.sunlightfoundation.com/images/blog/social_icons/help/twitter.png">
+						<span>Follow Me</span>
+					</a>
+				{% endif %}
+			</div>
+			<div class="staffDetails">
+				<h3>{{ person.get_full_name }}</h3> 
+				<p>{{ profile.bio|safe }}</p>
+			</div>
+			<div class="clear"></div>
 		</div>
-		<div class="clear"></div>
-    </div>
+
+		<div id="employeeDonate" class="module">
+			<h4>Donate to Sunlight Foundation in honor of {{ person.get_full_name }}</h4>
+			{% comment %}
+			<p><strong>We are having a problem with our payment processor. Please check back tomorrow.</strong></p>
+			{% if form %}
+				{% simplepay_form form %}
+			{% endif %}
+			{% endcomment %}
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+				<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			<div class="clear"></div>
+		</div>
+	
 		{% if recent_posts %}
-	<div class="module" id="individualPosts">
-            <h3>Recent blog contributions from {{ person.first_name }} {{ person.last_name }}</h3>
-        
-    		{% with recent_posts as entries %}
-            	{% if entries %}
-    				<ul class="hfeed">
-    		    		{% for entry in entries %}
-    		    			<li class="hentry">
-    		        			<a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
-    		        			<div class="entryMetaData">
-        		        			<time datetime="{{ entry.date_published.isoformat }}" class="published" pubdate>
-                				        {{ entry.date_published|date:"F j, Y" }}
-                				    </time>
-                				</div>
-    		    			</li>
-    		    		{% endfor %}
-    				</ul>
-    			{% endif %}
-			{% endwith %}
-		</div>
+			<div class="module" id="individualPosts">
+				<h3>Recent blog contributions from {{ person.first_name }} {{ person.last_name }}</h3>
+				{% with recent_posts as entries %}
+					{% if entries %}
+						<ul class="hfeed">
+							{% for entry in entries %}
+								<li class="hentry">
+									<a href="{{ entry.link }}" class="entry-title" rel="bookmark">{{ entry.title|safe }}</a>
+									<div class="entryMetaData">
+										<time datetime="{{ entry.date_published.isoformat }}" class="published" pubdate>
+											{{ entry.date_published|date:"F j, Y" }}
+										</time>
+									</div>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				{% endwith %}
+			</div>
 		{% endif %}
 		
-    {% endwith %}
+	{% endwith %}
 
 {% endblock %}

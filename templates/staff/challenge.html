@@ -1,0 +1,35 @@
+{% extends "staff/base.html" %}
+
+{% block meta %}
+	<meta http-equiv="refresh" content="60">
+{% endblock %}
+
+{% block css %}
+	<style>
+		table#scorecard { border-collapse: collapse; }
+		table#scorecard td, table#scorecard th {
+			padding: 5px 5px;
+		}
+		table#scorecard .description { width: 200px; }
+		table#scorecard .score { text-align: right; width: 100px; }
+	</style>
+{% endblock %}
+
+{% block content %}
+	<table id="scorecard">
+		<thead>
+			<tr>
+				<th class="description">Name</th>
+				<th class="score">Score</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for button in buttons %}
+				<tr>
+					<td class="description">{{ button.description|slice:"44:" }}</td>
+					<td class="score">{{ button.score }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}
