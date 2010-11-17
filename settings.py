@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'debug_toolbar',
     'mediasync',
+    'sunlightfoundation',
     'sunlightfoundation.presscenter',
     'sunlightfoundation.policy',
     'sunlightfoundation.spammer',
