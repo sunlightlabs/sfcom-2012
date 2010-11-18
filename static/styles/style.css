@@ -151,7 +151,7 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #joinBtn { background: url(../images/btn_join.png) top center no-repeat; width: 76px; height: 30px;}
 #joinBtn:hover { background: url(../images/btn_join.png) bottom center no-repeat; }
 #searchform button { background: url(../images/magnifier.png) 1px 6px no-repeat; float: right; margin-left: -30px; position: relative; padding: 5px 10px;}
-#dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 30px;}
+#dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 50px;}
 #dsq-content .dsq-post-footer #dsq-post-button:hover { background: url(../images/btn_comment.png) bottom center no-repeat;}
 .donatebutton { background: url(../images/btn_donate_google.png) top center no-repeat; width: 240px; height: 54px;}
 .donatebutton:hover { background: url(../images/btn_donate_google.png) bottom center no-repeat; }
@@ -201,7 +201,7 @@ li { margin-bottom: 15px;}
 
 .morelink { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; background: url(../images/icon_viewMore.png) left 4px no-repeat; padding-left: 20px; font-size: 130%; text-decoration: none; margin-top: 30px; display: block;}
 
-.entryMetaData, .specificBlog, .toolCategory, .tip { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; }
+.entryMetaData, .specificBlog, .toolCategory, .tip { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; color: #766f6b; }
 address { float: left; margin-right: 10px; }
 footer address { font-style: normal;}
 .toolCategory { margin-bottom: 10px; display: block;}
@@ -300,7 +300,6 @@ article { margin-bottom: 50px;}
 
 /*blog styles*/
 .entry-content ol { list-style-type: decimal;}
-.entry-content footer { }
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
@@ -309,3 +308,16 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 .right { float: right; margin-left: 25px;}
 
 .listMarker li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px;}
+
+#disqus_thread .dsq-full-comment { border-left: 1px solid #E5E4DB; margin-bottom: 20px; padding: 5px 10px; background-color: #F3F2E9;}
+#mainContent #dsq-content .dsq-comment-header { background: none; border: none; border-bottom: 1px dashed #dddcd4; padding-bottom: 3px;}
+#dsq-content .dsq-comment-header cite { display: block; margin-top: 10px;}
+#mainContent #dsq-content .dsq-comment-header td  { vertical-align: top;}
+#mainContent #dsq-content .dsq-comment-header-time, #dsq-content a.dsq-reply-link { padding: 0; font-family: Georgia,"Times New Roman",Times,serif; font-style: oblique; color: #766f6b;}
+#dsq-content .dsq-comment-footer-right { float: right;}
+#dsq-content .dsq-comment-footer-right span { float: left;}
+#dsq-content .dsq-comment-footer-right .dsq-like button { background: url(../images/btn_like.png) top right no-repeat; width: 50px; height: 16px; border: none;}
+#dsq-content .dsq-comment-footer-right .dsq-like button:hover { background: url(../images/btn_like.png) bottom right no-repeat; }
+#dsq-content .dsq-comment-footer-reply button { background: url(../images/btn_reply.png) top right no-repeat; width: 60px; height: 16px; border: none;}
+#dsq-content .dsq-comment-footer-reply button:hover { background: url(../images/btn_reply.png) bottom right no-repeat; }
+#dsq-content .dsq-global-toolbar-likes .dsq-group { display: none;}
