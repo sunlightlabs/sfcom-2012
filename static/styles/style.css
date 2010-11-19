@@ -276,7 +276,7 @@ article { margin-bottom: 50px;}
 #fundersKey li{ margin-bottom: 0;}
 .grantee { font-weight: bold;}
 
-#signUp { background: url(../images/bg_signups.jpg) top center no-repeat; margin: 50px -30px 0; padding: 0 30px; min-height: 358px;}
+#signUp { background: url(../images/bg_signups.jpg) top center no-repeat; margin: 0 -30px 0; padding: 0 30px; min-height: 358px;}
 #signUp p { font-size: 140%; line-height: 25px; -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); padding-top: 60px; text-align: center; color: #fff;}
 #contactAddress { font-size: 130%; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique;}
 
@@ -299,13 +299,16 @@ article { margin-bottom: 50px;}
 .share-buzz { background: url(../images/icons/16/google-buzz.png) top left no-repeat;}
 
 /*blog styles*/
-.entry-content ol { list-style-type: decimal;}
+.entry-content ol { list-style-type: decimal; margin-left: 40px;}
+.entry-content ul { list-style-type: disc; margin-left: 40px;}
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
 footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #e5e4db;}
-.left { float: left; margin-right: 25px;}
-.right { float: right; margin-left: 25px;}
+.alignleft { float: left; margin-right: 25px;}
+.alignright { float: right; margin-left: 25px;}
+.aligncenter { display: block; margin:0 auto; margin-bottom: 25px;}
+
 
 .listMarker li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px;}
 
