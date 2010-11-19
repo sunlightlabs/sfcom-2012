@@ -56,3 +56,7 @@ def contact(request):
     return render_to_response("contact/form.html",
                               { "form": form },
                               context_instance=RequestContext(request))
+
+def projects(request):
+    return render_to_response("projects/index.html",
+                              context_instance=RequestContext(request))

@@ -2,6 +2,8 @@
 
 {% block title %}{{ object.headline }} - {{ block.super }}{% endblock %}
 
+{% block subnavclass %}{{ block.super }} {{ pub_type }}{% endblock %}
+
 {% block js %}
 	<script type="text/javascript" src="http://assets.sunlightfoundation.com/scripts/anarchy_media/anarchy.js"></script>
 {% endblock %}

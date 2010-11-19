@@ -3,6 +3,8 @@
 
 {% block title %}Press Articles &amp; Mentions - {{ block.super }}{% endblock %}
 
+{% block subnavclass %}{{ block.super }} {{ pub_type }}{% endblock %}
+
 {% block content %}
  
 	{% if only_editorials %}
