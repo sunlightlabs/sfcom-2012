@@ -14,11 +14,11 @@
     
     {% if post.excerpt %}
         <div class="entry-summary">
-            {{ post.excerpt|safe|markdown }}
+            {{ post.excerpt|safe|linebreaks|markdown }}
         </div>
     {% else %}
         <div class="entry-content">
-            {{ post.content|safe|markdown }}
+            {{ post.content|safe|linebreaks|markdown }}
         </div>
     {% endif %}
 
