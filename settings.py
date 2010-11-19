@@ -143,6 +143,7 @@ MEDIASYNC = {
     'JOINED': {
         'styles/thefoundation.css': (
             'styles/style.css',
+			'styles/style-projects.css',
             'styles/carousel.css',
             'styles/screen.css',
         ),
