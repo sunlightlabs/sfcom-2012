@@ -3,3 +3,4 @@
 local_settings.py
 sunlightfoundation
 index_whoosh/
+.DS_Store
