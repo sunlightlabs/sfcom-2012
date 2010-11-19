@@ -125,6 +125,22 @@ nav.documents li.documents a { color: #fff; }
 nav.success li.success { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
 nav.success li.success a { color: #fff; }
 
+/* interiorNav for press pages */
+nav.press li.press { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.press li.press a { color: #fff; }
+nav.experts li.experts { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.experts li.experts a { color: #fff; }
+nav.releases li.releases { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.releases li.releases a { color: #fff; }
+nav.articles li.articles { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.articles li.articles a { color: #fff; }
+nav.editorials li.editorials { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.editorials li.editorials a { color: #fff; }
+nav.oped li.oped { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.oped li.oped a { color: #fff; }
+nav.webmentions li.webmentions { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.webmentions li.webmentions a { color: #fff; }
+
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto; min-height: 800px;}
 #searchform { float: right; margin-top: 40px;}
