@@ -1,4 +1,5 @@
 {% extends "about/base.html" %}
+{% load media %}
 
 {% block title %}Donate to the Sunlight Foundation{% endblock %}
 
@@ -29,6 +30,26 @@
 			
 		</form>
 		
+	</div>
+	<div class="store"> 
+		<h3 class="withTip">Need more incentive to donate?</h3>
+		<p class="tip">Choose one of our nifty products below and donate through our shopify page.</p>
+		
+		<ul>
+			<li>
+				<a title="Superhero Shirt" href="http://donate.sunlightfoundation.com/products/superhero-shirt"> <img src={% media_url "images/shirt.jpg" %} width="148" height="148" alt="Shirt" /></a>
+				<a class="buttonLink donate10" title="$10 Donation" href="http://donate.sunlightfoundation.com/products/superhero-shirt">$10 Donation</a>
+			</li>
+			<li>
+				<a title="Tote This" href="http://donate.sunlightfoundation.com/products/tote"><img src={% media_url "images/tote.jpg" %} width="148" height="148" alt="Tote" /></a>
+				<a class="buttonLink donate15" title="$15 Donation" href="http://donate.sunlightfoundation.com/products/tote">$15 Donation</a>
+			</li>
+			<li>
+				<a title="Caffeinate Me" href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img src={% media_url "images/mug.jpg" %} width="148" height="148" alt="Mug" /></a>
+				<a class="buttonLink donate10" title="$10 Donation"  href="http://donate.sunlightfoundation.com/products/caffeinate-me">$10 Donation</a>
+			</li>	
+		</ul>
+					
 	</div>
 	
 	{% block campaigncontent %}		
