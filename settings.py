@@ -145,6 +145,7 @@ MEDIASYNC = {
         'styles/thefoundation.css': (
             'styles/style.css',
 			'styles/style-projects.css',
+			'styles/style-policy.css',
             'styles/carousel.css',
             'styles/screen.css',
         ),
