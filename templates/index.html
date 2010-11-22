@@ -45,7 +45,7 @@
 		<div id="outreachBlock">
 		    <div id="join">
     			<p>Become a part of the open government community <span class="tip">and get updates on what we're up to by</span> <b>signing up below</b></p>
-    			<form action="#" method="post" id="mailinglistform">
+    			<form action="/mailinglist/subscribe/" method="post" id="mailinglistform">
     				{% csrf_token %}
     				<ul>
     					<li>
@@ -54,7 +54,7 @@
     					</li>
     					<li>
     						<label for="id_zipcode">ZIP Code</label>
-    						<input class="transparent" type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
+    						<input class="transparent" type="text" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
     					</li>
     					<li>
     					    <button id="joinBtn" type="submit">
@@ -123,7 +123,7 @@
 		<p>The Sunlight Foundation uses cutting-edge technology and ideas to make government transparent and accountable.</p>
 	</div>
 	<div class="module" id="explore">
-	    <h2><a href="#">Explore our projects</a></h2>
+	    <h2><a href="/projects/">Explore our projects</a></h2>
     	<ul>
     		<li>
     			<img src="http://dummyimage.com/40x40/999/fff.png&amp;text=icon">
@@ -144,7 +144,7 @@
             	<div class="clear"></div>
     		</li>
     	</ul>
-    	<a href="#" class="morelink">View all projects</a>
+    	<a href="/projects/" class="morelink">View all projects</a>
 	</div>
 	<div class="module">
     	<h2 class="withTip">Join Us</h2>
