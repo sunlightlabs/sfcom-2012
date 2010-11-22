@@ -24,6 +24,7 @@
 	font-weight: 400;
 	font-size: 18px;
 	color: #8b1809;
+	text-transform: uppercase;
 }
 
 .projIntroSun{
@@ -51,16 +52,17 @@ h3.sectionHeader{
 	width: 425px;
 }
 
-.columnOf2 dt{
+.columnOf2 img{
 	float: left;
 	width: 80px;
 	margin: 0 20px 25px 0;
 }
 
-.columnOf2 dd{
+.columnOf2 .description{
 	float: left;
 	width: 320px;
 	margin: 0 0 25px 0;
+	display: block;
 	
 }
 .visitSite {
@@ -80,13 +82,13 @@ h3.sectionHeader{
 	width: 265px;
 }
 
-.columnOf3 dt{
+.columnOf3 img{
 	float: left;
 	width: 80px;
 	margin: 0 20px 25px 0;
 }
 
-.columnOf3 dd{
+.columnOf3 .description{
 	float: left;
 	width: 165px;
 	margin: 0 0 25px 0;
