@@ -179,6 +179,10 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #dsq-openid-submit-button { background: url(../images/btn_signin.png) top center no-repeat; width: 104px; height: 26px; border: none;}
 #dsq-openid-submit-button:hover { background: url(../images/btn_signin.png) bottom center no-repeat; }
 .dsq-popup-title .dsq-popup-close { background: url(../images/delete_16.png) top right no-repeat; border: none; width: 16px;}
+.donate10 { background: url(../images/btn_donation10.png) top right no-repeat; height: 26px; }
+.donate10:hover { background: url(../images/btn_donation10.png) bottom right no-repeat; }
+.donate15 { background: url(../images/btn_donation15.png) top right no-repeat;  height: 26px;}
+.donate15:hover { background: url(../images/btn_donation15.png) bottom right no-repeat; }
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
@@ -237,7 +241,7 @@ article { margin-bottom: 50px;}
 #popularTags li { float: left; margin-right: 10px; margin-bottom: 0;}
 #popularTags a { text-decoration: none;}
 
-.hentry img { border: 2px solid #d4cfc2;}
+.hentry img, .store img { border: 2px solid #d4cfc2;}
 .photo { float: left; width: 50px; margin-right: 15px;}
 .photo img { width: 50px;}
 .hentry_content { float: left; width: 490px;}
@@ -320,6 +324,8 @@ article { margin-bottom: 50px;}
 .share-delicious { background: url(../images/icons/16/delicious.png) top left no-repeat;}
 .share-digg { background: url(../images/icons/16/digg.png) top left no-repeat;}
 .share-buzz { background: url(../images/icons/16/google-buzz.png) top left no-repeat;}
+
+.store li { float: left; width: 150px; margin: 0 25px 50px;}
 
 /*blog styles*/
 .entry-content ol { list-style-type: decimal; margin-left: 40px;}
