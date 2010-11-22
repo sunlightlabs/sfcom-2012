@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from sunlightfoundation.com.feeds import NetworkFeed, NetworkOnlyFeed
 from sunlightfoundation.presscenter.feeds import PressArticleFeed, PressReleaseFeed
+from thefoundation.feeds import BlogFeed
 from thefoundation.sitemaps import sitemaps
 
 admin.autodiscover()
@@ -95,6 +96,7 @@ urlpatterns += patterns('',
 # primary feeds
 urlpatterns += patterns('',
     url(r'^feeds/congressional_news/', 'django.views.generic.simple.redirect_to', {'url': 'http://feeds.delicious.com/rss/Sunlight_News_Watch'}),
+    url(r'^feeds/blog/$', BlogFeed()),
     url(r'^feeds/latest/$', NetworkFeed()),
     url(r'^feeds/network/$', NetworkOnlyFeed()),
     url(r'^feeds/pressarticles/$', PressArticleFeed()),
@@ -105,9 +107,9 @@ urlpatterns += patterns('',
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^rss.xml', 'redirect_to', {'url': '/feeds/latest/'}),
     url(r'^aggregator/', 'redirect_to', {'url': '/feeds/latest/'}),
-    url(r'^atom/feed/', 'redirect_to', {'url': 'http://blog.sunlightfoundation.com/feed/atom/'}),
-    url(r'^blog/feed/', 'redirect_to', {'url': 'http://blog.sunlightfoundation.com/feed/atom'}),
-    url(r'^blog/atom/', 'redirect_to', {'url': 'http://blog.sunlightfoundation.com/feed/atom/'}),
+    url(r'^atom/feed/', 'redirect_to', {'url': '/feeds/blog/'}),
+    url(r'^blog/feed/', 'redirect_to', {'url': '/feeds/blog/'}),
+    url(r'^blog/atom/', 'redirect_to', {'url': '/feeds/blog/'}),
     url(r'^feed/sunlightblogs.php', 'redirect_to', {'url': '/feeds/network/'}),
     url(r'^feed/sunlightpressrelease.php', 'redirect_to', {'url': '/feeds/pressreleases/'}),
     url(r'^feed/sunlightpress.php', 'redirect_to', {'url': '/feeds/pressarticles/'}),
