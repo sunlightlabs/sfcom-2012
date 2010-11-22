@@ -34,7 +34,5 @@ python-openid
 gunicorn
 
 # from old
-# feedparser
-# -e git://github.com/sunlightlabs/django-feedinator.git#egg=feedinator
 # -e git://github.com/sunlightlabs/django-failwhale.git#egg=failwhale
 # python-twitter

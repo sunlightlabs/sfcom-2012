@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from sunlightfoundation.com.feeds import NetworkFeed, NetworkOnlyFeed
 from sunlightfoundation.presscenter.feeds import PressArticleFeed, PressReleaseFeed
+from thefoundation.sitemaps import sitemaps
 
 admin.autodiscover()
 
@@ -23,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^staff/', include('googleauth.urls')),
     url(r'^staff/', include('sunlightfoundation.staff.urls')),
     url(r'^superpacs/', include('sunlightfoundation.superpacs.urls')),
+    url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     url(r'^', include('mediasync.urls')),
     url(r'^', include('thefoundation.legacy.urls')),
     url(r'^$', 'thefoundation.views.index', name='index'),
