@@ -8,3 +8,13 @@
 #press_nav_box ul.press_year_navigation li { margin-bottom: 5px; }
 #press_nav_box ul.press_month_navigation li { display: inline; margin: 0 5px; padding: 0; }
 #press_nav_box ul.press_month_navigation { display: inline; }
+
+.expertsimg{
+	float: left;
+}
+
+.expertbio{
+	width: 479px;
+	margin-left: 20px;
+	float: left;
+}

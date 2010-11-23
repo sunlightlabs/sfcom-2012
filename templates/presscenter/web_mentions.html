@@ -10,14 +10,32 @@
 	<p>Beyond our press mentions, the Sunlight Foundation keeps tabs on our presence across the web by tagging and archiving blog mentions on <a href="http://www.delicious.com/sunlight_foundation">Delicious</a>.</p>
 
 	{% if entries %}
-		<ul>
-			{% for entry in entries %}
-				<li>
-					<a href="{{ entry.link }}">{{ entry.title }}</a>
-					<div>{{ entry.summary|safe }}</div>
-				</li>
-			{% endfor %}
-		</ul>
+	<div class="module ">
+
+		{% for entry in entries %}
+		<article class="poia">
+		    	<div class="docs {{ press_articles.get_article_type_display }}">
+		    		<header>
+		    			<h4>
+							<a href="{{ entry.link }}">{{ entry.title }}</a>
+						</h4>
+					</header>
+					<p>
+						{{ entry.summary|safe }}
+					</p>
+			   	</div>
+	    </article>
+    		{% endfor %}
+	</div>
 	{% endif %}
+	
+	    
+	
+
+	
+	
+	
+	
+	
 	
 {% endblock %}
