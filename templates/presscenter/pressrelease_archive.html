@@ -27,7 +27,7 @@
 							</h4>
 						</header>
 						<p>
-							<span class="specificBlog">{{ press_release.publication_date|date:"F j, Y" }} </span>&mdash;
+							<span class="specificBlog">{{ object.publication_date|date:"F j, Y" }} </span>&mdash;
 							{{ object.teaser|safe }}
 						</p>
 				   	</div>
@@ -35,6 +35,7 @@
 	
 			{% endfor %}		
 		</div>
+
 	{% endif %}
 
 {% endblock %}
