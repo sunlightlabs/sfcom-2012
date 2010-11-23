@@ -7,11 +7,12 @@
 	<h2>Search for Sunlight</h2>
 	
 	<form action="/search/" method="get" id="searchresultform">
-		<label for="id_q">Search</label>
+		<label for="id_q" class="tip">Not quite what you were looking for? Search again!</label>
 		<input class="transparent" type="search" name="q" id="id_q" placeholder="search SunlightFoundation.com" value="{{ query }}">
-		<button type="submit">
+		<button id="search" type="submit">
 		   <span>Search</span>
 		</button>
+		<div class="clear"></div>
 	</form>
 			
 	{% if query %}

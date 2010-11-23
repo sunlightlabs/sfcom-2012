@@ -183,6 +183,8 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 .donate10:hover { background: url(../images/btn_donation10.png) bottom right no-repeat; }
 .donate15 { background: url(../images/btn_donation15.png) top right no-repeat;  height: 26px;}
 .donate15:hover { background: url(../images/btn_donation15.png) bottom right no-repeat; }
+#search { background: url(../images/btn_search.png) top right no-repeat; width: 98px; height: 26px;}
+#search:hover { background: url(../images/btn_search.png) bottom right no-repeat; }
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
@@ -288,7 +290,7 @@ article { margin-bottom: 50px;}
 .staffDetails { float: left; width: 475px;}
 .individualTwitter { text-decoration: none; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; text-align: center; display: block;}
 .individualTwitter span { margin-left: 5px;}
-#employeeDonate { -moz-border-radius:5px 5px 5px 5px; background-color: #FCFBF6; border: 1px solid #E5E4DB; padding:20px 20px 10px; margin-top: 25px; text-align: center;}
+#employeeDonate { -moz-border-radius: 5px; -webkit-border-radius: 5px; background-color: #FCFBF6; border: 1px solid #E5E4DB; padding:20px 20px 10px; margin-top: 25px; text-align: center;}
 #employeeDonate input { border: none; margin: 0 auto;}
 
 #individualPosts .entry-title { font-size: 120%; text-decoration: none; line-height:25px;}
@@ -330,6 +332,12 @@ article { margin-bottom: 50px;}
 .store li { float: left; width: 150px; margin: 0 25px 50px;}
 
 .indent { margin-left:25px;}
+
+#searchresultform label { margin-right: 10px; display: block; margin-bottom: 5px;}
+#searchresultform { -moz-border-radius: 5px; -webkit-border-radius: 5px; background-color: #FCFBF6; border:1px solid #E5E4DB; padding: 10px 15px 12px; margin-bottom: 25px;}
+#searchresultform input { border:1px solid #CDCBC5; float: left; margin-right: 15px;}
+
+.infographicImg { max-width: 940px; border: 1px solid #D1CCBF;}
 
 /*blog styles*/
 .entry-content ol { list-style-type: decimal; margin-left: 40px;}

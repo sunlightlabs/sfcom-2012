@@ -58,6 +58,13 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^policy/success/$', 'direct_to_template', {"template": "policy/success.html"}),
     url(r'^legal/privacy/$', 'direct_to_template', {"template": "legal/privacy.html"}),
     url(r'^legal/terms/$', 'direct_to_template', {"template": "legal/terms.html"}),
+    url(r'^infographics/bluedog-fire-2009/$', 'direct_to_template', {"template": "infographics/bluedog-fire-2009.html"}),
+    url(r'^infographics/dodd-shelby/$', 'direct_to_template', {"template": "infographics/dodd-shelby.html"}),
+    url(r'^infographics/healthsectorcontributions/$', 'direct_to_template', {"template": "infographics/healthsectorcontributions.html"}),
+    url(r'^infographics/reconciliation/$', 'direct_to_template', {"template": "infographics/reconciliation.html"}),
+    url(r'^infographics/senate-fire-ag/$', 'direct_to_template', {"template": "infographics/senate-fire-ag.html"}),
+    url(r'^infographics/telecom-lobby/$', 'direct_to_template', {"template": "infographics/telecom-lobby.html"}),
+    url(r'^infographics/lincoln/energy/$', 'direct_to_template', {"template": "infographics/lincoln_energy.html"}),
 )
 
 # projects - to be made into a real django app
