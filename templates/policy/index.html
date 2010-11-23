@@ -35,14 +35,27 @@
 	</div>
 	<div class="module">
 		<h3 class="sectionspace">Recent Policy Documents</h3>
-		<ul id="document_link" class="docs">
+		
+	
+
 		{% for feature_document in feature_documents %} 
-				<li>
-					<h4><a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a></h4>
-					<p>{{ feature_document.summary }}</p>
-				</li>
+		<article class="poia">
+	    	<div id="document_link" class="docs">
+	    		<header>
+	    			<h4>
+						<a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a>
+	    
+					</h4>
+				</header>
+				<p>
+					{{ feature_document.summary }}
+				</p>
+		   	</div>
+	    </article>
 		{% endfor %}
-		</ul>
+
+
+
 
 		<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
 	</div>

@@ -69,7 +69,6 @@
 						{{ feature_poianew.summary }}
 					</p>
 			   	</div>
-	    	<div class="clear"></div>
 	    </article>			
 		{% endfor %}
 	
@@ -78,14 +77,23 @@
 	<div class="module">
 	
 		<h3 class="sectionspace">POIA Resources</h3>
-		<ul id="document_link" class="docs">
-			{% for feature_poiaresource in feature_poiaresources %}
-				<li>
-					<h4><a href="{{ feature_poiaresource.url }}">{{ feature_poiaresource.title }}</a></h4>
-					<p>{{ feature_poiaresource.summary }}</p>
-				</li>
-			{% endfor %}
-		</ul>
+	
+	{% for feature_poiaresource in feature_poiaresources %}
+		<article class="poia">
+		    	<div id="document_link" class="docs">
+		    		<header>
+		    			<h4 class="">
+		    				<a href="{{ feature_poiaresource.url }}">{{ feature_poiaresource.title }}</a>
+						</h4>
+					</header>
+					<p>
+						{{ feature_poiaresource.summary }}
+					</p>
+			   	</div>
+	    </article>
+	
+	{% endfor %}
+	
 	</div>
 	
 {% endblock %}
