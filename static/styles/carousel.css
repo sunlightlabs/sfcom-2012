@@ -12,19 +12,19 @@
 }
 
 .carousel ul li {
-	left: -560px;
+	left: -500px;
 	position: relative;
 	float: left;
 	height: 140px;
-	width: 480px;
+	width: 420px;
 	padding: 10px 40px 0;
 }
 
 .carousel .imgHolder { float: left; width: 55px; margin-right: 15px;}
-.featureContent { float: left; width: 410px; }
+.featureContent { float: left; width: 350px; }
 
 .carouselBtn { float: left; width: 35px; text-indent: -9999em; display: block; width: 30px; height: 43px; margin-top: 65px;}
 .carousel-previous { background: url(../images/btn_previous.png) top left no-repeat;}
 .carousel-previous:hover { background: url(../images/btn_previous.png) bottom left no-repeat;}
-.carousel-next { background: url(../images/btn_next.png) top left no-repeat;}
+.carousel-next { background: url(../images/btn_next.png) top left no-repeat; position: relative; right: -585px; top: -160px;}
 .carousel-next:hover { background: url(../images/btn_next.png) bottom left no-repeat;}

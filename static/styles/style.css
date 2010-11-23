@@ -155,12 +155,13 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 
 #outreachBlock_wrapper { background: url(../images/featureBar_wrapper.jpg) top center repeat-x; margin-top: 10px;}
 #outreachBlock { background: url(../images/featureBar.jpg) top center no-repeat; height: 108px; padding-top: 10px; color: #fefefe;}
+#outreachBlock span { color: #fefefe;}
 #outreachBlock p { font-size:130%; line-height: 23px; margin-bottom:10px;}
 #events { float: left; width: 444px;}
 #events strong { text-transform: uppercase; font-size: 120%; margin-top: 3px; display: block;}
 #events .morelink { color: #fff; margin-top: 20px;}
 #main { background: #F8F6EC url(../images/below_green_bg.png) top center repeat-x; border-top:3px solid #F3F1EC;}
-.home #main { border: none; }
+.thefoundation #main { border: none; }
 
 #donateBtn { background: url(../images/btn_donate.png) top center no-repeat; width: 240px; height: 54px; margin-left: 20px;}
 #donateBtn:hover { background: url(../images/btn_donate.png) bottom center no-repeat; }
@@ -178,6 +179,10 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #dsq-openid-submit-button { background: url(../images/btn_signin.png) top center no-repeat; width: 104px; height: 26px; border: none;}
 #dsq-openid-submit-button:hover { background: url(../images/btn_signin.png) bottom center no-repeat; }
 .dsq-popup-title .dsq-popup-close { background: url(../images/delete_16.png) top right no-repeat; border: none; width: 16px;}
+.donate10 { background: url(../images/btn_donation10.png) top right no-repeat; height: 26px; }
+.donate10:hover { background: url(../images/btn_donation10.png) bottom right no-repeat; }
+.donate15 { background: url(../images/btn_donation15.png) top right no-repeat;  height: 26px;}
+.donate15:hover { background: url(../images/btn_donation15.png) bottom right no-repeat; }
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
@@ -192,7 +197,7 @@ input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-bo
 #id_zipcode { width: 80px;}
 #signUp form { margin-top: 30px; -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); margin-left: 40px;}
 
-article header { padding: 0; width: auto; margin: 0 0 30px;}
+article header { padding: 0; width: auto; margin: 0 0 15px;}
 #recent-posts header { margin: 0 0 5px;}
 #recent-posts article { margin-bottom: 30px;}
 .entry-title { font-size: 220%; line-height: 32px;}
@@ -207,10 +212,13 @@ li { margin-bottom: 15px;}
 
 #content { width: 600px; float: left; margin-right: 40px; padding: 50px 0; }
 .thefoundation #content { width: 560px; margin-right: 30px;}
+.blog #content { width: 680px; margin-right: 30px; }
 #content-full { width: 100%; margin-right: 30px; padding: 50px 0; }
 #sidebar {  float: left; background: url(../images/sideColumn_middleSm.png) center top repeat-y; width: 300px;}
 .thefoundation #sidebar { width: 360px; background: url(../images/sideColumn_middle.png) center top repeat-y;}
 .thefoundation #sidebarInterior { width: 300px; background: url(../images/sideColumn_bottom.jpg) center bottom no-repeat;}
+.blog #sidebar { width: 240px; background: url(../images/sideColumn_middleSmall.png) center top repeat-y;}
+.blog #sidebarInterior { width: 180px; background: url(../images/sideColumn_bottomSmall.png) center bottom no-repeat;}
 #sidebarInterior { background: url(../images/sideColumn_bottomSm.jpg) center bottom no-repeat; padding: 50px 30px 98px;  width: 240px;}
 
 .transparent{ -moz-opacity: 0.6 !important; -webkit-opacity: 0.6!important; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)" !important; filter: alpha(opacity=60) !important; opacity: 0.6 !important;}
@@ -224,21 +232,24 @@ footer address { font-style: normal;}
 
 article { margin-bottom: 50px;}
 
-#mission-statement { color: #ca5703; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 160%; line-height: 27px; background: url(../images/icon_curleyBrace.png) center bottom no-repeat; padding-bottom: 50px;}
+#mission-statement, #callOut { color: #ca5703; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 160%; line-height: 27px; }
+#callOut { background:url('../images/bg_projectsHeader.png') top right no-repeat; height: 59px; padding: 25px 15px;}
+#mission-statement { background: url(../images/icon_curleyBrace.png) center bottom no-repeat; padding-bottom: 50px;}
 #popularTags { background: url(../images/popularTags.jpg) center bottom no-repeat; padding: 15px 25px;  margin-bottom: 30px;}
 
 #popularTags h2 { float: left; margin-right: 15px; text-transform: uppercase; font-size: 120%; margin-bottom: 0;}
 #popularTags li { float: left; margin-right: 10px; margin-bottom: 0;}
 #popularTags a { text-decoration: none;}
 
-.hentry img { border: 2px solid #d4cfc2;}
+.hentry img, .store img { border: 2px solid #d4cfc2;}
 .photo { float: left; width: 50px; margin-right: 15px;}
 .photo img { width: 50px;}
 .hentry_content { float: left; width: 490px;}
 
-.module { margin-bottom: 50px;}
+.module { margin-bottom: 45px; padding-bottom: 55px; background: url(../images/projects_flourish.png) bottom center no-repeat;}
 
-#explore img { width: 45px; margin-right: 15px; float: left;}
+#explore li { margin-bottom: 25px;}
+#explore img { display: block; margin: 0 auto 10px;}
 #explore h3 { margin-bottom: 0;}
 .projectDetails { float: left; width: 180px;}
 .social-links li { float: left; height: 16px; padding-left: 25px; margin-bottom: 15px; width: 120px;}
@@ -314,9 +325,12 @@ article { margin-bottom: 50px;}
 .share-digg { background: url(../images/icons/16/digg.png) top left no-repeat;}
 .share-buzz { background: url(../images/icons/16/google-buzz.png) top left no-repeat;}
 
+.store li { float: left; width: 150px; margin: 0 25px 50px;}
+
 /*blog styles*/
 .entry-content ol { list-style-type: decimal; margin-left: 40px;}
 .entry-content ul { list-style-type: disc; margin-left: 40px;}
+.entry-content { padding-left: 10px; border-left: 1px solid #E5E4DB; margin-left: 35px; }
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
@@ -328,6 +342,8 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 
 .listMarker li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px;}
 
+#mainContent #dsq-content #dsq-global-toolbar { margin-bottom: 30px;}
+#disqus_thread { background: url(../images/bg_comments.png) top center no-repeat; padding-top: 10px; margin-top: 70px;}
 #disqus_thread .dsq-full-comment { border-left: 1px solid #E5E4DB; margin-bottom: 20px; padding: 5px 10px; background-color: #F3F2E9;}
 #mainContent #dsq-content .dsq-comment-header { background: none; border: none; border-bottom: 1px dashed #dddcd4; padding-bottom: 3px;}
 #dsq-content .dsq-comment-header cite { display: block; margin-top: 10px;}
