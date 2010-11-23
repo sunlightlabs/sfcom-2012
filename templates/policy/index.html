@@ -5,7 +5,7 @@
 {% block content %}
 
 	<h2 >Policy</h2>
-	<p>The Sunlight Foundation's policy team is helping to create a more open, transparent government.</p>
+	<h3>The Sunlight Foundation's policy team is helping to create a more open, transparent government.</h3>
 	<p>Our policy work joins issue expertise with an open, innovative approach to advocacy, bringing technology to analysis and lobbying, and adding substantive detail to our vision for digitally empowered governance and citizenship.</p>
     <div id="sectionContact">
     	<h3>Contact</h3>
@@ -19,19 +19,25 @@
     	</div>
     </div>
     
-	<h3>Featured Resource</h3>
-	<ul id="policy_feature" class="docs">
-		<li>
-			<a href="{{ feature_resource.url }}">{{ feature_resource.title }}</a>
-			<p>{{ feature_resource.summary }}</p>
-		</li>
-	</ul>
+	<div class="featuretop">
+	</div>
+	<div class="featurespace">
+		<h3><img width="80" height="22" alt="Projects Flourish" src="../../static/images/projects_flourish.png" class="flourish"> <span class="seeWhat">Featured</span> <span class="projIntroSun">Resource</span></h3>
+		<ul id="policy_feature" class="docs">
+			<li>
+				<h4><a href="{{ feature_resource.url }}">{{ feature_resource.title }}</a></h4>
+				<p>{{ feature_resource.summary }}</p>
+			</li>
+		</ul>
+	</div>
+	<div class="featurebottom">
+	</div>
 
-	<h3>Recent Policy Documents</h3>
+	<h3 class="sectionspace">Recent Policy Documents</h3>
 	<ul id="document_link" class="docs">
 	{% for feature_document in feature_documents %} 
 			<li>
-				<a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a>
+				<h4><a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a></h4>
 				<p>{{ feature_document.summary }}</p>
 			</li>
 	{% endfor %}
@@ -40,3 +46,5 @@
 	<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
 
 {% endblock %}
+
+All data used in this visualization is part of the public record. We would like to thank Capitol Words, Times Developer Network and THe San Francisco Chronicle for helping us gain access.

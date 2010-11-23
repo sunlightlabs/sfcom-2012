@@ -1,3 +1,24 @@
-.policy h3{
+.sectionspace {
 	margin-top: 50px;
+}
+
+ul#document_link li{
+	margin-bottom: 30px;
+}
+
+.featurespace{
+	background:url('../images/featurespace_bg.jpg')center top repeat-y ;
+	padding: 30px 0 20px 0;
+}
+
+.featuretop{
+	background:url('../images/featurespace_top.jpg') center top no-repeat ;
+	width: 604px;
+	height: 8px;
+}
+
+.featurebottom{
+	background:url('../images/featurespace_bottom.jpg') center top no-repeat;
+	width: 604px;
+	height: 18px;
 }
