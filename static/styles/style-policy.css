@@ -46,8 +46,18 @@ ul#document_link li{
 }
 
 article .docs {
-background-color:transparent;
-background-image:url("../images/document_icon.png");
-background-position:left 2px;
-background-repeat:no-repeat;
-padding-left:30px;
+	background-color:transparent;
+	background-image:url("../images/document_icon.png");
+	background-position:left 2px;
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+
+.featurespace .flourish{
+	padding: 4px 4px 0 0;
+	float: left;
+}
+
+.agendaitems li{
+	padding-left: 30px;
+}
