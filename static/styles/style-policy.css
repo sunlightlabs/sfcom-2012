@@ -36,3 +36,18 @@ ul#document_link li{
 	margin-right: 20px;
 	margin-bottom: 10px;
 }
+
+.poia{
+	margin-bottom: 30px;
+}
+
+.poia header{
+	margin-bottom: 0;
+}
+
+article .docs {
+background-color:transparent;
+background-image:url("../images/document_icon.png");
+background-position:left 2px;
+background-repeat:no-repeat;
+padding-left:30px;

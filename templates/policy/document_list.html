@@ -10,7 +10,7 @@
 	<p>Sunlight's policy team prepares testimony, briefings, and presentations that elucidate our policy proposals.</p>
 
 	{% if object_list %}
-		<ul id="document_link" class="docs">
+		<ul id="document_link" class="sectionspace docs">
 			{% for object in object_list %}
 				<li>
 					<h4><a href="{% url policy_document object.slug %}">{{ object.title }}</a></h4>

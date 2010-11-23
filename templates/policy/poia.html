@@ -11,7 +11,8 @@
 	<div class="featuretop">
 	</div>
 	<aside class="featurespace">
-		<h3><img width="80" height="22" alt="Projects Flourish" src="../../static/images/projects_flourish.png" class="flourish"> <span class="seeWhat">Quick</span> <span class="projIntroSun">Links</span></h3>
+		<h3><img width="80" height="22" alt="Projects Flourish" src="../../static/images/projects_flourish.png" class="flourish"> <span class="seeWhat">Quick</span> <span class="projIntroSun">Links</span>
+		</h3>
 		<ul class="quicklinks">
 			<li>
 				Read The Bill: [<a href="http://hdl.loc.gov/loc.uscongress/legislation.111hr4858">House</a>, <a href="http://tester.senate.gov/Legislation/upload/public_online_information_act.pdf">Senate</a>]
@@ -26,12 +27,13 @@
 				<a href="/policy/documents/coalition-organizations-calls-for-hearings">Orgs. call for hearings</a>
 			</li>
 		</ul>
+		<div class="clear"></div>
 	</aside>
-	<div class="clear"></div>
+	
 	<div class="featurebottom">
 	</div>
 	
-	<p>In the age of the Internet, government is transparent only when public information is available online. <a href="http://hdl.loc.gov/loc.uscongress/legislation.111hr4858">The Public Online Information Act</a> (POIA) is legislation, introduced by Rep. Steve Israel in the House and Sen. Jon Tester in the Senate, that embraces a new formula for transparency: public equals online. No longer will antiquated government disclosure practices bury public information in out-of-the-way offices and in outmoded formats.</p>
+	<p class="sectionspace">In the age of the Internet, government is transparent only when public information is available online. <a href="http://hdl.loc.gov/loc.uscongress/legislation.111hr4858">The Public Online Information Act</a> (POIA) is legislation, introduced by Rep. Steve Israel in the House and Sen. Jon Tester in the Senate, that embraces a new formula for transparency: public equals online. No longer will antiquated government disclosure practices bury public information in out-of-the-way offices and in outmoded formats.</p>
 	<p>POIA requires Executive Branch agencies to publish all publicly available information on the Internet in a timely fashion and in user-friendly formats. It also creates an advisory committee to help develop government-wide Internet publication policies.</p>
 
 
@@ -46,8 +48,33 @@
 	</object>
 
 	<h3 class="sectionspace">POIA in the News</h3>
+	
+	
+	
+	{% for feature_poianew in feature_poianews %}
+	<article class="poia">
+	    	<div class="docs">
+	    		<header>
+	    			<h4 class="">
+	    				<a class="bookmark" href="{{ feature_poianew.url }}">{{ feature_poianew.title }}</a>
+					</h4>
+				</header>
+				<p>
+					<span class="specificBlog"> {{ feature_poianew.date_published|date:"m.d.y" }}</span>&mdash;
+					{{ feature_poianew.summary }}
+				</p>
+		   	</div>
+    	<div class="clear"></div>
+    </article>			
+	{% endfor %}
+	
+	
+	
+	
+<!--	
 	<ul id="document_link">
 		{% for feature_poianew in feature_poianews %}
+			
 			<li>
 				<h4><a href="{{ feature_poianew.url }}">{{ feature_poianew.title }}</a></h4>
 				<p>{{ feature_poianew.date_published|date:"m.d.y" }}&mdash;{{ feature_poianew.summary }}</p>
@@ -56,8 +83,25 @@
 	</ul>
 	<a href="/policy/poia/news/" class="morelink">View all POIA articles</a>
 	
+-->	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<h3 class="sectionspace">POIA Resources</h3>
-	<ul id="document_link">
+	<ul id="document_link" class="docs">
 		{% for feature_poiaresource in feature_poiaresources %}
 			<li>
 				<h4><a href="{{ feature_poiaresource.url }}">{{ feature_poiaresource.title }}</a></h4>
