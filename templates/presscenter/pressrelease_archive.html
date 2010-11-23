@@ -12,15 +12,30 @@
     {% release_navigation %}
 
 	{% if latest %}
-		<h3>Recent Press Releases</h3>
-		<ul>
-			{% for object in latest %}
-				<li>
-					<h4><a href="{{ object.get_absolute_url }}">{{ object.headline }}</a></h4>
-					<p>{{ press_release.publication_date|date:"F j, Y" }} - {{ object.teaser|safe }}</p>	
-				</li>
-			{% endfor %}
-		</ul>
+		
+		
+		<div class="module docs">
+			<h3>Recent Press Releases</h3>
+
+				{% for object in latest %}			
+				<article class="poia">
+			    	<div class="docs">
+			    		<header>
+			    			<h4>
+								<a href="{{ object.get_absolute_url }}">{{ object.headline }}</a>
+
+							</h4>
+						</header>
+						<p>
+							<span class="specificBlog">{{ object.publication_date|date:"F j, Y" }} </span>&mdash;
+							{{ object.teaser|safe }}
+						</p>
+				   	</div>
+		    </article>
+	
+			{% endfor %}		
+		</div>
+
 	{% endif %}
 
 {% endblock %}
