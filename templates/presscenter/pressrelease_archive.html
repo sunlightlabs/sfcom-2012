@@ -17,7 +17,7 @@
 			{% for object in latest %}
 				<li>
 					<h4><a href="{{ object.get_absolute_url }}">{{ object.headline }}</a></h4>
-					<p>{{ press_release.publication_date|date:"F j, Y" }} - {{ object.teaser|safe }}</p>	
+					<p>{{ object.publication_date|date:"F j, Y" }} - {{ object.teaser|safe }}</p>	
 				</li>
 			{% endfor %}
 		</ul>
