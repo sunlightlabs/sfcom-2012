@@ -32,83 +32,61 @@
 	
 	<div class="featurebottom">
 	</div>
-	
-	<p class="sectionspace">In the age of the Internet, government is transparent only when public information is available online. <a href="http://hdl.loc.gov/loc.uscongress/legislation.111hr4858">The Public Online Information Act</a> (POIA) is legislation, introduced by Rep. Steve Israel in the House and Sen. Jon Tester in the Senate, that embraces a new formula for transparency: public equals online. No longer will antiquated government disclosure practices bury public information in out-of-the-way offices and in outmoded formats.</p>
-	<p>POIA requires Executive Branch agencies to publish all publicly available information on the Internet in a timely fashion and in user-friendly formats. It also creates an advisory committee to help develop government-wide Internet publication policies.</p>
+	<div class="module">	
+		<p class="sectionspace">In the age of the Internet, government is transparent only when public information is available online. <a href="http://hdl.loc.gov/loc.uscongress/legislation.111hr4858">The Public Online Information Act</a> (POIA) is legislation, introduced by Rep. Steve Israel in the House and Sen. Jon Tester in the Senate, that embraces a new formula for transparency: public equals online. No longer will antiquated government disclosure practices bury public information in out-of-the-way offices and in outmoded formats.</p>
+		<p>POIA requires Executive Branch agencies to publish all publicly available information on the Internet in a timely fashion and in user-friendly formats. It also creates an advisory committee to help develop government-wide Internet publication policies.</p>
 
 
-	<a href="/policy/poia/about/" class="morelink">Read More about POIA</a>
+		<a href="/policy/poia/about/" class="morelink">Read More about POIA</a>
+	</div>
+	<div class="module">	
 
-	<h3 class="sectionspace">A Video Introduction to POIA</h3>
-	<object width="560" height="340">
-		<param name="movie" value="http://www.youtube.com/v/wD8dT236aS4&amp;hl=en_US&amp;fs=1&amp;rel=0&amp;hd=1"></param>
-		<param name="allowFullScreen" value="true"></param>
-		<param name="allowscriptaccess" value="always"></param>
-		<embed src="http://www.youtube.com/v/wD8dT236aS4&amp;hl=en_US&amp;fs=1&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed>
-	</object>
-
-	<h3 class="sectionspace">POIA in the News</h3>
+		<h3 class="sectionspace">A Video Introduction to POIA</h3>
+		<object width="560" height="340">
+			<param name="movie" value="http://www.youtube.com/v/wD8dT236aS4&amp;hl=en_US&amp;fs=1&amp;rel=0&amp;hd=1"></param>
+			<param name="allowFullScreen" value="true"></param>
+			<param name="allowscriptaccess" value="always"></param>
+			<embed src="http://www.youtube.com/v/wD8dT236aS4&amp;hl=en_US&amp;fs=1&amp;rel=0&amp;hd=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="560" height="340"></embed>
+		</object>
+	</div>
+	
+	<div class="module">	
+	
+		<h3 class="sectionspace">POIA in the News</h3>
 	
 	
 	
-	{% for feature_poianew in feature_poianews %}
-	<article class="poia">
-	    	<div class="docs">
-	    		<header>
-	    			<h4 class="">
-	    				<a class="bookmark" href="{{ feature_poianew.url }}">{{ feature_poianew.title }}</a>
-					</h4>
-				</header>
-				<p>
-					<span class="specificBlog"> {{ feature_poianew.date_published|date:"m.d.y" }}</span>&mdash;
-					{{ feature_poianew.summary }}
-				</p>
-		   	</div>
-    	<div class="clear"></div>
-    </article>			
-	{% endfor %}
-	
-	
-	
-	
-<!--	
-	<ul id="document_link">
 		{% for feature_poianew in feature_poianews %}
-			
-			<li>
-				<h4><a href="{{ feature_poianew.url }}">{{ feature_poianew.title }}</a></h4>
-				<p>{{ feature_poianew.date_published|date:"m.d.y" }}&mdash;{{ feature_poianew.summary }}</p>
-			</li>
+		<article class="poia">
+		    	<div class="docs">
+		    		<header>
+		    			<h4 class="">
+		    				<a class="bookmark" href="{{ feature_poianew.url }}">{{ feature_poianew.title }}</a>
+						</h4>
+					</header>
+					<p>
+						<span class="specificBlog"> {{ feature_poianew.date_published|date:"m.d.y" }}</span>&mdash;
+						{{ feature_poianew.summary }}
+					</p>
+			   	</div>
+	    	<div class="clear"></div>
+	    </article>			
 		{% endfor %}
-	</ul>
-	<a href="/policy/poia/news/" class="morelink">View all POIA articles</a>
 	
--->	
+	</div>
 	
+	<div class="module">
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<h3 class="sectionspace">POIA Resources</h3>
-	<ul id="document_link" class="docs">
-		{% for feature_poiaresource in feature_poiaresources %}
-			<li>
-				<h4><a href="{{ feature_poiaresource.url }}">{{ feature_poiaresource.title }}</a></h4>
-				<p>{{ feature_poiaresource.summary }}</p>
-			</li>
-		{% endfor %}
-	</ul>
+		<h3 class="sectionspace">POIA Resources</h3>
+		<ul id="document_link" class="docs">
+			{% for feature_poiaresource in feature_poiaresources %}
+				<li>
+					<h4><a href="{{ feature_poiaresource.url }}">{{ feature_poiaresource.title }}</a></h4>
+					<p>{{ feature_poiaresource.summary }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 	
 {% endblock %}
 

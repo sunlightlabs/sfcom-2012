@@ -7,6 +7,8 @@
 {% block content %}
 	
 	<h2>Sunlight Foundation Policy Documents</h2>
+	<div class="module">	
+
 	<p>Sunlight's policy team prepares testimony, briefings, and presentations that elucidate our policy proposals.</p>
 
 	{% if object_list %}
@@ -19,7 +21,7 @@
 			{% endfor %}
 		</ul>
 	{% endif %}
-	
+
 	{% include "includes/pagination.html" %}
-	
+	</div>
 {% endblock %}

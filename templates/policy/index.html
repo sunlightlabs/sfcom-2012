@@ -33,19 +33,19 @@
 	</div>
 	<div class="featurebottom">
 	</div>
+	<div class="module">
+		<h3 class="sectionspace">Recent Policy Documents</h3>
+		<ul id="document_link" class="docs">
+		{% for feature_document in feature_documents %} 
+				<li>
+					<h4><a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a></h4>
+					<p>{{ feature_document.summary }}</p>
+				</li>
+		{% endfor %}
+		</ul>
 
-	<h3 class="sectionspace">Recent Policy Documents</h3>
-	<ul id="document_link" class="docs">
-	{% for feature_document in feature_documents %} 
-			<li>
-				<h4><a href="/policy/documents/{{ feature_document.slug }}">{{ feature_document.title }}</a></h4>
-				<p>{{ feature_document.summary }}</p>
-			</li>
-	{% endfor %}
-	</ul>
-
-	<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
-
+		<a href="{% url policy_document_list %}" class="morelink">View all policy documents</a>
+	</div>
 {% endblock %}
 
 All data used in this visualization is part of the public record. We would like to thank Capitol Words, Times Developer Network and THe San Francisco Chronicle for helping us gain access.
