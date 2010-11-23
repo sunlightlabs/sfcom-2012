@@ -1,0 +1,18 @@
+{% extends "base_full.html" %}
+{% load media %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block meta %}
+	<meta name="og:title" content="Sunlight Live">
+	<meta name="og:description" content="Sunlight Live coverage of Rep. Charles Rangel's House Ethics Trial">
+	<meta name="og:type" content="website">
+	<!-- meta name="og:image" content="" -->
+	<meta name="og:url" content="http://sunlightfoundation.com/live/">
+	<meta name="og:site_name" content="Sunlight Live">
+	<meta name="fb:admins" content="7812952">
+{% endblock %}
+
+{% block content %}
+    {{ flatpage.content }}
+{% endblock %}

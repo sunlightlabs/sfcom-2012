@@ -3,7 +3,7 @@ $().ready( function() {
 	/* simulate html5 placeholder attribute in unsupported browsers */
     $("input, textarea").placehold();
 	
-	var slideWidth = 480;
+	var slideWidth = 420;
 	$('.carousel ul').css({'width': $('.carousel li').length * slideWidth});
 	$('.carousel ul').prepend($('.carousel li:last'));
 
@@ -25,23 +25,6 @@ $().ready( function() {
 		);
 		ev.preventDefault();
 	});
-
-	/* setup index carousel */
-	// var carousel = $('.carousel ul').jcarousel({
-	// 	scroll: 1,
-	// 	visible: 1,
-	// 	wrap: 'circular',
-	// 	buttonNextHTML: null,
-	// 	buttonPrevHTML: null
-	// });
-	// $('.carousel a.previous').click(function(ev) {
-	// 	carousel.jcarousel('prev');
-	// 	ev.preventDefault();
-	// });
-	// $('.carousel a.next').click(function(ev) {
-	// 	carousel.jcarousel('next');
-	// 	ev.preventDefault();
-	// });
 	
 });
 
