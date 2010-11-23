@@ -21,7 +21,7 @@
     {% article_navigation only_editorials %}
 
 	{% if latest %}
-	
+	<div class="module docs">
 		{% if only_editorials %}
 			<h3>Recent Press Editorials</h3>
 		{% else %}
@@ -32,17 +32,32 @@
 			{% endif %}	
 		{% endif %}	
 	
-		<ul>
-			{% for object in latest %}
-				<li class="{{ object.get_article_type_display }}">
-					<h4><a href="{{ object.get_absolute_url }}">{{ object.publication }} - {{ object.headline }}</a></h4>
-					<p>{{ object.teaser|safe }}</p>
-				</li>
-			{% endfor %}
-		</ul>
 		
+		
+			{% for object in latest %}
+		<article class="poia">
+		    	<div class="docs {{ object.get_article_type_display }}">
+		    		<header>
+		    			<h4>
+							<a href="{{ object.get_absolute_url }}">{{ object.headline }}</a>
+
+						</h4>
+					</header>
+					<p>
+						<span class="specificBlog">{{ object.publication }} </span>&mdash;
+						{{ object.teaser|safe }}
+					</p>
+			   	</div>
+	    </article>
+			{% endfor %}
+		
+		
+				
+	</div>	
 	{% endif %}
 
 	{% include "includes/pagination.html" %}
 
 {% endblock %}
+
+

@@ -19,29 +19,48 @@
 	</div>
     <div class="module docs">
     	<h3>Recent Sunlight Foundation Press Articles</h3>
-     	<ul>
-        	{% for press_articles in press_articles  %}
-    			<li class="{{ press_articles.get_article_type_display }}">
-    				<a href="{{ press_articles.get_absolute_url }}">{{ press_articles.publication }} - {{ press_articles.headline }}</a>
-    				<p>{{ press_articles.teaser|safe }}</p>
-    			</li>
-    		{% endfor %}	
-    	</ul>
+     	
+{% for press_articles in press_articles  %}
+		<article class="poia">
+		    	<div class="docs {{ press_articles.get_article_type_display }}">
+		    		<header>
+		    			<h4>
+							<a href="{{ press_articles.get_absolute_url }}">{{ press_articles.headline }}</a>
+		    
+						</h4>
+					</header>
+					<p>
+						<span class="specificBlog">{{ press_articles.publication }} </span>&mdash;
+						{{ press_articles.teaser|safe }}
+					</p>
+			   	</div>
+	    </article>
+    		{% endfor %}
+
 
     	<a href="/presscenter/articles/" class="morelink">All press mentions</a>
 	</div>
 	<div class="module docs">
     	<h3>Recent Sunlight Foundation Press Releases</h3>
-     	<ul>
-        	{% for press_release in press_releases %}
-    			<li>
-    				<div>
-    					<a href="{{ press_release.get_absolute_url }}">{{ press_release.headline }}</a>
-    					<p>{{ press_release.publication_date|date:"F j, Y" }} - {{ press_release.teaser|safe }}</p>
-    				</div>
-    			</li>
-    		{% endfor %}	
-    	</ul>
+     	
+
+    	{% for press_release in press_releases %}
+		<article class="poia">
+		    	<div class="docs">
+		    		<header>
+		    			<h4>
+							<a href="{{ press_release.get_absolute_url }}">{{ press_release.headline }}</a>
+		    
+						</h4>
+					</header>
+					<p>
+						<span class="specificBlog">{{ press_release.publication_date|date:"F j, Y" }} </span>&mdash;
+						{{ press_release.teaser|safe }}
+					</p>
+			   	</div>
+	    </article>
+		{% endfor %}	
+
 
     	<a href="/presscenter/releases/" class="morelink">All press releases</a>
     </div>
