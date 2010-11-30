@@ -321,7 +321,7 @@ article { margin-bottom: 50px;}
 .adr { display: block; margin-bottom: 8px;}
 .org { font-size: 110%; margin-bottom: 5px; display: block;}
 
-.share-links li{ text-indent: -9999em; display: block; width: 16px; height: 16px;}
+.share-links a { display: block; text-indent: -9999em; width: 16px; height: 16px;}
 .share-facebook { background: url(../images/icons/16/facebook.png) top left no-repeat;}
 .share-twitter { background: url(../images/icons/16/twitter.png) top left no-repeat;}
 .share-reddit { background: url(../images/icons/16/reddit.png) top left no-repeat;}
