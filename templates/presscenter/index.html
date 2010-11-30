@@ -9,48 +9,34 @@
 	<div id="sectionContact">
 	    <h3>Contact</h3>
 	    <img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_gschneider.jpg" class="section_avatar">
-	    <div class="hcard">
-	        <a href="/people/gschneider/">Gabriela <br />Schneider</a>
+	    <div class="vcard">
+	        <a href="/people/gschneider/" class="fn url">Gabriela <br />Schneider</a>
     		<div class="contactDetails">
     		    <span class="title">Communications Director</span>
     		    <span class="tel">(202) 742-1520 ext 236</span>
     		</div>
     	</div>
 	</div>
-    <div class="module docs">
-    	<h3>Recent Sunlight Foundation Press Articles</h3>
-     	
-{% for press_articles in press_articles  %}
-		<article class="poia">
-		    	<div class="docs {{ press_articles.get_article_type_display }}">
-		    		<header>
-		    			<h4>
-							<a href="{{ press_articles.get_absolute_url }}">{{ press_articles.headline }}</a>
-		    
-						</h4>
-					</header>
-					<p>
-						<span class="specificBlog">{{ press_articles.publication }} </span>&mdash;
-						{{ press_articles.teaser|safe }}
-					</p>
-			   	</div>
-	    </article>
-    		{% endfor %}
-
-
-    	<a href="/presscenter/articles/" class="morelink">All press mentions</a>
+	<div id="sectionContact">
+	    <h3>Contact</h3>
+	    <img src="http://assets.sunlightfoundation.com/images/blog/avatars/300/300x300_lbartolomeo.jpg" class="section_avatar">
+	    <div class="vcard">
+	        <a href="/people/lbartolomeo/" class="fn url">Liz<br />Bartolomeo</a>
+    		<div class="contactDetails">
+    		    <span class="title">Communications Manager</span>
+    		    <span class="tel">(202) 742-1520 ext 226</span>
+    		</div>
+    	</div>
 	</div>
-	<div class="module docs">
-    	<h3>Recent Sunlight Foundation Press Releases</h3>
-     	
 
-    	{% for press_release in press_releases %}
-		<article class="poia">
+	<div class="module docs">
+		<h3>Recent Sunlight Foundation Press Releases</h3>
+		{% for press_release in press_releases %}
+			<article class="poia">
 		    	<div class="docs">
 		    		<header>
 		    			<h4>
 							<a href="{{ press_release.get_absolute_url }}">{{ press_release.headline }}</a>
-		    
 						</h4>
 					</header>
 					<p>
@@ -58,10 +44,30 @@
 						{{ press_release.teaser|safe }}
 					</p>
 			   	</div>
-	    </article>
-		{% endfor %}	
-
-
-    	<a href="/presscenter/releases/" class="morelink">All press releases</a>
+	    	</article>
+		{% endfor %}
+		<a href="/presscenter/releases/" class="morelink">All press releases</a>
     </div>
+	
+    <div class="module docs">
+		<h3>Recent Sunlight Foundation Press Articles</h3>
+		{% for press_articles in press_articles  %}
+			<article class="poia">
+			    	<div class="docs {{ press_articles.get_article_type_display }}">
+			    		<header>
+			    			<h4>
+								<a href="{{ press_articles.get_absolute_url }}">{{ press_articles.headline }}</a>
+		    
+							</h4>
+						</header>
+						<p>
+							<span class="specificBlog">{{ press_articles.publication }} </span>&mdash;
+							{{ press_articles.teaser|safe }}
+						</p>
+				   	</div>
+		    </article>
+		{% endfor %}
+		<a href="/presscenter/articles/" class="morelink">All press mentions</a>
+	</div>
+
 {% endblock %}

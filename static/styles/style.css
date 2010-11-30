@@ -262,7 +262,7 @@ article { margin-bottom: 50px;}
 #sectionContact img { width: 70px; float: left; border: 2px solid #d4cfc2; margin-right: 15px;}
 #sectionContact h3 { display: none;}
 #sectionContact .hcard { float: left; width: 300px; padding-top: 10px;}
-#sectionContact a { font-size: 160%; display: block; float: left; line-height: 27px; height: 60px; border-right: 1px dashed #CDCDC9; padding-right: 20px; margin-right: 20px; text-decoration: none;}
+#sectionContact a { font-size: 150%; display: block; float: left; line-height: 27px; height: 60px; border-right: 1px dashed #CDCDC9; padding-right: 20px; margin-right: 20px; text-decoration: none;}
 #sectionContact .title { border-bottom: 1px dashed #e2e2de; padding-bottom: 5px; margin-bottom: 5px; display: block; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique;}
 .contactDetails { float: left;}
 
