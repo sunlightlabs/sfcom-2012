@@ -12,16 +12,17 @@
 }
 
 .carousel ul li {
-	left: -500px;
+	left: -558px;
 	position: relative;
 	float: left;
 	height: 140px;
-	width: 420px;
+	width: 478px;
 	padding: 10px 40px 0;
 }
 
-.carousel .imgHolder { float: left; width: 55px; margin-right: 15px;}
-.featureContent { float: left; width: 350px; }
+.carousel .imgHolder { float: left; margin-right: 20px;}
+.featureContent { float: left; font-size: 115%;}
+.featureContent .morelink { margin-top: 20px;}
 
 .carouselBtn { float: left; width: 35px; text-indent: -9999em; display: block; width: 30px; height: 43px; margin-top: 65px;}
 .carousel-previous { background: url(../images/btn_previous.png) top left no-repeat;}
