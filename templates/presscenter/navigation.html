@@ -1,9 +1,11 @@
 {% if years %}
 <div id="press_nav_box">
+<div class="featuretop"></div>
+<div class="featurespace">
 <ul class="press_year_navigation">
     {% for year in years reversed %}
     <li class="press_year">
-        <a href="/presscenter/{{ press_type }}/{{ year.year }}/">{{ year.year }}</a>:
+        <a class="press_year_link" href="/presscenter/{{ press_type }}/{{ year.year }}/">{{ year.year }} : </a>  
         {% if year.months %}
         <ul class="press_month_navigation">
             {% for month in year.months %}
@@ -20,5 +22,7 @@
     </li>
     {% endfor %}
 </ul>
+</div>
+<div class="featurebottom"></div>
 </div>
 {% endif %}
