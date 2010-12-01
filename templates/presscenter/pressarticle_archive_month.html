@@ -1,5 +1,6 @@
 {% extends "presscenter/base.html" %}
 {% load press %}
+{% load pagination_tags %}
 
 {% block title %}{{ month|date:"F Y" }} Press Articles &amp; Mentions - {{ block.super }}{% endblock %}
 
@@ -15,7 +16,6 @@
 	
     {% article_navigation only_editorials %}
 
-
 	{% if object_list %}
 		<h3>{{ month|date:"F Y" }}</h3>
 		<ul>
@@ -28,6 +28,6 @@
 		</ul>
 	{% endif %}
 
-	{% include "includes/pagination.html" %}
+	{% paginate %}
 	
 {% endblock %}

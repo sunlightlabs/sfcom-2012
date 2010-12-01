@@ -1,9 +1,10 @@
 {% extends "wordpress/base.html" %}
+{% load pagination_tags %}
 
 {% block content %}
     <h3>{{ month|date:"F, Y" }}</h3>
     {% for post in post_list %}
         {% include "wordpress/post_summary.html" %}
     {% endfor %}
-    {% include "includes/pagination.html" %}
+	{% paginate %}
 {% endblock %}
