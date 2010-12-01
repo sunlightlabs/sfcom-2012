@@ -1,4 +1,6 @@
 {% extends "wordpress/base.html" %}
+{% load cache %}
+{% load media %}
 
 {% block content %}
 
@@ -9,4 +11,84 @@
     {% endfor %}
     {% include "includes/pagination.html" %}
     
+{% endblock %}
+
+{% block sidebar %}
+	<div class="module">
+    	<h3 class="withTip">Join Us</h3>
+    	<p class="tip">Follow every post, project, or video on our way to a more transparency government</p>
+    	<ul class="social-links">
+    		<li class="social-facebook">
+    			<a href="http://www.facebook.com/sunlightfoundation" rel="me">Facebook</a>
+    		</li>
+    		<li class="social-twitter">
+    			<a href="http://twitter.com/#!/sunfoundation" rel="me">Twitter</a>
+    		</li>
+    		<li class="social-flickr">
+    			<a href="http://www.flickr.com/sunlightfoundation" rel="me">Flickr</a>
+    		</li>
+    		<li class="social-youtube">
+    			<a href="http://www.youtube.com/sunlightfoundation" rel="me">YouTube</a>
+    		</li>
+    		<li class="social-delicious">
+    			<a href="http://delicious.com/sunlight_foundation" rel="me">Delicious</a>
+    		</li>
+    	</ul>
+    	<div class="clear"></div>
+    </div>
+	<div class="module">
+		{% cache 3600 populartags %}
+		<h3>Popular Tags / Topics</h3>
+		<p>Need a cached template tag for this</p>
+		{% endcache %}
+	</div>
+	<div class="module" id="explore">
+		<h3>Explore Our Other Blogs</h3>
+		<ul>
+			<li>
+				<a href="#">
+					<img alt="reporting icon" src="{% media_url %}/images/icon_reporting.png"/>
+					<div class="projectDetails">
+						<h4>Reporting Group</h4>
+						<span>Digging into data and disclosures</span>
+					</div>
+				</a>
+				<div class="clear"></div>
+			</li>
+			<li>
+				<a href="#">
+					<img alt="Sunlight Labs icon" src="{% media_url %}/images/icon_labs.png"/>
+					<h4>Sunlight Labs</h4>
+					<span>Developers opening America's government</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img alt="Party Time icon" src="{% media_url %}/images/icon_partyTime.png"/>
+					<h4>Party Time</h4>
+					<span>Tracking the congressional fundraising circuit</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<img alt="Open Congress icon" src="{% media_url %}/images/icon_openCongress.png"/>
+					<h4>Open Congress Blog</h4>
+					<span>Everyone can be an insider</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="module">
+		<h3>Recent Sunlight Foundation Projects</h3>
+		<ul>
+			<li><a href="http://publicequalsonline.com">Public=Online</a></li>
+			<li><a href="http://sunlightlabs.com/contests/designforamerica/">Design For America</a></li>
+			<li><a href="http://sunlightfoundation.com/live/">Sunlight Live</a></li>
+			<li><a href="http://realtimecongress.org">Real Time Congress iPhone App</a></li>
+			<li><a href="http://sunlightfoundation.com/android/congress/">Congress: The Android App</a></li>
+			<li><a href="http://sunlightfoundation.com/WhiteHouseVisitors/">White House Visitor Logs</a></li>
+			<li><a href="http://sunlightfoundation.com/opengovernmentdirective/">Open Government Directive</a></li>
+			<li><a href="http://sunlightfoundation.com/projects/expenditures/">House Expenditure Reports</a></li>
+		</ul>	 
+	</div>
 {% endblock %}
