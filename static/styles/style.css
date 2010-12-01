@@ -185,6 +185,8 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 .donate15:hover { background: url(../images/btn_donation15.png) bottom right no-repeat; }
 #search { background: url(../images/btn_search.png) top right no-repeat; width: 98px; height: 26px;}
 #search:hover { background: url(../images/btn_search.png) bottom right no-repeat; }
+#applyBtn { background: url(../images/btn_apply.png) top right no-repeat; width: 140px; height: 26px;}
+#applyBtn:hover { background: url(../images/btn_apply.png) bottom right no-repeat; }
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
@@ -198,6 +200,11 @@ input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-bo
 #id_email { width: 160px;}
 #id_zipcode { width: 80px;}
 #signUp form { margin-top: 30px; -webkit-transform: rotate(-5deg); -moz-transform: rotate(-5deg); margin-left: 40px;}
+
+#grant_application label { float: none;}
+#grant_application input { width: 288px;}
+#grant_application legend { margin-bottom: 25px;}
+#grant_application { margin-top: 0;}
 
 article header { padding: 0; width: auto; margin: 0 0 15px;}
 #recent-posts header { margin: 0 0 5px;}
