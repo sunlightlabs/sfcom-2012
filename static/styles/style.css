@@ -428,3 +428,29 @@ td { padding: 15px;}
 .messages .success { background-color: #dce6ce; border: 2px solid #b6c745;}
 .messages .warning { background-color: #f9dea9; border: 2px solid #e1af00;}
 .messages .error { background-color: #f9cba9; border: 2px solid #ee0f0f;}
+
+
+.logo_downloads li{
+	float: left;
+	display: block;
+	width: 160px;
+	margin-left: 25px;
+	margin-bottom: 30px;
+
+}
+.logo_link{
+	display: block;
+}
+
+.logo_thumb_container{
+	height: 80px;
+}
+
+.logoFor{
+	background: url('../images/logoDownloadHeader.png') top left no-repeat;
+	background-size: 41px 560px;
+	width: 560px;
+	height: 41px;
+	padding: 5px 0 0 25px;
+}
+

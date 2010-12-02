@@ -37,7 +37,7 @@
 		
 			{% for object in latest %}
 		<article class="poia">
-		    	<div class="docs {{ object.get_article_type_display }}">
+		    	<div class="press_article {{ object.get_article_type_display }}">
 		    		<header>
 		    			<h4>
 							<a href="{{ object.get_absolute_url }}">{{ object.headline }}</a>

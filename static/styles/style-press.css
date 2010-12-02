@@ -57,5 +57,21 @@ li.press_year{
 	text-decoration: none;
 }
 
+#press_nav_box label { margin-right: 10px; display: block; margin-bottom: 5px;}
+#press_nav_box { -moz-border-radius: 5px; -webkit-border-radius: 5px; background-color: #FCFBF6; border:1px solid #E5E4DB; padding: 10px 15px 12px; margin-bottom: 25px;}
+#press_nav_box input { border:1px solid #CDCBC5; float: left; margin-right: 15px;}
 
-
+article .press_release {
+	background-color:transparent;
+	background-image:url("../images/press_release.png");
+	background-position:left 2px;
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
+article .press_article {
+	background-color:transparent;
+	background-image:url("../images/press_article.png");
+	background-position:left 2px;
+	background-repeat:no-repeat;
+	padding-left:30px;
+}
