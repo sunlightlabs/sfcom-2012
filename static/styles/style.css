@@ -46,7 +46,7 @@ nav ul, nav li { margin: 0; }
 small { font-size: 85%; }
 strong, th, b { font-weight: bold; }
 td, td img { vertical-align: top; } 
-sub { vertical-align: sub; font-size: smaller; }
+sub { vertical-align: sub; font-size: smaller; line-height:1px;}
 sup { vertical-align: super; font-size: smaller; }
 pre {  padding: 15px;  white-space: pre;  white-space: pre-wrap;  white-space: pre-line;  word-wrap: break-word; }
 textarea { overflow: auto; } 
@@ -401,3 +401,8 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 #dsq-content .dsq-comment-footer-reply button { background: url(../images/btn_reply.png) top right no-repeat; width: 60px; height: 16px; border: none;}
 #dsq-content .dsq-comment-footer-reply button:hover { background: url(../images/btn_reply.png) bottom right no-repeat; }
 #dsq-content .dsq-global-toolbar-likes .dsq-group { display: none;}
+
+/* table styling */
+
+th { text-align: left; padding: 10px 15px;}
+td { padding: 15px;}
