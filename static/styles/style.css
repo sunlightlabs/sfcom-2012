@@ -72,9 +72,9 @@ input:invalid, textarea:invalid { border-radius: 1px;  -moz-box-shadow: 0px 0px 
 .normalForm input, .normalForm textarea { width: 300px;}
 .normalForm { margin-top: 30px;}
 
-::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
-::selection { background:#FF5E99; color:#fff; text-shadow: none; } 
-a:link { -webkit-tap-highlight-color: #FF5E99; } 
+::-moz-selection{ background: #CA5703; color:#fff; text-shadow: none; }
+::selection { background:#CA5703; color:#fff; text-shadow: none; } 
+a:link { -webkit-tap-highlight-color: #CA5703; } 
 
 button, .buttonLink { width: auto; text-indent: -9999em; display: block; border: none; cursor: pointer; }
 .ie7 img { -ms-interpolation-mode: bicubic; }
@@ -411,6 +411,11 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 #dsq-content .dsq-comment-footer-reply button { background: url(../images/btn_reply.png) top right no-repeat; width: 60px; height: 16px; border: none;}
 #dsq-content .dsq-comment-footer-reply button:hover { background: url(../images/btn_reply.png) bottom right no-repeat; }
 #dsq-content .dsq-global-toolbar-likes .dsq-group { display: none;}
+
+#paginator { border-top: 1px dashed #E5E4DB; padding-top: 10px;}
+.next { text-align: right; display: block;}
+.prev { float: left;}
+.numbers { float: left; text-align: center; width: 520px; }
 
 /* table styling */
 
