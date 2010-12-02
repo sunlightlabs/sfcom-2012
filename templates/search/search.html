@@ -23,24 +23,46 @@
 				<li class="{{ result.type }}">
     				{% if result.type == 'post' %}
     					<!-- wordpress post -->
-    					<a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a>    
+    					<img class="searchIcon" src="../../static/images/post.png" alt="Post" title="Post">
+						<div class="search_result_text">
+						<h4><a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a></h4>    
     					<p>{{ result.text|striptags|truncatewords:20 }}</p>
+						</div>
     				{% endif %}
     				{% if result.type == 'feed' %}
     					<!-- feedinator -->
-    					<a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a>
+    					<img class="searchIcon" src="../../static/images/feed.png" alt="Feed" title="Feed">
+						<div class="search_result_text">
+						<h4><a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a></h4>
     					<p>{{ result.text|striptags|truncatewords:20 }}</p>
+						</div>
     				{% endif %}
     				{% if result.type == 'page' %}
     					<!-- flatpage -->
-    					<a href="{{ result.link }}" class="searchTitle">{{ result.title|safe }}</a>
+    					<img class="searchIcon" src="../../static/images/page.png" alt="Page" title="Page">
+						<div class="search_result_text">
+							<h4><a href="{{ result.link }}" class="searchTitle">{{ result.title|safe }}</a></h4>
+						</div>
     				{% endif %}
-    				{% if result.type == 'press_article' or result.type == 'press_release' %}
+    				{% if result.type == 'press_release' %}
     				    <!-- press center -->
-    					<a href="{{ result.object.get_absolute_url }}" class="searchTitle">{{ result.title|safe }}</a>
+    					<img class="searchIcon" src="../../static/images/press_release.png" alt="Press Release" title="Press Release">
+						<div class="search_result_text">
+						<h4><a href="{{ result.object.get_absolute_url }}" class="searchTitle">{{ result.title|safe }}</a></h4>
     					<p>{{ result.summary|striptags|truncatewords:20 }}</p>
+						</div>
     				{% endif %}
+    				{% if result.type == 'press_article' %}
+    				    <!-- press center -->
+    					<img class="searchIcon" src="../../static/images/press_article.png" alt="Press Article" title="Press Article">
+						<div class="search_result_text">
+						<h4><a href="{{ result.object.get_absolute_url }}" class="searchTitle">{{ result.title|safe }}</a></h4>
+    					<p>{{ result.summary|striptags|truncatewords:20 }}</p>
+						</div>
+    				{% endif %}
+
 				</li>
+				<div class="clear"></div>
 				
 			{% empty %}
 				<li>No results found.</li>

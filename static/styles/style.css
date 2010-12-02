@@ -16,9 +16,12 @@ menu, nav, section, summary, time, mark, audio, video {
 }                  
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ul { list-style: none; }
-blockquote, q { quotes:none; }
+blockquote, q { quotes: '»' '«' ;
+	padding-left: 25px;
+	color: #726B68; }
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
+
 a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
 ins { background-color:#ff9; color:#000; text-decoration:none; }
 mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
@@ -187,6 +190,20 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #search:hover { background: url(../images/btn_search.png) bottom right no-repeat; }
 #applyBtn { background: url(../images/btn_apply.png) top right no-repeat; width: 140px; height: 26px;}
 #applyBtn:hover { background: url(../images/btn_apply.png) bottom right no-repeat; }
+#search_results img{
+	width: 16px;
+	height: 16px;
+	margin-right: 14px;
+	margin-top: 2px;
+	float: left;
+}
+
+.search_result_text{
+	float: left;
+	display: block;
+	width: 570px;
+	margin-bottom: 20px;
+}
 
 input, textarea { border: 1px solid #eceae3; -moz-border-radius: 3px; -webkit-border-radius: 3px; padding: 8px 5px 5px;}
 
