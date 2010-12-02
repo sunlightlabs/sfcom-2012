@@ -16,11 +16,18 @@ menu, nav, section, summary, time, mark, audio, video {
 }                  
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ul { list-style: none; }
-blockquote, q { quotes: '»' '«' ;
+blockquote, q { 
+	background:url('../images/quotes.png') top left no-repeat ;
+	quotes: '»' '«' ;
 	padding-left: 25px;
+	margin-left: 15px;
+
 	color: #726B68; }
+	
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
+
+
 
 a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
 ins { background-color:#ff9; color:#000; text-decoration:none; }
