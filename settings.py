@@ -75,6 +75,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'pagination.middleware.PaginationMiddleware',
 )
 
 ROOT_URLCONF = 'thefoundation.urls'
@@ -94,6 +95,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'debug_toolbar',
+    'pagination',
     'mediasync',
     'sunlightfoundation',
     'sunlightfoundation.presscenter',
@@ -104,6 +106,7 @@ INSTALLED_APPS = (
     'sunlightfoundation.earmarkdisclosures',
     'sunlightfoundation.fortune535',
     'sunlightfoundation.signups',
+    'thefoundation',
     'thefoundation.funding',
     'feedinator',
 	'wordpress',

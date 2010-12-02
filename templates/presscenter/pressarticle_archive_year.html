@@ -1,5 +1,6 @@
 {% extends "presscenter/base.html" %}
 {% load press %}
+{% load pagination_tags %}
 
 {% block title %}{{ year }} Press Articles &amp; Mentions - {{ block.super }}{% endblock %}
 
@@ -27,6 +28,6 @@
 		</ul>
 	{% endif %}
 		
-	{% include "includes/pagination.html" %}
+	{% paginate %}
 	
 {% endblock %}

@@ -1,6 +1,7 @@
 {% extends "wordpress/base.html" %}
 {% load cache %}
 {% load media %}
+{% load pagination_tags %}
 
 {% block content %}
 
@@ -9,7 +10,8 @@
     {% for post in post_list %}
         {% include "wordpress/post_summary.html" %}
     {% endfor %}
-    {% include "includes/pagination.html" %}
+
+	{% paginate %}
     
 {% endblock %}
 

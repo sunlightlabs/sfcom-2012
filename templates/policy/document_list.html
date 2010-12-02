@@ -1,4 +1,5 @@
 {% extends "policy/base.html" %}
+{% load pagination_tags %}
 
 {% block title %}Documents - {{ block.super }}{% endblock %}
 
@@ -9,27 +10,28 @@
 	<h2>Sunlight Foundation Policy Documents</h2>
 	<div class="module">	
 
-	<p>Sunlight's policy team prepares testimony, briefings, and presentations that elucidate our policy proposals.</p>
+		<p>Sunlight's policy team prepares testimony, briefings, and presentations that elucidate our policy proposals.</p>
 
-	{% if object_list %}
-	{% for object in object_list %}
-		<article class="poia">
-			<div id="document_link" class="docs">
-				<header>
-					<h4>
-						<a href="{% url policy_document object.slug %}">{{ object.title }}</a>
+		{% if object_list %}
+		{% for object in object_list %}
+			<article class="poia">
+				<div id="document_link" class="docs">
+					<header>
+						<h4>
+							<a href="{% url policy_document object.slug %}">{{ object.title }}</a>
 
-					</h4>
-				</header>
-				<p>
-					{{ object.summary }}
-				</p>
-		   	</div>
-		</article>
-	{% endfor %}
-	{% endif %}
+						</h4>
+					</header>
+					<p>
+						{{ object.summary }}
+					</p>
+			   	</div>
+			</article>
+		{% endfor %}
+		{% endif %}
 
-	{% include "includes/pagination.html" %}
+		{% paginator %}
+		
 	</div>
 {% endblock %}
 
