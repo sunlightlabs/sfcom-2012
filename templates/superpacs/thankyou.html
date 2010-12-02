@@ -1,0 +1,44 @@
+{% extends "base_sidebar.html" %}
+
+{% block title %}Super PAC Sleuths - {{ block.super }}{% endblock %}
+{% block bodyclass %}superpac{% endblock %}
+
+{% block css %}
+	<style>
+	</style>
+{% endblock %}
+
+{% block content %}
+
+	<h2>Super PAC Sleuths</h2>
+	<div>
+		<p>Thank you for signing up. We'll let you know when the sleuthing begins!</p>
+		<p><a href="http://sunlightfoundation.com/superpacs/">Click here</a> to go back to the map and look at other SuperPACs around the country.</p>
+	</div>
+	
+{% endblock %}
+
+{% block sidebar %}
+    <div id="signUp">
+		<p>Become a part of the open government community <span class="tip">and get regular updates from us by</span> <b>signing-up below.</b></p>
+		<form action="/mailinglist/subscribe/" method="post" id="mailinglistform">
+			{% csrf_token %}
+			<ul>
+				<li>
+					<label for="id_email">Email</label>
+					<input class="transparent" type="email" name="email" id="id_email" placeholder="enter your email address">
+				</li>
+				<li>
+					<label for="id_zipcode">ZIP Code</label>
+					<input class="transparent" type="zipcode" name="zipcode" id="id_zipcode" placeholder="and zip code" pattern="[0-9]{5}" maxlength="5">
+				</li>
+				<li>
+				    <button id="joinBtn" type="submit">
+				        <span>Join</span>
+				    </button>
+			    </li>
+			</ul>
+		</form>
+		<div class="clear"></div>
+    </div>    
+{% endblock %}

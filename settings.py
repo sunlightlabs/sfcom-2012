@@ -152,6 +152,7 @@ MEDIASYNC = {
 			'styles/style-projects.css',
             'styles/carousel.css',
             'styles/screen.css',
+            'styles/superpacs.css',
         ),
         'scripts/thefoundation.js': (
             'scripts/jquery.jcarousel.min.js',
