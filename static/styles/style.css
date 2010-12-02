@@ -413,3 +413,26 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 
 th { text-align: left; padding: 10px 15px;}
 td { padding: 15px;}
+.logo_downloads li{
+	float: left;
+	display: block;
+	width: 160px;
+	margin-left: 25px;
+	margin-bottom: 30px;
+
+}
+.logo_link{
+	display: block;
+}
+
+.logo_thumb_container{
+	height: 80px;
+}
+
+.logoFor{
+	background: url('../images/logoDownloadHeader.png') top left no-repeat;
+	background-size: 41px 560px;
+	width: 560px;
+	height: 41px;
+	padding: 5px 0 0 25px;
+}
