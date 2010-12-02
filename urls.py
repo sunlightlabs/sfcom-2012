@@ -65,6 +65,8 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^infographics/senate-fire-ag/$', 'direct_to_template', {"template": "infographics/senate-fire-ag.html"}),
     url(r'^infographics/telecom-lobby/$', 'direct_to_template', {"template": "infographics/telecom-lobby.html"}),
     url(r'^infographics/lincoln/energy/$', 'direct_to_template', {"template": "infographics/lincoln_energy.html"}),
+    url(r'^live/$', 'direct_to_template', {"template": "live/live.html"}),
+    url(r'^live/feedback$', 'direct_to_template', {"template": "live/feedback.html"}),
 )
 
 # projects - to be made into a real django app

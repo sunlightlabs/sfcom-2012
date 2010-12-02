@@ -1,0 +1,96 @@
+{% extends "base_full.html" %}
+
+{% block title %}Sunlight Projects - {{ block.super }}{% endblock %}
+{% block bodyclass %}live{% endblock %}
+
+{% block content %}
+<div id="liveLeft">
+    <div class="smallModule">
+        <h2 class="h3">House Debate on Censure of Rep. Charles Rangel</h2>
+        <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="480" height="296" id="utv818105"><param name="flashvars" value="autoplay=false&amp;brand=embed&amp;cid=2121299&amp;v3=1"/><param name="allowfullscreen" value="true"/><param name="allowscriptaccess" value="always"/><param name="movie" value="http://www.ustream.tv/flash/viewer.swf"/><embed flashvars="autoplay=false&amp;brand=embed&amp;cid=2121299&amp;v3=1" width="480" height="296" allowfullscreen="true" allowscriptaccess="always" id="utv818105" name="utv_n_147790" src="http://www.ustream.tv/flash/viewer.swf" type="application/x-shockwave-flash" /></object>
+    </div>
+
+    <div class="smallModule">
+        <h2 class="h3">Sunlight's Contextual Content & Data Stream</h2>
+        <iframe src="http://live.sunlightlabs.com" frameborder="0" scrolling="no" height="455" width="480"></iframe>
+    </div>
+</div>
+
+<div id="liveRight">
+    <div class="smallModule">
+        <h2 class="h3">Participate Here</h2>
+        <iframe src="http://www.coveritlive.com/index2.php/option=com_altcaster/task=viewaltcast/altcast_code=ecd6edb25c/height=840/width=450" scrolling="no" height="840px" width="450px" frameBorder="0" allowTransparency="true" ><a href="http://www.coveritlive.com/mobile.php/option=com_mobile/task=viewaltcast/altcast_code=ecd6edb25c" >House of Representatives Debate on Censure of Rep. Charles Rangel</a></iframe>
+    </div>
+</div>
+<div class="clear"></div>
+
+<div class="smallModule" id="twitter">
+    <h3>Twitter Search</h3>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: '#rangeltrial OR \"charles rangel\" OR \"charlie rangel\"',
+  interval: 6000,
+  title: 'Sunlight Live',
+  subject: 'Rangel Ethics Trial', 
+  width: 180,
+  height: 330,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+</div>
+<div class="googlecheckout" id="liveDonate">
+    <h3>Like this product? Help us build more of them by donating now.</h3>
+	
+	<form action="https://checkout.google.com/cws/v2/Donations/548702786961191/checkoutForm" id="BB_BuyButtonForm" method="post" name="BB_BuyButtonForm" target="_top">
+		
+		<input name="item_name_1" type="hidden" value="Support the Sunlight Foundation with a Donation"/>
+		<input name="item_description_1" type="hidden" value="The Sunlight Foundation is a non-profit, nonpartisan organization that uses the power of the Internet to catalyze greater government openness and transparency and to provide new tools and resources for media and individuals alike."/>
+		<input name="item_quantity_1" type="hidden" value="1"/>
+		<input name="item_currency_1" type="hidden" value="USD"/>
+		<input name="item_is_modifiable_1" type="hidden" value="true"/>
+		<input name="item_min_price_1" type="hidden" value="0.01"/>
+		<input name="item_max_price_1" type="hidden" value="25000.0"/>
+		<input name="_charset_" type="hidden" value="utf-8"/>
+		
+		<input id="item_price_1" name="item_price_1" type="text" value="10.00" placeholder="donation amount"/>
+		
+		<button class="donatebutton" type="submit">
+			<span>Donate</span>
+		</button>
+		
+	</form>
+	
+</div>
+
+<div class="clear"></div>
+
+<p class="tip">Data provided by <a href="http://opensecrets.org">CRP</a> and the <a href="http://www.fec.gov/">FEC.</a>  Contributions to candidates current as of last filing, 9/30/2010.</p>
+
+<div style="clear:both;">&nbsp;</div>
+</div>
+
+	
+{% endblock %}
