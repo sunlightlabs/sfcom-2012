@@ -3,6 +3,7 @@
 	height: 160px;
 	width: 560px;
 	float: left;
+	position: relative;
 }
 
 .carousel ul {
