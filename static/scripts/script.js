@@ -30,7 +30,7 @@ $().ready( function() {
 		if (carouselUserIntervention) return;
 		carouselNext();
 		setTimeout(carouselAutoAdvance, 10000);
-	}
+	};
 
 	$('a.carousel-next').click(function(ev) {
 		carouselNext();

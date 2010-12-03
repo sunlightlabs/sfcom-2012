@@ -156,7 +156,6 @@ MEDIASYNC = {
             'styles/live.css',
         ),
         'scripts/thefoundation.js': (
-            'scripts/jquery.jcarousel.min.js',
             'scripts/jquery.placehold-0.3.min.js',
             'scripts/plugins.js',
             'scripts/script.js',
