@@ -410,16 +410,9 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 
 #dsq-content .dsq-global-toolbar-likes .dsq-group { display: none;}
 #dsq-content .dsq-comment-footer-reply-tab { display: none;}
-<<<<<<< HEAD
 
-#dsq-content .dsq-post-edit { background: url(../images/btn_edit.png) top right no-repeat; width: 40px; height: 16px; border: none;}
-#dsq-content .dsq-post-edit:hover { background: url(../images/btn_edit.png) bottom right no-repeat; }
-
-#dsq-content .dsq-save-edit { background: url(../images/btn_saveEdit.png) top right no-repeat; width: 133px; height: 26px; border: none; margin-top: 15px;}
-#dsq-content .dsq-save-edit:hover { background: url(../images/btn_saveEdit.png) bottom right no-repeat;}
-=======
 #disqus_thread #dsq-content .dsq-append-post { margin-top: -47px;}
->>>>>>> 48c5d61946c1c8b84a361314fcd258054a6ef908
+
 
 #paginator { border-top: 1px dashed #E5E4DB; padding-top: 10px;}
 .next { text-align: right; display: block;}
