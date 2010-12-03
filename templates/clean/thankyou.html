@@ -1,0 +1,81 @@
+{% extends "base_sidebar.html" %}
+{% load media %}
+{% block bodyclass %}join{% endblock %}
+{% load markup %}
+
+{% block content %}
+
+
+<div class="module">
+	<h2>Thank you for joining Sunlight in the transparency movement!
+	</h2>
+	<p>We'll be updating you with ways you can take action in the coming weeks and months, so stay tuned.
+	</p>
+	<p>We'd also love to hear from you, and there's a bunch of ways we like to do that. You can follow every post, project, or video on our way to a more transparency government.
+	</p>
+	<div class="join-social">
+		<ul class="social-links">
+	   		<li class="social-facebook">
+	   			<a rel="me" href="http://www.facebook.com/sunlightfoundation">Facebook</a>
+	   		</li>
+	   		<li class="social-twitter">
+	   			<a rel="me" href="http://twitter.com/#!/sunfoundation">Twitter</a>
+	   		</li>
+	   		<li class="social-flickr">
+	   			<a rel="me" href="http://www.flickr.com/sunlightfoundation">Flickr</a>
+	   		</li>
+	   		<li class="social-youtube">
+	   			<a rel="me" href="http://www.youtube.com/sunlightfoundation">YouTube</a>
+	   		</li>
+	   		<li class="social-delicious">
+	   			<a rel="me" href="http://delicious.com/sunlight_foundation">Delicious</a>
+	   		</li>
+   		</ul>
+	</div>
+	<div class="clear"></div>
+
+
+<h3 class="sectionspace"> When we write, some of the requests you can expect from us are:
+</h3>
+
+	<ul id="bullet">
+		<li>
+			<p>Making phone calls to your representatives about specific issues</p>
+		</li>
+		<li>
+			<p>Signing petitions that we will submit to congressional leaders demanding their action</p>
+		</li>
+		<li>
+			<p>Laughing at our bad jokes</p>
+		</li>
+		<li>
+			<p>Inviting others you know to join us as well</p>
+		</li>
+		<li>
+			<p><a href="http://meetup.com/sunlightfoundation">Join or host a Sunlight Meetup</a></p>
+		</li>
+	</ul>
+
+<p>Your voice and your actions are absolutely crucial in helping to make government more transparent and accountable ...that's not an exaggeration.</p>
+<p><i>Thank you!</i></p>
+</div>
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+	<div class="module">
+        <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+        <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+        <ul id="storeSidebar">
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+        </ul>    
+        <div class="clear"></div>
+    </div>
+{% endblock %}
