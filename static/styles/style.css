@@ -178,8 +178,8 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #joinBtn { background: url(../images/btn_join.png) top center no-repeat; width: 76px; height: 30px;}
 #joinBtn:hover { background: url(../images/btn_join.png) bottom center no-repeat; }
 #searchform button { background: url(../images/magnifier.png) 1px 6px no-repeat; float: right; margin-left: -30px; position: relative; padding: 5px 10px;}
-#dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 50px;}
-#dsq-content .dsq-post-footer #dsq-post-button:hover { background: url(../images/btn_comment.png) bottom center no-repeat;}
+#disqus_thread #dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 50px; text-indent: -9999em; border: none;}
+#disqus_thread #dsq-content .dsq-post-footer #dsq-post-button:hover { background: url(../images/btn_comment.png) bottom center no-repeat;}
 .donatebutton { background: url(../images/btn_donate_google.png) top center no-repeat; width: 240px; height: 54px;}
 .donatebutton:hover { background: url(../images/btn_donate_google.png) bottom center no-repeat; }
 .sendbutton { background: url(../images/btn_send.png) top center no-repeat; width: 111px; height: 45px; margin-left: 120px; }
@@ -398,7 +398,9 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 
 .listMarker li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px;}
 
-#dsq-content button.dsq-button, button.dsq-button-small { background: none; border: none;}
+#dsq-content button, #dsq-content .dsq-post-footer .dsq-button { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; background: none; background-color: #a93502; border: 2px solid #902a01; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-indent: 0; color: #fff; text-transform: uppercase; padding: 0 8px;}
+#dsq-content button:hover, #dsq-content .dsq-post-footer .dsq-button:hover { background-color: #902d01; border: 2px solid #7b2300;}
+#dsq-content .dsq-post-footer .dsq-button { padding-top: 1px;}
 #mainContent #dsq-content #dsq-global-toolbar { margin-bottom: 30px;}
 #disqus_thread { background: url(../images/bg_comments.png) top center no-repeat; padding-top: 10px; margin-top: 70px;}
 #disqus_thread .dsq-full-comment { border-left: 1px solid #E5E4DB; margin-bottom: 20px; padding: 5px 10px; background-color: #F3F2E9;}
@@ -408,18 +410,19 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 #mainContent #dsq-content .dsq-comment-header-time, #dsq-content a.dsq-reply-link { padding: 0; font-family: Georgia,"Times New Roman",Times,serif; font-style: oblique; color: #766f6b;}
 #dsq-content .dsq-comment-footer-right { float: right;}
 #dsq-content .dsq-comment-footer-right span, #dsq-content .dsq-post-edit { float: left;}
-#dsq-content .dsq-comment-footer-right .dsq-like button { background: url(../images/btn_like.png) top right no-repeat; width: 50px; height: 16px; border: none;}
-#dsq-content .dsq-comment-footer-right .dsq-like button:hover { background: url(../images/btn_like.png) bottom right no-repeat; }
-#dsq-content .dsq-comment-footer-reply button { background: url(../images/btn_reply.png) top right no-repeat; width: 60px; height: 16px; border: none;}
-#dsq-content .dsq-comment-footer-reply button:hover { background: url(../images/btn_reply.png) bottom right no-repeat; }
+
 #dsq-content .dsq-global-toolbar-likes .dsq-group { display: none;}
 #dsq-content .dsq-comment-footer-reply-tab { display: none;}
+<<<<<<< HEAD
 
 #dsq-content .dsq-post-edit { background: url(../images/btn_edit.png) top right no-repeat; width: 40px; height: 16px; border: none;}
 #dsq-content .dsq-post-edit:hover { background: url(../images/btn_edit.png) bottom right no-repeat; }
 
 #dsq-content .dsq-save-edit { background: url(../images/btn_saveEdit.png) top right no-repeat; width: 133px; height: 26px; border: none; margin-top: 15px;}
 #dsq-content .dsq-save-edit:hover { background: url(../images/btn_saveEdit.png) bottom right no-repeat;}
+=======
+#disqus_thread #dsq-content .dsq-append-post { margin-top: -47px;}
+>>>>>>> 48c5d61946c1c8b84a361314fcd258054a6ef908
 
 #paginator { border-top: 1px dashed #E5E4DB; padding-top: 10px;}
 .next { text-align: right; display: block;}
