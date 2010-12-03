@@ -419,7 +419,7 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 #dsq-content .dsq-post-edit:hover { background: url(../images/btn_edit.png) bottom right no-repeat; }
 
 #dsq-content .dsq-save-edit { background: url(../images/btn_saveEdit.png) top right no-repeat; width: 133px; height: 26px; border: none; margin-top: 15px;}
-#dsq-content .dsq-save-edit:hover { background: url(../images/btn_saveEdit.png) bottom right no-repeat;
+#dsq-content .dsq-save-edit:hover { background: url(../images/btn_saveEdit.png) bottom right no-repeat;}
 
 #paginator { border-top: 1px dashed #E5E4DB; padding-top: 10px;}
 .next { text-align: right; display: block;}

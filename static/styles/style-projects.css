@@ -50,7 +50,7 @@ h3.sectionHeader{
 .columnOf2 {
 	float: left;
 	padding: 0 25px 25px 25px;
-	width: 425px;
+	width: 420px;
 }
 
 .columnOf2 img{
@@ -80,7 +80,7 @@ h3.sectionHeader{
 .columnOf3{
 	float: left;
 	padding: 0 25px 25px 25px;
-	width: 265px;
+	width: 263px;
 }
 
 .columnOf3 img{
@@ -91,6 +91,6 @@ h3.sectionHeader{
 
 .columnOf3 .description {
 	float: left;
-	width: 165px;
+	width: 163px;
 	margin: 0 0 25px 0;
 }
