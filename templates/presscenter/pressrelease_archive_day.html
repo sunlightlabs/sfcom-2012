@@ -9,7 +9,7 @@
 
 	<h2>Sunlight Foundation Press Release Archive</h2>
     
-	{% release_navigation %}
+	{% include "presscenter/navigation.html" %}
 
 	{% if object_list %}
 		<h3>Press Releases for {{ month|date:"F Y" }}</h3>	

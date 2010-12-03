@@ -89,6 +89,6 @@ background-image:url('../images/btn_press_nav_submit.png');
 background-position:center bottom;
 background-repeat:no-repeat;
 }
-#month, #year{
+#id_month, #id_year{
 	margin-right: 30px;
 }

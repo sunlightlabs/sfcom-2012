@@ -1,10 +1,12 @@
 {% extends "base_sidebar.html" %}
+{% load media %}
 
 {% block title %}Policy Center - {{ block.super }}{% endblock %}
 
 {% block bodyclass %}policy{% endblock %}
 
 {% block sidebar %}
+<div class="module">
 	<nav class="{% block subnavclass %}interiorNav{% endblock %}">
 		<ul>
 			<li class="policy"><a href="/policy/">Policy Center</a></li>
@@ -14,4 +16,18 @@
 			<li class="success"><a href="/policy/success/">Policy Success</a></li>
 		</ul>
 	</nav>
+</div>
+<div class="module">
+    <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+    <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+    <ul id="storeSidebar">
+        <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+        <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+        <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+        <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+        <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+        <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+    </ul>    
+    <div class="clear"></div>
+</div>
 {% endblock %}
