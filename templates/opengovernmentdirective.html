@@ -1,4 +1,5 @@
 {% extends "base_sidebar.html" %}
+{% load media %}
 {% block bodyclass %}join{% endblock %}
 {% load markup %}
 
@@ -18,61 +19,55 @@ In December 2009, the White House <a href="http://www.whitehouse.gov/blog/2009/1
 
 
 <h4>Relevant Sunlight Blog Posts</h4>
-<ul >
-
-	<li>
-		<h4 class="search_result_text">
-			<a href="http://blog.sunlightfoundation.com/2010/04/12/a-study-in-transparency-the-open-government-directive-the-department-of-labor-and-the-open-data-principles/">A Study in Transparency: The Open Government Directive, the Department of Labor, and the Open Data Principles
-			</a>
-		</h4>
-	</li>
+<ul id="search_results">
 
 	<li class="post">
 		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">
-			<h4 class="search_result_text">
-				<a href="http://blog.sunlightfoundation.com/2010/04/12/what-open-government-plans-could-learn-from-retail-management/">What Open Government plans could learn from retail management
-				</a>
-			</h4>
+		<div class="search_result_text">
+			<h4>
+				<a class="searchTitle" href="http://blog.sunlightfoundation.com/2010/04/12/a-study-in-transparency-the-open-government-directive-the-department-of-labor-and-the-open-data-principles/">A Study in Transparency: The Open Government Directive, the Department of Labor, and the Open Data Principles</a>
+			</h4>    
+		</div>
 	</li>
-
 	<li class="post">
-		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">	
-			<h4 class="search_result_text">
-				<a href="http://blog.sunlightfoundation.com/2010/04/08/open-government-idling-in-the-driveway/">Open Government: idling in the driveway
-				</a>
-			</h4>
+		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">
+		<div class="search_result_text">
+			<h4>
+				<a class="searchTitle" href="http://blog.sunlightfoundation.com/2010/04/12/what-open-government-plans-could-learn-from-retail-management/">What Open Government plans could learn from retail management</a>
+			</h4>    
+		</div>
 	</li>
-
-	<li>
-		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">		
-		<h4 class="search_result_text">
-			<a href="http://blog.sunlightfoundation.com/2009/12/11/three-misconceptions-about-the-open-government-directive/">Three Misconceptions about the Open Government Directive
-			</a>
-		</h4>
+	<li class="post">
+		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">
+		<div class="search_result_text">
+			<h4>
+				<a class="searchTitle" href="http://blog.sunlightfoundation.com/2009/12/11/three-misconceptions-about-the-open-government-directive/">Three Misconceptions about the Open Government Directive</a>
+			</h4>    
+		</div>
 	</li>
-
-	<li>
-		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">			
-		<h4 class="search_result_text">
-			<a href="http://sunlightlabs.com/blog/2009/open-government-directive-developers/">The Open Government Directive for Developers
-			</a>
-		</h4>
+	<li class="post">
+		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">
+		<div class="search_result_text">
+			<h4>
+				<a class="searchTitle" href="http://sunlightlabs.com/blog/2009/open-government-directive-developers/">The Open Government Directive for Developers</a>
+			</h4>    
+		</div>
 	</li>
-
-	<li>
-		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">				
-		<h4 class="search_result_text">
-			<a href="http://blog.sunlightfoundation.com/2009/12/08/a-sneak-peak-at-cabinet-department-open-government-projects/">A Sneak Peak at Cabinet Department Open Government Projects
-			</a>
-		</h4>
+	<li class="post">
+		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">
+		<div class="search_result_text">
+			<h4>
+				<a class="searchTitle" href="http://blog.sunlightfoundation.com/2009/12/08/a-sneak-peak-at-cabinet-department-open-government-projects/">A Sneak Peak at Cabinet Department Open Government Projects</a>
+			</h4>    
+		</div>
 	</li>
-
-	<li>
-		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">					
-		<h4 class="search_result_text">
-			<a href="http://blog.sunlightfoundation.com/2009/12/08/open-government-directive-timelines/">Open Government Directive Timelines
-			</a>
-		</h4>
+	<li class="post">
+		<img title="Post" alt="Post" src="../../static/images/post.png" class="searchIcon">
+		<div class="search_result_text">
+			<h4>
+				<a class="searchTitle" href="http://blog.sunlightfoundation.com/2009/12/08/open-government-directive-timelines/">Open Government Directive Timelines</a>
+			</h4>    
+		</div>
 	</li>
 
 </ul>
@@ -80,6 +75,10 @@ In December 2009, the White House <a href="http://www.whitehouse.gov/blog/2009/1
 <div class="clear"></div>
 
 
+
+
+
+<li><p><a href="http://blog.sunlightfoundation.com/2009/12/08/open-government-directive-timelines/">Open Government Directive Timelines</a></p></li>
 
 
 
@@ -140,4 +139,21 @@ new TWTR.Widget({
 
 
 
+{% endblock %}
+
+
+{% block sidebar %}
+	<div class="module">
+        <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+        <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+        <ul id="storeSidebar">
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+        </ul>    
+        <div class="clear"></div>
+    </div>
 {% endblock %}
