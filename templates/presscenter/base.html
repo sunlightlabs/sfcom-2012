@@ -1,20 +1,36 @@
 {% extends "base_sidebar.html" %}
+{% load media %}
 
 {% block title %}Press - {{ block.super }}{% endblock %}
 
 {% block bodyclass %}press{% endblock %}
 
 {% block sidebar %}
-	<nav class="{% block subnavclass %}interiorNav{% endblock %}">
-		<ul>
-			<li class="press"><a href="/press/">Press Center</a></li>
-			<li class="experts"><a href="/press/experts/">Subject Matter Experts</a></li>
-			<li class="releases"><a href="/press/releases/">Press Releases</a></li>
-			<li class="articles"><a href="/press/articles/">Articles &amp; Mentions</a></li>
-			<li class="editorials"><a href="/press/editorials/">Editorials</a></li>
-			<li class="oped"><a href="/press/oped/">Op-Eds</a></li>
-			<li class="webmentions"><a href="/press/webmentions/">Web Mentions</a></li>
-			<li class="logos"><a href="/press/logos/">Logos</a></li>
-		</ul>
-	</nav>
+    <div class="module">
+    	<nav class="{% block subnavclass %}interiorNav{% endblock %}">
+    		<ul>
+    			<li class="press"><a href="/press/">Press Center</a></li>
+    			<li class="experts"><a href="/press/experts/">Subject Matter Experts</a></li>
+    			<li class="releases"><a href="/press/releases/">Press Releases</a></li>
+    			<li class="articles"><a href="/press/articles/">Articles &amp; Mentions</a></li>
+    			<li class="editorials"><a href="/press/editorials/">Editorials</a></li>
+    			<li class="oped"><a href="/press/oped/">Op-Eds</a></li>
+    			<li class="webmentions"><a href="/press/webmentions/">Web Mentions</a></li>
+    			<li class="logos"><a href="/press/logos/">Logos</a></li>
+    		</ul>
+    	</nav>
+	</div>
+	<div class="module">
+        <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+        <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+        <ul id="storeSidebar">
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+        </ul>    
+        <div class="clear"></div>
+    </div>
 {% endblock %}
