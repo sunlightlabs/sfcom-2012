@@ -4,6 +4,19 @@ $().ready( function() {
 	/* simulate html5 placeholder attribute in unsupported browsers */
     $("input, textarea").placehold();
 	
+	$("form#press-nav-form").submit(function(ev) {
+		var form = $(this);
+		ev.preventDefault();
+		window.location = '/press/' +
+			form.find('input[type=hidden]').val() + '/' + 
+			form.find('select[name=year]').val() + '/' + 
+			form.find('select[name=month]').val() + '/';
+	});
+	
+	
+	/*
+	 * carousel stuff
+	 */
 	var slideWidth = 478;
 	var carouselUserIntervention = false;
 	$('.carousel ul').css({'width': $('.carousel li').length * slideWidth});
