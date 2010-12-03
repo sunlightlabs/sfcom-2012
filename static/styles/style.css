@@ -17,17 +17,15 @@ menu, nav, section, summary, time, mark, audio, video {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 ul { list-style: none; }
 blockquote, q { 
-	background:url('../images/quotes.png') top left no-repeat ;
+	background:url('../images/quotes.png') 12px top no-repeat ;
 	quotes: '»' '«' ;
-	padding-left: 25px;
-	margin-left: 15px;
-
+	margin-left:30px;
+    padding-left:35px;
+    border-left: 1px solid #E5E4DB;
 	color: #726B68; }
 	
 blockquote:before, blockquote:after,
 q:before, q:after { content:''; content:none; }
-
-
 
 a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
 ins { background-color:#ff9; color:#000; text-decoration:none; }
@@ -276,7 +274,7 @@ article { margin-bottom: 50px;}
 #popularTags li { float: left; margin-right: 10px; margin-bottom: 0;}
 #popularTags a { text-decoration: none;}
 
-.hentry img, .store img { border: 2px solid #d4cfc2;}
+.hentry img, .store img, .expertsimg { border: 2px solid #d4cfc2;}
 .photo { float: left; width: 50px; margin-right: 15px;}
 .photo img { width: 50px;}
 .hentry_content { float: left; width: 490px;}
@@ -386,7 +384,6 @@ article { margin-bottom: 50px;}
 /*blog styles*/
 .entry-content ol { list-style-type: decimal; margin-left: 40px;}
 .entry-content ul { list-style-type: disc; margin-left: 40px;}
-.entry-content { padding-left: 10px; border-left: 1px solid #E5E4DB; margin-left: 35px; }
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
@@ -399,6 +396,7 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 .listMarker li { background: url(../images/icon_list.png) left 7px no-repeat; padding-left: 15px;}
 
 #dsq-content button, #dsq-content .dsq-post-footer .dsq-button { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; background: none; background-color: #a93502; border: 2px solid #902a01; -moz-border-radius: 5px; -webkit-border-radius: 5px; text-indent: 0; color: #fff; text-transform: uppercase; padding: 0 8px;}
+#dsq-content button:hover, #dsq-content .dsq-post-footer .dsq-button:hover { background-color: #902d01; border: 2px solid #7b2300;}
 #dsq-content .dsq-post-footer .dsq-button { padding-top: 1px;}
 #mainContent #dsq-content #dsq-global-toolbar { margin-bottom: 30px;}
 #disqus_thread { background: url(../images/bg_comments.png) top center no-repeat; padding-top: 10px; margin-top: 70px;}
@@ -412,7 +410,16 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 
 #dsq-content .dsq-global-toolbar-likes .dsq-group { display: none;}
 #dsq-content .dsq-comment-footer-reply-tab { display: none;}
+<<<<<<< HEAD
+
+#dsq-content .dsq-post-edit { background: url(../images/btn_edit.png) top right no-repeat; width: 40px; height: 16px; border: none;}
+#dsq-content .dsq-post-edit:hover { background: url(../images/btn_edit.png) bottom right no-repeat; }
+
+#dsq-content .dsq-save-edit { background: url(../images/btn_saveEdit.png) top right no-repeat; width: 133px; height: 26px; border: none; margin-top: 15px;}
+#dsq-content .dsq-save-edit:hover { background: url(../images/btn_saveEdit.png) bottom right no-repeat;}
+=======
 #disqus_thread #dsq-content .dsq-append-post { margin-top: -47px;}
+>>>>>>> 48c5d61946c1c8b84a361314fcd258054a6ef908
 
 #paginator { border-top: 1px dashed #E5E4DB; padding-top: 10px;}
 .next { text-align: right; display: block;}
