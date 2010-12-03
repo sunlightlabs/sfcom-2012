@@ -148,6 +148,8 @@ nav.oped li.oped { background: url(../images/nav_arrow.png) top left no-repeat; 
 nav.oped li.oped a { color: #fff; }
 nav.webmentions li.webmentions { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
 nav.webmentions li.webmentions a { color: #fff; }
+nav.logos li.logos { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.logos li.logos a { color: #fff; }
 
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto; min-height: 800px;}
@@ -436,7 +438,7 @@ td { padding: 15px;}
 	float: left;
 	display: block;
 	width: 160px;
-	margin-left: 25px;
+	margin:0 10px 0 25px;
 	margin-bottom: 30px;
 
 }
