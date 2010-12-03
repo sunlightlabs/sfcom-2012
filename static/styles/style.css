@@ -356,11 +356,12 @@ article { margin-bottom: 50px;}
 .org { font-size: 110%; margin-bottom: 5px; display: block;}
 
 .tel-skype {
-	background: url(../images/icons/16/skype.png) top left no-repeat;
+	background: url(../images/icons/16/skype.png) left 2px no-repeat;
 	display: inline-block;
 	height: 16px;
 	width: 16px;
 	text-indent: -9999em;
+	padding-bottom:2px;
 }
 
 .share-links a { display: block; text-indent: -9999em; width: 16px; height: 16px;}

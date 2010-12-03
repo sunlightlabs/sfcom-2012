@@ -1,0 +1,1260 @@
+<html>
+<head>
+    <title>Pass S.482</title>
+    <script type="text/javascript" src="http://media.sunlightprojects.org/s223/scripts/jquery/jquery.js"></script>
+    <script type="text/javascript" src="http://assets.sunlightlabs.com/scripts/jquery-plugins/jquery.tablesorter.js"></script>
+
+
+    <link rel="stylesheet" href="http://media.sunlightprojects.org/s482/css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<!--[if IE ]><link rel="stylesheet" href="http://media.sunlightprojects.org/s482/css/blueprint/ie.css" type="text/css" media="screen, projection" /><![endif]-->
+
+	<link rel="stylesheet" href="http://media.sunlightprojects.org/s482/css/s482.css" type="text/css" media="screen, projection">
+    
+    <link rel="shortcut icon" href="http://media.sunlightprojects.org/s482/images/favicon.ico" type="image/x-icon">
+    
+    <style type="text/css">
+
+	
+    </style>
+<script src="http://services.sunlightlabs.com/brandingbar/hat_js/s482/" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+<div class="column span-24">
+<div class="column span-1">&nbsp;</div>
+<div class="column span-22">
+
+	<a href="index.html" class="tech"><h1 class="technique-eight">
+		<span></span>WE NEED YOUR HELP
+	</h1></a>
+
+<div id="candidates_box">
+	<div id="candidates_explanation">
+		Candidates for the US Senate are the only federal candidates who fail to make their campaign finances available online in a timely fashion.
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript">
+/* on ready */
+$(
+  function() {
+    // register state_select ajax
+    $('#state_select').change( function() {
+      $('#your_senators').load('/pass482/state_senators/' + this.value + '/', null, function() { $('#chosen_senators').fadeIn(); });
+    } );
+  }
+);
+
+$(function() {
+    $("table").tablesorter();
+} );
+</script>
+
+
+
+<!--<div id="header_box">
+<h1 class="header">The Senate is considering a bill S. 482 that would increase the disclosure of campaign contributions to Senate campaigns.</h1>
+</div>-->
+
+
+<div id="considering">The Senate is considering a bill&mdash;S.482&mdash;that would fix this.</div>
+
+<div id="explanation">
+	<p>&#8220;Unfortunately, <span style="color:#000000; font-weight:bold;">one senator</span>, Sen. Roberts, KS, is setting this bill up to fail by tacking on an unnecessary and controversial amendment that would actually decrease transparency and accountability in the Senate.&#8221;</p>
+</div>
+
+<h2 class="fortunately">Fortunately, Helping is as Easy as These 3 Simple Steps.</h2>
+<div id="steps">
+	<ul>
+    <li>Call your senators.</li>
+    <li>Ask your senators if they will co-sponsor S. 482.</li>
+    <li>Ask your senators to oppose the Roberts amendment.</li>	</ul>
+</div>	
+
+<div class="readmore">
+	<a href="about/index.html" class="about_project">Learn More About the Project</a>
+</div>
+
+
+<h2 class="please_select">Please select your state to begin:</h2>
+<div id="step_container">
+<div id="step_1" style="margin-left:100px; margin-top:10px;">
+<form>
+ <h3>
+  <img src="http://media.sunlightprojects.org/s223/images/num_1.png" alt="Step 1" border="0">Select Your State
+
+  <select id="state_select">
+    <option> -------- </option>
+    
+    <option value="AL">Alabama</option>
+    
+    <option value="AK">Alaska</option>
+    
+    <option value="AZ">Arizona</option>
+    
+    <option value="AR">Arkansas</option>
+    
+    <option value="CA">California</option>
+    
+    <option value="CO">Colorado</option>
+    
+    <option value="CT">Connecticut</option>
+    
+    <option value="DE">Delaware</option>
+    
+    <option value="FL">Florida</option>
+    
+    <option value="GA">Georgia</option>
+    
+    <option value="HI">Hawaii</option>
+    
+    <option value="ID">Idaho</option>
+    
+    <option value="IL">Illinois</option>
+    
+    <option value="IN">Indiana</option>
+    
+    <option value="IA">Iowa</option>
+    
+    <option value="KS">Kansas</option>
+    
+    <option value="KY">Kentucky</option>
+    
+    <option value="LA">Louisiana</option>
+    
+    <option value="ME">Maine</option>
+    
+    <option value="MD">Maryland</option>
+    
+    <option value="MA">Massachusetts</option>
+    
+    <option value="MI">Michigan</option>
+    
+    <option value="MN">Minnesota</option>
+    
+    <option value="MS">Mississippi</option>
+    
+    <option value="MO">Missouri</option>
+    
+    <option value="MT">Montana</option>
+    
+    <option value="NE">Nebraska</option>
+    
+    <option value="NV">Nevada</option>
+    
+    <option value="NH">New Hampshire</option>
+    
+    <option value="NJ">New Jersey</option>
+    
+    <option value="NM">New Mexico</option>
+    
+    <option value="NY">New York</option>
+    
+    <option value="NC">North Carolina</option>
+    
+    <option value="ND">North Dakota</option>
+    
+    <option value="OH">Ohio</option>
+    
+    <option value="OK">Oklahoma</option>
+    
+    <option value="OR">Oregon</option>
+    
+    <option value="PA">Pennsylvania</option>
+    
+    <option value="RI">Rhode Island</option>
+    
+    <option value="SC">South Carolina</option>
+    
+    <option value="SD">South Dakota</option>
+    
+    <option value="TN">Tennessee</option>
+    
+    <option value="TX">Texas</option>
+    
+    <option value="UT">Utah</option>
+    
+    <option value="VT">Vermont</option>
+    
+    <option value="VA">Virginia</option>
+    
+    <option value="WA">Washington</option>
+    
+    <option value="WV">West Virginia</option>
+    
+    <option value="WI">Wisconsin</option>
+    
+    <option value="WY">Wyoming</option>
+    
+  </select>
+ </h3>
+</form>
+</div>
+
+<div id="chosen_senators" style="display:none; margin-left:100px;">
+  <div id="step_2">
+   <h3><img src="http://media.sunlightprojects.org/s223/images/num_2.png" alt="Step 2" border="0">Select a Senator to Contact by Phone</h3>
+  </div>
+
+  <div id="your_senators">
+    <!-- filled via ajax call -->
+  </div>
+
+</div> <!-- ends senator box -->
+</div>
+
+
+
+<div class="column span-22">
+
+<div id="total_status_box">
+
+<h3>The Current Status of Senate Wide Support for S.482</h3>
+<!--<p>(Legislators who need to be called are <span class="highlighted">highlighted</span>)</p>-->
+<table>
+<thead>
+<tr>
+    <th class="table_left_pad">Senator<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>State<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Party<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th># Calls<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Cosponsor<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Supports S.482<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+    <th>Likely to Oppose Roberts Amendment<img src="http://media.sunlightprojects.org/s223/images/sort.png" border="0" class="sorter"></th>
+</tr>
+</thead>
+<tbody>
+
+<tr >
+  <td class="table_left_pad"><a href="call/1/index.html" class="row_tot">Daniel Akaka</a></td>
+  <td><a href="call/1/index.html" class="row_tot">HI</a></td>
+  <td><a href="call/1/index.html" class="row_tot">D</a></td>
+  <td><a href="call/1/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/1/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/1/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/1/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/2/index.html" class="row_tot">Lamar Alexander</a></td>
+  <td><a href="call/2/index.html" class="row_tot">TN</a></td>
+  <td><a href="call/2/index.html" class="row_tot">R</a></td>
+  <td><a href="call/2/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/2/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/2/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/2/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/3/index.html" class="row_tot">John Barrasso</a></td>
+  <td><a href="call/3/index.html" class="row_tot">WY</a></td>
+  <td><a href="call/3/index.html" class="row_tot">R</a></td>
+  <td><a href="call/3/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/3/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/3/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/3/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/4/index.html" class="row_tot">Max Baucus</a></td>
+  <td><a href="call/4/index.html" class="row_tot">MT</a></td>
+  <td><a href="call/4/index.html" class="row_tot">D</a></td>
+  <td><a href="call/4/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/4/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/4/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/4/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/5/index.html" class="row_tot">Evan Bayh</a></td>
+  <td><a href="call/5/index.html" class="row_tot">IN</a></td>
+  <td><a href="call/5/index.html" class="row_tot">D</a></td>
+  <td><a href="call/5/index.html" class="row_tot">9  / 10 </a></td>
+  <td><a href="call/5/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/5/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/5/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/6/index.html" class="row_tot">Mark Begich</a></td>
+  <td><a href="call/6/index.html" class="row_tot">AK</a></td>
+  <td><a href="call/6/index.html" class="row_tot">D</a></td>
+  <td><a href="call/6/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/6/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/6/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/6/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/7/index.html" class="row_tot">Michael Bennet</a></td>
+  <td><a href="call/7/index.html" class="row_tot">CO</a></td>
+  <td><a href="call/7/index.html" class="row_tot">D</a></td>
+  <td><a href="call/7/index.html" class="row_tot">8  / 10 </a></td>
+  <td><a href="call/7/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/7/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/7/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/8/index.html" class="row_tot">Bob Bennett</a></td>
+  <td><a href="call/8/index.html" class="row_tot">UT</a></td>
+  <td><a href="call/8/index.html" class="row_tot">R</a></td>
+  <td><a href="call/8/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/8/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/8/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/8/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/9/index.html" class="row_tot">Jeff Bingaman</a></td>
+  <td><a href="call/9/index.html" class="row_tot">NM</a></td>
+  <td><a href="call/9/index.html" class="row_tot">D</a></td>
+  <td><a href="call/9/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/9/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/9/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/9/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/10/index.html" class="row_tot">Kit Bond</a></td>
+  <td><a href="call/10/index.html" class="row_tot">MO</a></td>
+  <td><a href="call/10/index.html" class="row_tot">R</a></td>
+  <td><a href="call/10/index.html" class="row_tot">7  / 10 </a></td>
+  <td><a href="call/10/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/10/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/10/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/11/index.html" class="row_tot">Barbara Boxer</a></td>
+  <td><a href="call/11/index.html" class="row_tot">CA</a></td>
+  <td><a href="call/11/index.html" class="row_tot">D</a></td>
+  <td><a href="call/11/index.html" class="row_tot">26  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/11/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/11/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/11/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/12/index.html" class="row_tot">Sherrod Brown</a></td>
+  <td><a href="call/12/index.html" class="row_tot">OH</a></td>
+  <td><a href="call/12/index.html" class="row_tot">D</a></td>
+  <td><a href="call/12/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/12/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/12/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/12/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/13/index.html" class="row_tot">Sam Brownback</a></td>
+  <td><a href="call/13/index.html" class="row_tot">KS</a></td>
+  <td><a href="call/13/index.html" class="row_tot">R</a></td>
+  <td><a href="call/13/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/13/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/13/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/13/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/14/index.html" class="row_tot">Jim Bunning</a></td>
+  <td><a href="call/14/index.html" class="row_tot">KY</a></td>
+  <td><a href="call/14/index.html" class="row_tot">R</a></td>
+  <td><a href="call/14/index.html" class="row_tot">5  / 10 </a></td>
+  <td><a href="call/14/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/14/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/14/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/15/index.html" class="row_tot">Richard Burr</a></td>
+  <td><a href="call/15/index.html" class="row_tot">NC</a></td>
+  <td><a href="call/15/index.html" class="row_tot">R</a></td>
+  <td><a href="call/15/index.html" class="row_tot">10  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/15/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/15/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/15/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/16/index.html" class="row_tot">Roland Burris</a></td>
+  <td><a href="call/16/index.html" class="row_tot">IL</a></td>
+  <td><a href="call/16/index.html" class="row_tot">D</a></td>
+  <td><a href="call/16/index.html" class="row_tot">16  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/16/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/16/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/16/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/17/index.html" class="row_tot">Robert Byrd</a></td>
+  <td><a href="call/17/index.html" class="row_tot">WV</a></td>
+  <td><a href="call/17/index.html" class="row_tot">D</a></td>
+  <td><a href="call/17/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/17/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/17/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/17/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/18/index.html" class="row_tot">Maria Cantwell</a></td>
+  <td><a href="call/18/index.html" class="row_tot">WA</a></td>
+  <td><a href="call/18/index.html" class="row_tot">D</a></td>
+  <td><a href="call/18/index.html" class="row_tot">6  / 10 </a></td>
+  <td><a href="call/18/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/18/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/18/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/19/index.html" class="row_tot">Ben Cardin</a></td>
+  <td><a href="call/19/index.html" class="row_tot">MD</a></td>
+  <td><a href="call/19/index.html" class="row_tot">D</a></td>
+  <td><a href="call/19/index.html" class="row_tot">0  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/19/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/19/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/19/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/20/index.html" class="row_tot">Tom Carper</a></td>
+  <td><a href="call/20/index.html" class="row_tot">DE</a></td>
+  <td><a href="call/20/index.html" class="row_tot">D</a></td>
+  <td><a href="call/20/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/20/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/20/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/20/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/21/index.html" class="row_tot">Bob Casey</a></td>
+  <td><a href="call/21/index.html" class="row_tot">PA</a></td>
+  <td><a href="call/21/index.html" class="row_tot">D</a></td>
+  <td><a href="call/21/index.html" class="row_tot">6  / 10 </a></td>
+  <td><a href="call/21/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/21/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/21/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/22/index.html" class="row_tot">C. Saxby Chambliss</a></td>
+  <td><a href="call/22/index.html" class="row_tot">GA</a></td>
+  <td><a href="call/22/index.html" class="row_tot">R</a></td>
+  <td><a href="call/22/index.html" class="row_tot">7  / 10 </a></td>
+  <td><a href="call/22/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/22/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/22/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/23/index.html" class="row_tot">Tom Coburn</a></td>
+  <td><a href="call/23/index.html" class="row_tot">OK</a></td>
+  <td><a href="call/23/index.html" class="row_tot">R</a></td>
+  <td><a href="call/23/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/23/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/23/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/23/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/24/index.html" class="row_tot">Thad Cochran</a></td>
+  <td><a href="call/24/index.html" class="row_tot">MS</a></td>
+  <td><a href="call/24/index.html" class="row_tot">R</a></td>
+  <td><a href="call/24/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/24/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/24/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/24/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/25/index.html" class="row_tot">Susan Collins</a></td>
+  <td><a href="call/25/index.html" class="row_tot">ME</a></td>
+  <td><a href="call/25/index.html" class="row_tot">R</a></td>
+  <td><a href="call/25/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/25/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/25/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/25/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/26/index.html" class="row_tot">Kent Conrad</a></td>
+  <td><a href="call/26/index.html" class="row_tot">ND</a></td>
+  <td><a href="call/26/index.html" class="row_tot">D</a></td>
+  <td><a href="call/26/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/26/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/26/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/26/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/27/index.html" class="row_tot">Bob Corker</a></td>
+  <td><a href="call/27/index.html" class="row_tot">TN</a></td>
+  <td><a href="call/27/index.html" class="row_tot">R</a></td>
+  <td><a href="call/27/index.html" class="row_tot">6  / 10 </a></td>
+  <td><a href="call/27/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/27/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/27/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/28/index.html" class="row_tot">John Cornyn</a></td>
+  <td><a href="call/28/index.html" class="row_tot">TX</a></td>
+  <td><a href="call/28/index.html" class="row_tot">R</a></td>
+  <td><a href="call/28/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/28/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/28/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/28/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/29/index.html" class="row_tot">Mike Crapo</a></td>
+  <td><a href="call/29/index.html" class="row_tot">ID</a></td>
+  <td><a href="call/29/index.html" class="row_tot">R</a></td>
+  <td><a href="call/29/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/29/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/29/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/29/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/30/index.html" class="row_tot">Jim DeMint</a></td>
+  <td><a href="call/30/index.html" class="row_tot">SC</a></td>
+  <td><a href="call/30/index.html" class="row_tot">R</a></td>
+  <td><a href="call/30/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/30/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/30/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/30/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/31/index.html" class="row_tot">Chris Dodd</a></td>
+  <td><a href="call/31/index.html" class="row_tot">CT</a></td>
+  <td><a href="call/31/index.html" class="row_tot">D</a></td>
+  <td><a href="call/31/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/31/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/31/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/31/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/32/index.html" class="row_tot">Byron Dorgan</a></td>
+  <td><a href="call/32/index.html" class="row_tot">ND</a></td>
+  <td><a href="call/32/index.html" class="row_tot">D</a></td>
+  <td><a href="call/32/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/32/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/32/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/32/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/33/index.html" class="row_tot">Dick Durbin</a></td>
+  <td><a href="call/33/index.html" class="row_tot">IL</a></td>
+  <td><a href="call/33/index.html" class="row_tot">D</a></td>
+  <td><a href="call/33/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/33/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/33/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/33/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/34/index.html" class="row_tot">John Ensign</a></td>
+  <td><a href="call/34/index.html" class="row_tot">NV</a></td>
+  <td><a href="call/34/index.html" class="row_tot">R</a></td>
+  <td><a href="call/34/index.html" class="row_tot">8  / 10 </a></td>
+  <td><a href="call/34/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/34/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/34/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/35/index.html" class="row_tot">Mike Enzi</a></td>
+  <td><a href="call/35/index.html" class="row_tot">WY</a></td>
+  <td><a href="call/35/index.html" class="row_tot">R</a></td>
+  <td><a href="call/35/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/35/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/35/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/35/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/36/index.html" class="row_tot">Russell Feingold</a></td>
+  <td><a href="call/36/index.html" class="row_tot">WI</a></td>
+  <td><a href="call/36/index.html" class="row_tot">D</a></td>
+  <td><a href="call/36/index.html" class="row_tot">1  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/36/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/36/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/36/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/37/index.html" class="row_tot">Dianne Feinstein</a></td>
+  <td><a href="call/37/index.html" class="row_tot">CA</a></td>
+  <td><a href="call/37/index.html" class="row_tot">D</a></td>
+  <td><a href="call/37/index.html" class="row_tot">14  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/37/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/37/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/37/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/38/index.html" class="row_tot">Kirsten Gillibrand</a></td>
+  <td><a href="call/38/index.html" class="row_tot">NY</a></td>
+  <td><a href="call/38/index.html" class="row_tot">D</a></td>
+  <td><a href="call/38/index.html" class="row_tot">12  / 20 </a></td>
+  <td><a href="call/38/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/38/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/38/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/39/index.html" class="row_tot">Lindsey Graham</a></td>
+  <td><a href="call/39/index.html" class="row_tot">SC</a></td>
+  <td><a href="call/39/index.html" class="row_tot">R</a></td>
+  <td><a href="call/39/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/39/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/39/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/39/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/40/index.html" class="row_tot">Chuck Grassley</a></td>
+  <td><a href="call/40/index.html" class="row_tot">IA</a></td>
+  <td><a href="call/40/index.html" class="row_tot">R</a></td>
+  <td><a href="call/40/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/40/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/40/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/40/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/41/index.html" class="row_tot">Judd Gregg</a></td>
+  <td><a href="call/41/index.html" class="row_tot">NH</a></td>
+  <td><a href="call/41/index.html" class="row_tot">R</a></td>
+  <td><a href="call/41/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/41/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/41/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/41/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/42/index.html" class="row_tot">Kay Hagan</a></td>
+  <td><a href="call/42/index.html" class="row_tot">NC</a></td>
+  <td><a href="call/42/index.html" class="row_tot">D</a></td>
+  <td><a href="call/42/index.html" class="row_tot">8  / 10 </a></td>
+  <td><a href="call/42/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/42/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/42/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/43/index.html" class="row_tot">Tom Harkin</a></td>
+  <td><a href="call/43/index.html" class="row_tot">IA</a></td>
+  <td><a href="call/43/index.html" class="row_tot">D</a></td>
+  <td><a href="call/43/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/43/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/43/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/43/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/44/index.html" class="row_tot">Orrin Hatch</a></td>
+  <td><a href="call/44/index.html" class="row_tot">UT</a></td>
+  <td><a href="call/44/index.html" class="row_tot">R</a></td>
+  <td><a href="call/44/index.html" class="row_tot">5  / 10 </a></td>
+  <td><a href="call/44/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/44/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/44/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/45/index.html" class="row_tot">Kay Hutchison</a></td>
+  <td><a href="call/45/index.html" class="row_tot">TX</a></td>
+  <td><a href="call/45/index.html" class="row_tot">R</a></td>
+  <td><a href="call/45/index.html" class="row_tot">7  / 10 </a></td>
+  <td><a href="call/45/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/45/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/45/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/46/index.html" class="row_tot">Jim Inhofe</a></td>
+  <td><a href="call/46/index.html" class="row_tot">OK</a></td>
+  <td><a href="call/46/index.html" class="row_tot">R</a></td>
+  <td><a href="call/46/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/46/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/46/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/46/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/47/index.html" class="row_tot">Daniel Inouye</a></td>
+  <td><a href="call/47/index.html" class="row_tot">HI</a></td>
+  <td><a href="call/47/index.html" class="row_tot">D</a></td>
+  <td><a href="call/47/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/47/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/47/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/47/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/48/index.html" class="row_tot">Johnny Isakson</a></td>
+  <td><a href="call/48/index.html" class="row_tot">GA</a></td>
+  <td><a href="call/48/index.html" class="row_tot">R</a></td>
+  <td><a href="call/48/index.html" class="row_tot">6  / 10 </a></td>
+  <td><a href="call/48/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/48/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/48/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/49/index.html" class="row_tot">Mike Johanns</a></td>
+  <td><a href="call/49/index.html" class="row_tot">NE</a></td>
+  <td><a href="call/49/index.html" class="row_tot">R</a></td>
+  <td><a href="call/49/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/49/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/49/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/49/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/50/index.html" class="row_tot">Tim Johnson</a></td>
+  <td><a href="call/50/index.html" class="row_tot">SD</a></td>
+  <td><a href="call/50/index.html" class="row_tot">D</a></td>
+  <td><a href="call/50/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/50/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/50/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/50/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/51/index.html" class="row_tot">Ted Kaufman</a></td>
+  <td><a href="call/51/index.html" class="row_tot">DE</a></td>
+  <td><a href="call/51/index.html" class="row_tot">D</a></td>
+  <td><a href="call/51/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/51/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/51/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/51/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/53/index.html" class="row_tot">John Kerry</a></td>
+  <td><a href="call/53/index.html" class="row_tot">MA</a></td>
+  <td><a href="call/53/index.html" class="row_tot">D</a></td>
+  <td><a href="call/53/index.html" class="row_tot">3  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/53/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/53/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/53/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/54/index.html" class="row_tot">Amy Klobuchar</a></td>
+  <td><a href="call/54/index.html" class="row_tot">MN</a></td>
+  <td><a href="call/54/index.html" class="row_tot">D</a></td>
+  <td><a href="call/54/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/54/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/54/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/54/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/55/index.html" class="row_tot">Herb Kohl</a></td>
+  <td><a href="call/55/index.html" class="row_tot">WI</a></td>
+  <td><a href="call/55/index.html" class="row_tot">D</a></td>
+  <td><a href="call/55/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/55/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/55/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/55/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/56/index.html" class="row_tot">Jon Kyl</a></td>
+  <td><a href="call/56/index.html" class="row_tot">AZ</a></td>
+  <td><a href="call/56/index.html" class="row_tot">R</a></td>
+  <td><a href="call/56/index.html" class="row_tot">12  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/56/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/56/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/56/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/57/index.html" class="row_tot">Mary Landrieu</a></td>
+  <td><a href="call/57/index.html" class="row_tot">LA</a></td>
+  <td><a href="call/57/index.html" class="row_tot">D</a></td>
+  <td><a href="call/57/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/57/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/57/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/57/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/58/index.html" class="row_tot">Frank Lautenberg</a></td>
+  <td><a href="call/58/index.html" class="row_tot">NJ</a></td>
+  <td><a href="call/58/index.html" class="row_tot">D</a></td>
+  <td><a href="call/58/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/58/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/58/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/58/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/59/index.html" class="row_tot">Patrick Leahy</a></td>
+  <td><a href="call/59/index.html" class="row_tot">VT</a></td>
+  <td><a href="call/59/index.html" class="row_tot">D</a></td>
+  <td><a href="call/59/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/59/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/59/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/59/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/60/index.html" class="row_tot">Carl Levin</a></td>
+  <td><a href="call/60/index.html" class="row_tot">MI</a></td>
+  <td><a href="call/60/index.html" class="row_tot">D</a></td>
+  <td><a href="call/60/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/60/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/60/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/60/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/61/index.html" class="row_tot">Joseph Lieberman</a></td>
+  <td><a href="call/61/index.html" class="row_tot">CT</a></td>
+  <td><a href="call/61/index.html" class="row_tot">I</a></td>
+  <td><a href="call/61/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/61/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/61/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/61/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/62/index.html" class="row_tot">Blanche Lincoln</a></td>
+  <td><a href="call/62/index.html" class="row_tot">AR</a></td>
+  <td><a href="call/62/index.html" class="row_tot">D</a></td>
+  <td><a href="call/62/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/62/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/62/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/62/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/63/index.html" class="row_tot">Richard Lugar</a></td>
+  <td><a href="call/63/index.html" class="row_tot">IN</a></td>
+  <td><a href="call/63/index.html" class="row_tot">R</a></td>
+  <td><a href="call/63/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/63/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/63/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/63/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/64/index.html" class="row_tot">Mel Martinez</a></td>
+  <td><a href="call/64/index.html" class="row_tot">FL</a></td>
+  <td><a href="call/64/index.html" class="row_tot">R</a></td>
+  <td><a href="call/64/index.html" class="row_tot">11  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/64/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/64/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/64/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/65/index.html" class="row_tot">John McCain</a></td>
+  <td><a href="call/65/index.html" class="row_tot">AZ</a></td>
+  <td><a href="call/65/index.html" class="row_tot">R</a></td>
+  <td><a href="call/65/index.html" class="row_tot">6  / 10 </a></td>
+  <td><a href="call/65/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/65/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/65/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/66/index.html" class="row_tot">Claire McCaskill</a></td>
+  <td><a href="call/66/index.html" class="row_tot">MO</a></td>
+  <td><a href="call/66/index.html" class="row_tot">D</a></td>
+  <td><a href="call/66/index.html" class="row_tot">5  / 10 </a></td>
+  <td><a href="call/66/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/66/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/66/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/67/index.html" class="row_tot">Mitch McConnell</a></td>
+  <td><a href="call/67/index.html" class="row_tot">KY</a></td>
+  <td><a href="call/67/index.html" class="row_tot">R</a></td>
+  <td><a href="call/67/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/67/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/67/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/67/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/68/index.html" class="row_tot">Robert Menendez</a></td>
+  <td><a href="call/68/index.html" class="row_tot">NJ</a></td>
+  <td><a href="call/68/index.html" class="row_tot">D</a></td>
+  <td><a href="call/68/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/68/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/68/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/68/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/69/index.html" class="row_tot">Jeff Merkley</a></td>
+  <td><a href="call/69/index.html" class="row_tot">OR</a></td>
+  <td><a href="call/69/index.html" class="row_tot">D</a></td>
+  <td><a href="call/69/index.html" class="row_tot">8  / 10 </a></td>
+  <td><a href="call/69/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/69/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/69/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/70/index.html" class="row_tot">Barbara Mikulski</a></td>
+  <td><a href="call/70/index.html" class="row_tot">MD</a></td>
+  <td><a href="call/70/index.html" class="row_tot">D</a></td>
+  <td><a href="call/70/index.html" class="row_tot">9  / 10 </a></td>
+  <td><a href="call/70/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/70/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/70/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/71/index.html" class="row_tot">Lisa Murkowski</a></td>
+  <td><a href="call/71/index.html" class="row_tot">AK</a></td>
+  <td><a href="call/71/index.html" class="row_tot">R</a></td>
+  <td><a href="call/71/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/71/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/71/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/71/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/72/index.html" class="row_tot">Patty Murray</a></td>
+  <td><a href="call/72/index.html" class="row_tot">WA</a></td>
+  <td><a href="call/72/index.html" class="row_tot">D</a></td>
+  <td><a href="call/72/index.html" class="row_tot">5  / 10 </a></td>
+  <td><a href="call/72/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/72/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/72/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/73/index.html" class="row_tot">Bill Nelson</a></td>
+  <td><a href="call/73/index.html" class="row_tot">FL</a></td>
+  <td><a href="call/73/index.html" class="row_tot">D</a></td>
+  <td><a href="call/73/index.html" class="row_tot">14  <img src="http://media.sunlightprojects.org/s223/images/accept.png"> </a></td>
+  <td><a href="call/73/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/73/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/73/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/74/index.html" class="row_tot">Ben Nelson</a></td>
+  <td><a href="call/74/index.html" class="row_tot">NE</a></td>
+  <td><a href="call/74/index.html" class="row_tot">D</a></td>
+  <td><a href="call/74/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/74/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/74/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/74/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/75/index.html" class="row_tot">Mark Pryor</a></td>
+  <td><a href="call/75/index.html" class="row_tot">AR</a></td>
+  <td><a href="call/75/index.html" class="row_tot">D</a></td>
+  <td><a href="call/75/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/75/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/75/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/75/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/76/index.html" class="row_tot">Jack Reed</a></td>
+  <td><a href="call/76/index.html" class="row_tot">RI</a></td>
+  <td><a href="call/76/index.html" class="row_tot">D</a></td>
+  <td><a href="call/76/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/76/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/76/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/76/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/77/index.html" class="row_tot">Harry Reid</a></td>
+  <td><a href="call/77/index.html" class="row_tot">NV</a></td>
+  <td><a href="call/77/index.html" class="row_tot">D</a></td>
+  <td><a href="call/77/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/77/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/77/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/77/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/78/index.html" class="row_tot">Jim Risch</a></td>
+  <td><a href="call/78/index.html" class="row_tot">ID</a></td>
+  <td><a href="call/78/index.html" class="row_tot">R</a></td>
+  <td><a href="call/78/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/78/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/78/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/78/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/79/index.html" class="row_tot">Pat Roberts</a></td>
+  <td><a href="call/79/index.html" class="row_tot">KS</a></td>
+  <td><a href="call/79/index.html" class="row_tot">R</a></td>
+  <td><a href="call/79/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/79/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/79/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/79/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/80/index.html" class="row_tot">Jay Rockefeller</a></td>
+  <td><a href="call/80/index.html" class="row_tot">WV</a></td>
+  <td><a href="call/80/index.html" class="row_tot">D</a></td>
+  <td><a href="call/80/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/80/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/80/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/80/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/81/index.html" class="row_tot">Bernie Sanders</a></td>
+  <td><a href="call/81/index.html" class="row_tot">VT</a></td>
+  <td><a href="call/81/index.html" class="row_tot">I</a></td>
+  <td><a href="call/81/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/81/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/81/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/81/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/82/index.html" class="row_tot">Chuck Schumer</a></td>
+  <td><a href="call/82/index.html" class="row_tot">NY</a></td>
+  <td><a href="call/82/index.html" class="row_tot">D</a></td>
+  <td><a href="call/82/index.html" class="row_tot">7  / 10 </a></td>
+  <td><a href="call/82/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/82/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/82/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/83/index.html" class="row_tot">Jeff Sessions</a></td>
+  <td><a href="call/83/index.html" class="row_tot">AL</a></td>
+  <td><a href="call/83/index.html" class="row_tot">R</a></td>
+  <td><a href="call/83/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/83/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/83/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/83/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/84/index.html" class="row_tot">Jeanne Shaheen</a></td>
+  <td><a href="call/84/index.html" class="row_tot">NH</a></td>
+  <td><a href="call/84/index.html" class="row_tot">D</a></td>
+  <td><a href="call/84/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/84/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/84/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/84/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/85/index.html" class="row_tot">Richard Shelby</a></td>
+  <td><a href="call/85/index.html" class="row_tot">AL</a></td>
+  <td><a href="call/85/index.html" class="row_tot">R</a></td>
+  <td><a href="call/85/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/85/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/85/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/85/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/86/index.html" class="row_tot">Olympia Snowe</a></td>
+  <td><a href="call/86/index.html" class="row_tot">ME</a></td>
+  <td><a href="call/86/index.html" class="row_tot">R</a></td>
+  <td><a href="call/86/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/86/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/86/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/86/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/87/index.html" class="row_tot">Arlen Specter</a></td>
+  <td><a href="call/87/index.html" class="row_tot">PA</a></td>
+  <td><a href="call/87/index.html" class="row_tot">D</a></td>
+  <td><a href="call/87/index.html" class="row_tot">5  / 10 </a></td>
+  <td><a href="call/87/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/87/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/87/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/88/index.html" class="row_tot">Debbie Stabenow</a></td>
+  <td><a href="call/88/index.html" class="row_tot">MI</a></td>
+  <td><a href="call/88/index.html" class="row_tot">D</a></td>
+  <td><a href="call/88/index.html" class="row_tot">7  / 10 </a></td>
+  <td><a href="call/88/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/88/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/88/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/89/index.html" class="row_tot">Jon Tester</a></td>
+  <td><a href="call/89/index.html" class="row_tot">MT</a></td>
+  <td><a href="call/89/index.html" class="row_tot">D</a></td>
+  <td><a href="call/89/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/89/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/89/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/89/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/90/index.html" class="row_tot">John Thune</a></td>
+  <td><a href="call/90/index.html" class="row_tot">SD</a></td>
+  <td><a href="call/90/index.html" class="row_tot">R</a></td>
+  <td><a href="call/90/index.html" class="row_tot">1  / 10 </a></td>
+  <td><a href="call/90/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/90/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/90/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/91/index.html" class="row_tot">Mark Udall</a></td>
+  <td><a href="call/91/index.html" class="row_tot">CO</a></td>
+  <td><a href="call/91/index.html" class="row_tot">D</a></td>
+  <td><a href="call/91/index.html" class="row_tot">8  / 10 </a></td>
+  <td><a href="call/91/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/91/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/91/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/92/index.html" class="row_tot">Tom Udall</a></td>
+  <td><a href="call/92/index.html" class="row_tot">NM</a></td>
+  <td><a href="call/92/index.html" class="row_tot">D</a></td>
+  <td><a href="call/92/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/92/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/92/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/92/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/93/index.html" class="row_tot">David Vitter</a></td>
+  <td><a href="call/93/index.html" class="row_tot">LA</a></td>
+  <td><a href="call/93/index.html" class="row_tot">R</a></td>
+  <td><a href="call/93/index.html" class="row_tot">3  / 10 </a></td>
+  <td><a href="call/93/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/93/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/93/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/94/index.html" class="row_tot">George Voinovich</a></td>
+  <td><a href="call/94/index.html" class="row_tot">OH</a></td>
+  <td><a href="call/94/index.html" class="row_tot">R</a></td>
+  <td><a href="call/94/index.html" class="row_tot">5  / 10 </a></td>
+  <td><a href="call/94/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/94/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/94/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/95/index.html" class="row_tot">Mark Warner</a></td>
+  <td><a href="call/95/index.html" class="row_tot">VA</a></td>
+  <td><a href="call/95/index.html" class="row_tot">D</a></td>
+  <td><a href="call/95/index.html" class="row_tot">6  / 10 </a></td>
+  <td><a href="call/95/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/95/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/95/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/96/index.html" class="row_tot">Jim Webb</a></td>
+  <td><a href="call/96/index.html" class="row_tot">VA</a></td>
+  <td><a href="call/96/index.html" class="row_tot">D</a></td>
+  <td><a href="call/96/index.html" class="row_tot">4  / 10 </a></td>
+  <td><a href="call/96/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/96/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/96/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/97/index.html" class="row_tot">Sheldon Whitehouse</a></td>
+  <td><a href="call/97/index.html" class="row_tot">RI</a></td>
+  <td><a href="call/97/index.html" class="row_tot">D</a></td>
+  <td><a href="call/97/index.html" class="row_tot">2  / 10 </a></td>
+  <td><a href="call/97/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/97/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/97/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr  class="nocalls" >
+  <td class="table_left_pad"><a href="call/98/index.html" class="row_tot">Roger Wicker</a></td>
+  <td><a href="call/98/index.html" class="row_tot">MS</a></td>
+  <td><a href="call/98/index.html" class="row_tot">R</a></td>
+  <td><a href="call/98/index.html" class="row_tot">0  / 10 </a></td>
+  <td><a href="call/98/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/cross.png"></a></td>
+  <td><a href="call/98/index.html" class="row_tot"> CALL</a></td>
+  <td><a href="call/98/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+<tr >
+  <td class="table_left_pad"><a href="call/99/index.html" class="row_tot">Ron Wyden</a></td>
+  <td><a href="call/99/index.html" class="row_tot">OR</a></td>
+  <td><a href="call/99/index.html" class="row_tot">D</a></td>
+  <td><a href="call/99/index.html" class="row_tot">4  / 10 </a></td>
+  <td><a href="call/99/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/99/index.html" class="row_tot"><img src="http://media.sunlightprojects.org/s223/images/accept.png"></a></td>
+  <td><a href="call/99/index.html" class="row_tot"> CALL</a></td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="partner_logos_bottom">
+	<div style="margin-bottom:15px;">
+<a href="http://www.sunlightfoundation.com/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_sf.png" border="0" class="partner_padding_bottom" height="40"></a>
+<a href="http://www.opensecrets.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_crp.png" border="0" class="partner_padding_bottom" height="40"></a>
+<a href="http://www.citizen.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_pc.png" border="0" class="partner_padding_bottom" height="40"></a>
+<a href="http://www.cfinst.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_cf.png" border="0" height="40" class="partner_padding_bottom"></a>
+<a href="http://www.openthegovernment.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_otg.png" border="0" class="partner_padding_bottom"  height="40"></a>
+<a href="http://change-congress.org/"><img src="http://media.sunlightprojects.org/readthebill/images/logos/rtb_logo_change_congress.jpg" border="0" height="40"></a>
+</div>
+<div>
+<a href="http://www.ombwatch.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_omb.png" border="0"  height="40" class="partner_padding_bottom"></a>
+
+<a href="http://www.publicampaign.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_camp.png" border="0" height="40" class="partner_padding_bottom"></a>
+<a href="http://www.commoncause.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_comc.png" border="0"  height="40" class="partner_padding_bottom"></a>
+<a href="http://www.judicialwatch.org/"><img src="http://media.sunlightprojects.org/s482/images/partner/partner_logos_judicial_watch.png" border="0"  height="40" class="partner_padding_bottom"></a>
+
+<a href="http://www.maplight.org/"><img src="http://media.sunlightprojects.org/s223/images/partner_logos_maplight.png" border="0" </a>
+
+</div>
+
+</div>
+
+
+</div>
+<div class="column span-1 last">&nbsp;</div>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1265484-34");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

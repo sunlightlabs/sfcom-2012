@@ -1,4 +1,5 @@
 {% extends 'base_sidebar.html' %}
+
 {% block title %}Search {% endblock %}
 {% block bodyclass %}search{% endblock %}
 
@@ -25,7 +26,7 @@
     					<!-- wordpress post -->
     					<img class="searchIcon" src="../../static/images/post.png" alt="Post" title="Post">
 						<div class="search_result_text">
-						<h4><a href="{{ result.link }}" class="searchTitle">{{ result.feed }}: {{ result.title|safe }}</a></h4>    
+						<h4><a href="{{ result.link }}" class="searchTitle">{% if result.feed %}{{ result.feed }}: {% endif %}{{ result.title|safe }}</a></h4>    
     					<p>{{ result.text|striptags|truncatewords:20 }}</p>
 						</div>
     				{% endif %}
