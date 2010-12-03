@@ -34,9 +34,10 @@ urlpatterns = patterns('',
 # top level navigation redirects
 urlpatterns += patterns('django.views.generic.simple',
     #url(r'^blog/',      'redirect_to', {'url': 'http://blog.sunlightfoundation.com/'}),
-    url(r'^campaign/',  'redirect_to', {'url': 'http://publicequalsonline.com/'}),
-    url(r'^labs/',      'redirect_to', {'url': 'http://sunlightlabs.com/'}),
-    url(r'^reporting/', 'redirect_to', {'url': 'http://reporting.sunlightfoundation.com/'}),
+    url(r'^campaign/',          'redirect_to', {'url': 'http://publicequalsonline.com/'}),
+    url(r'^labs/',              'redirect_to', {'url': 'http://sunlightlabs.com/'}),
+    url(r'^reporting/',         'redirect_to', {'url': 'http://reporting.sunlightfoundation.com/'}),
+    url(r'^people/cjohnson/$',  'redirect_to', {'url': 'http://infovegan.com', 'permanent': True}),
 )
 
 # sunlightfoundation.com module
