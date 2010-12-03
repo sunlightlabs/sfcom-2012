@@ -1,34 +1,16 @@
 <div id="press_nav_box">
 	<p class="tip">Looking for something else? Browse our archives by date.</p>
-	<form>
+	<form action="/press/" method="post" id="press-nav-form">
+		{% csrf_token %}
+		{{ press_nav_form.pub_type }}
 		<ul class="press_year_navigation">
 			<li class="press_year">
-				<label for="id_year">Year:</label>
-				<select id="year">
-					<option>2010</option>
-					<option>2009</option>
-					<option>2008</option>
-					<option>2007</option>
-					<option>2006</option>
-		
-				</select>
+				<label for="id_year">{{ press_nav_form.year.label }}</label>
+				{{ press_nav_form.year }}
 			</li>
 			<li  class="press_month_navigation">
-				<label for="id_month">Month:</label>
-				<select id="month">
-					<option>Jan</option>
-					<option>Feb</option>
-					<option>Mar</option>
-					<option>Apr</option>
-					<option>May</option>
-					<option>Jun</option>
-					<option>Jul</option>
-					<option>Aug</option>
-					<option>Sep</option>
-					<option>Oct</option>
-					<option>Nov</option>
-					<option>Dec</option>		
-				</select>
+				<label for="id_month">{{ press_nav_form.month.label }}</label>
+				{{ press_nav_form.month }}
 			</li>
 			<li>
 				<button type="submit" name="submit-btn" class="press_nav_button"><span>Submit</span>
@@ -37,33 +19,3 @@
 	</form>
 	<div class="clear"></div>
 </div>
-
-<!--
-{% if years %}
-<div id="press_nav_box">
-
-<ul class="press_year_navigation">
-    {% for year in years reversed %}
-    <li class="press_year">
-        <a class="press_year_link" href="/presscenter/{{ press_type }}/{{ year.year }}/">{{ year.year }} : </a>  
-        {% if year.months %}
-        <ul class="press_month_navigation">
-            {% for month in year.months %}
-                <li class="press_month">
-                    {% if month.month %}
-                    <a href="/presscenter/{{ press_type }}/{{ year.year }}/{{ month.month }}/">{{ month.name }}</a>
-                    {% else %}
-                    {{ month.name }}
-                    {% endif %}
-                </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-    </li>
-    {% endfor %}
-</ul>
-
-</div>
-{% endif %}
-
--->
