@@ -5,7 +5,7 @@
 .project-intro{
 	background:url('../images/bg_projectsHeader.png') top left no-repeat;
 	background-color: transparent;
-	width: 900px;
+	width: 890px;
 	height: 59px;
 	margin: 0 0 30px 0;
 	font-size: 18px;
@@ -41,8 +41,8 @@ img.flourish{
 }
 
 h3.sectionHeader{
-	background: url('../images/projectsSections.png') top left no-repeat;
-	width: 940px;
+	background: url('../images/projectsSections.png') center top no-repeat;
+	width: 915px;
 	height: 41px;
 	padding: 5px 0 0 25px;
 }
@@ -50,7 +50,7 @@ h3.sectionHeader{
 .columnOf2 {
 	float: left;
 	padding: 0 25px 25px 25px;
-	width: 425px;
+	width: 420px;
 }
 
 .columnOf2 img{
@@ -80,7 +80,7 @@ h3.sectionHeader{
 .columnOf3{
 	float: left;
 	padding: 0 25px 25px 25px;
-	width: 265px;
+	width: 263px;
 }
 
 .columnOf3 img{
@@ -91,6 +91,6 @@ h3.sectionHeader{
 
 .columnOf3 .description {
 	float: left;
-	width: 165px;
+	width: 163px;
 	margin: 0 0 25px 0;
 }
