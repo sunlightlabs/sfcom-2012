@@ -143,7 +143,7 @@ MEDIASYNC = {
     'AWS_PREFIX': 'site/4.0',
     'AWS_BUCKET_CNAME': True,
     'DOCTYPE': 'html5',
-    'CACHE_BUSTER': 201012061356,
+    'CACHE_BUSTER': 201012061529,
     'JOINED': {
         'styles/thefoundation.css': (
             'styles/style.css',
