@@ -1,0 +1,97 @@
+{% extends "base_sidebar.html" %}
+{% load media %}
+{% block bodyclass %}committees{% endblock %}
+{% load markup %}
+
+{% block content %}
+
+
+<style>
+h3.highcharts-subtitle { border-bottom:0px;}
+</style>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://assets.sunlightfoundation.com/visualizations/expenditures/js/highcharts.js"></script>
+
+		<!--[if IE]>
+			<script type="text/javascript" src="http://assets.sunlightfoundation.com/visualizations/expenditures/js/excanvas.compiled.js"></script>
+		<![endif]-->
+
+<!-- 2. Add the JavaScript to initialize the chart on document ready -->
+		<script type="text/javascript">
+		$(document).ready(function() {
+      			var chart = new Highcharts.Chart({
+			   chart: {
+			      renderTo: 'container',
+			      margin: [50, 300, 60, 10]
+			   },
+			   title: {
+			      text: 'House Committee Disbursements Summary 2009 Q3'
+			   },
+			   plotArea: {
+			      shadow: null,
+			      borderWidth: null,
+			      backgroundColor: null
+			   },
+			   tooltip: {
+			      formatter: function() {
+			         return '<b>'+ this.point.name +'</b>: '+ this.y +' %';
+			      }
+			   },
+			   plotOptions: {
+			      pie: {
+			         dataLabels: {
+			            enabled: false,
+			            formatter: function() {
+			               if (this.y > 5) return this.point.name;
+			            },
+			            color: 'white',
+			            style: {
+			               font: '13px Trebuchet MS, Verdana, sans-serif'
+			            }
+			         }
+			      }
+			   },
+			   legend: {
+			      layout: 'vertical',
+			      style: {
+			         bottom: 'auto',
+			         left: '500px',
+			         top: '200px'
+			      }
+			   },
+			        series: [{
+			      type: 'pie',
+			      name: 'House Committee Disbursements Summary 2009 Q3',
+			      data: [['COMMITTEE ON APPROPRIATIONS', 22.7 ],['OVERSIGHT & GOVERNMENT REFORM', 5.63 ],['COMMITTEE ON ENERGY & COMMERCE', 6.4, sliced: true
+ ],['COMMITTEE ON JUDICIARY', 4.96 ],['COMMITTEE ON WAYS AND MEANS', 5.06 ],['TRANSPORTATION-INFRASTRUCTURE', 5.22 ],['COMMITTEE ON FINANCIAL SERVICE', 4.84 ],['COMMITTEE ON FOREIGN AFFAIRS', 4.75 ],['EDUCATION AND LABOR', 4.49 ],['HOMELAND SECURITY', 4.62 ],['ARMED SERVICES COMMITTEE', 4.32 ],['COMMITTEE ON NATURAL RESOURCES', 4.11 ],['COMM ON SCIENCE AND TECHNOLOGY', 3.63 ],['COMMITTEE ON AGRICULTURE', 3.08 ],['COMMITTEE ON BUDGET', 2.98 ],['HOUSE ADMINISTRATION', 2.84 ],['INTELLIGENCE', 2.59 ],['VETERANS AFFAIRS', 2.05 ],['COMMITTEE ON RULES', 1.74 ],['COMMITTEE ON SMALL BUSINESS', 1.66 ],['STANDARDS OF OFFICIAL CONDUCT', 1.21 ],['ENERGY INDEP & GLOBAL WARMING', 1.12 ]]
+			      
+			   }]
+			});
+			
+			
+		});
+		</script>
+		
+		
+
+		<div id="container" style="width: 600px; height: 600px"></div>
+		
+		{% endblock %}
+
+
+		{% block sidebar %}
+			<div class="module">
+		        <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+		        <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+		        <ul id="storeSidebar">
+		            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+		            <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+		            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+		            <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+		            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+		            <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+		        </ul>    
+		        <div class="clear"></div>
+		    </div>
+		{% endblock %}

@@ -16,9 +16,10 @@
 	left: -558px;
 	position: relative;
 	float: left;
-	height: 140px;
+	height: 160px;
 	width: 478px;
 	padding: 10px 40px 0;
+	margin-bottom: 0;
 }
 
 .carousel .imgHolder { float: left; margin-right: 20px;}
