@@ -8,7 +8,7 @@ $().ready( function() {
 		var form = $(this);
 		ev.preventDefault();
 		window.location = '/press/' +
-			form.find('input[type=hidden]').val() + '/' + 
+			form.find('input[name=pub_type]').val() + '/' + 
 			form.find('select[name=year]').val() + '/' + 
 			form.find('select[name=month]').val() + '/';
 	});
