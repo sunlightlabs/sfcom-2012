@@ -163,7 +163,7 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #donateBlock p { font-size: 120%; text-align: center;}
 #carouselBlock { width: 618px;}
 
-#outreachBlock_wrapper { background: url(../images/featureBar_wrapper.jpg) top center repeat-x; margin-top: 10px;}
+#outreachBlock_wrapper { background: url(../images/featureBar_wrapper.jpg) top center repeat-x; }
 #outreachBlock { background: url(../images/featureBar.jpg) top center no-repeat; height: 108px; padding-top: 10px; color: #fefefe;}
 #outreachBlock span { color: #fefefe;}
 #outreachBlock p { font-size:130%; line-height: 23px; margin-bottom:10px;}
