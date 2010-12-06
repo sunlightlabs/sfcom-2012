@@ -74,9 +74,6 @@ urlpatterns += patterns('django.views.generic.simple',
 	url(r'^presentations/$', 'direct_to_template', {"template": "presentations.html"}),
 	url(r'^presentations/emillerMITjune2010/$', 'direct_to_template', {"template": "emillerMITjune2010.html"}),
 	url(r'^projects/2009/earmarks/no_disclosure/$', 'direct_to_template', {"template": "projects/2009/earmarks/no_disclosure.html"}),
-	url(r'^projects/2009/expenditures/$', 'direct_to_template', {"template": "projects/2009/expenditures/index.html"}),
-	url(r'^projects/2009/expenditures/committees$', 'direct_to_template', {"template": "projects/2009/expenditures/committees.html"}),
-	url(r'^projects/2009/expenditures/totals', 'direct_to_template', {"template": "projects/2009/expenditures/totals.html"}),
 
 
 )
@@ -104,6 +101,8 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^projects/2006/earmarks/$', 'direct_to_template', {"template": "projects/2006/earmarks/index.html"}),
     url(r'^projects/2007/punchclockmap/$', 'direct_to_template', {"template": "projects/2007/punchclockmap/punchclock.html"}),
     url(r'^projects/2009/expenditures/', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/totals', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/committees', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
     url(r'^projects/transparency-timeline/$', 'direct_to_template', {"template": "projects/timeline/timeline.html"}),
     # poia
     url(r'^poia/', 'redirect_to', {'url': '/policy/poia/'}),
