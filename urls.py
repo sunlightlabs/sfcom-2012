@@ -71,6 +71,9 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^live/$', 'direct_to_template', {"template": "live/live.html"}),
     url(r'^live/feedback$', 'direct_to_template', {"template": "live/feedback.html"}),
 	url(r'^opengovernmentdirective/$', 'direct_to_template', {"template": "opengovernmentdirective.html"}),
+	url(r'^presentations/$', 'direct_to_template', {"template": "presentations.html"}),
+	url(r'^presentations/emillerMITjune2010/$', 'direct_to_template', {"template": "emillerMITjune2010.html"}),
+	url(r'^projects/2009/earmarks/no_disclosure/$', 'direct_to_template', {"template": "projects/2009/earmarks/no_disclosure.html"}),
 
 
 )
@@ -98,6 +101,8 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^projects/2006/earmarks/$', 'direct_to_template', {"template": "projects/2006/earmarks/index.html"}),
     url(r'^projects/2007/punchclockmap/$', 'direct_to_template', {"template": "projects/2007/punchclockmap/punchclock.html"}),
     url(r'^projects/2009/expenditures/', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/totals', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/committees', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
     url(r'^projects/transparency-timeline/$', 'direct_to_template', {"template": "projects/timeline/timeline.html"}),
     # poia
     url(r'^poia/', 'redirect_to', {'url': '/policy/poia/'}),

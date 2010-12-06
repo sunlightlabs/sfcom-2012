@@ -8,7 +8,7 @@ $().ready( function() {
 		var form = $(this);
 		ev.preventDefault();
 		window.location = '/press/' +
-			form.find('input[type=hidden]').val() + '/' + 
+			form.find('input[name=pub_type]').val() + '/' + 
 			form.find('select[name=year]').val() + '/' + 
 			form.find('select[name=month]').val() + '/';
 	});
@@ -57,7 +57,9 @@ $().ready( function() {
 		ev.preventDefault();
 	});
 	
-	setTimeout(carouselAutoAdvance, 10000);
+	if ($('.carousel').attr('data-autoadvance') == 'autoadvance') {
+		setTimeout(carouselAutoAdvance, 10000);
+	}
 	
 });
 

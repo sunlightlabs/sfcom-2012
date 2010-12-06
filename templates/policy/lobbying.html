@@ -1,0 +1,119 @@
+{% extends "policy/base.html" %}
+{% load media %}
+
+{% block title %}Lobbying Reform - {{ block.super }}{% endblock %}
+
+{% block subnavclass %}{{ block.super }} lobbying{% endblock %}
+
+{% block css %}
+	<style>
+		.doc-download {
+			float: right;
+			margin: 0 0 20px 20px;
+			padding: 0 10px 10px 10px;
+			width: 250px;
+		}
+		.doc-download ul { list-style: none; margin: 0; padding: 0; }
+		.doc-download ul li { margin-bottom: 5px; }
+		.doc-download ul li a {
+			display: block;
+			padding: 10px 5px 10px 50px;
+		}
+		.doc-download ul li.scribd a { background: url({% media_url %}/images/icons/btn_s_brn_30x30.jpg) 5px 5px no-repeat; }
+		.doc-download ul li.scribd a:hover { background-color: #FFF; }
+		
+		.doc-download ul li.doc a { background: url({% media_url %}/images/icons/famfamfam/page_white_office.png) 12px 12px no-repeat; }
+		.doc-download ul li.doc a:hover { background-color: #FFF; }
+		
+		.doc-download ul li.pdf a { background: url({% media_url %}/images/icons/famfamfam/page_white_acrobat.png) 12px 12px no-repeat; }
+		.doc-download ul li.pdf a:hover { background-color: #FFF; }
+		
+		.doc-download ul li.txt a { background: url({% media_url %}/images/icons/famfamfam/page_white_text.png) 12px 12px no-repeat; }
+		.doc-download ul li.txt a:hover { background-color: #FFF; }
+		
+		p.message {
+			background-color: #DE6D1D;
+			color: #FFF;
+			font-size: 18px;
+			padding: 10px 15px;
+		}
+		
+		#lobbying-signup {
+			background: #EBEEDC;
+			border: 1px solid #999;
+			margin-bottom: 40px;
+			padding: 15px 0 10px 0;
+		}
+		#lobbying-signup ul { list-style: none; margin: 0; padding: 0 0 0 10px; }
+		#lobbying-signup ul li { float: left; margin: 0 0 2px 0; padding: 0 8px; }
+		#lobbying-signup ul li label { display: block; font-size: 12px; font-family: sans-serif; }
+		#lobbying-signup input[type=text] { font-size: 14px; margin-top: 0; padding: 3px 4px; }
+		#lobbying-signup li.firstname input[type=text] { width: 80px; }
+		#lobbying-signup li.lastname input[type=text] { width: 80px; }
+		#lobbying-signup li.email input[type=text] { width: 130px; }
+		#lobbying-signup li.zipcode input[type=text] { width: 60px; }
+		#lobbying-signup span.submit { padding: 0 0 0 25px; }
+		#lobbying-signup input[type=submit] {
+			border: 1px solid #B65918;
+			background-color: #DE6D1D;
+			color: #FFF;
+			font-size: 16px;
+			font-weight: bold;
+			padding: 10px 20px;
+		}
+		#lobbying-signup input[type=submit]:hover { background-color: #C66118; }
+		#lobbying-signup p.clear { margin: 0; padding: 0 0 0 20px; }
+	</style>
+{% endblock %}
+
+{% block content %}
+
+	{% if message %}
+		<p class="message">{{ message }}</p>
+	{% endif %}
+			
+	<h2>Lobbying Reform</h2>
+	
+	<p>In the 112th Congress, Sunlight will be pushing legislators to change lobbying rules so that the public has real time, online information about who is influencing policy decisions on Capitol Hill.</p>
+	<p>Want to be a part of the effort to make sure there’s no more stealth lobbyists? Interested in closing the loopholes that help lobbyists avoid disclosing their influence peddling? Think the public should know which Members of Congress lobbyists are meeting with?</p>
+	<p>Join us - sign up here, and we’ll keep you posted on our efforts and ways you can get involved.</p>
+	
+	<p>
+		<form action="http://local.publicequalsonline.com/page/s/lobbying" method="post" id="lobbying-signup">
+			<ul>
+				<li class="firstname">
+					<label for="id_firstname">First Name</label>
+					<input id="id_firstname" type="text" name="firstname">
+				</li>
+				<li class="lastname">
+					<label for="id_lastname">Last Name</label>
+					<input id="id_lastname" type="text" name="lastname">
+				</li>
+				<li class="email">
+					<label for="id_email">Email Address *</label>
+					<input id="id_email" type="text" name="email">
+				</li>
+				<li class="zipcode">
+					<label for="id_zipcode">ZIP Code *</label>
+					<input id="id_zipcode" type="text" name="zip">
+				</li>
+			</ul>
+			<span class="submit"><input type="submit" value="Sign Up"></span>
+			<p class="clear"><small>* required field</small></p>
+		</form>
+	</p>
+	
+	<div class="doc-download">
+		<h3>Read <em>Goals for Lobbying Disclosure Act Amendments</em></h3>
+		<ul>
+			<li class="scribd"><a href="http://www.scribd.com/doc/44763730/Goals-for-LDA-Amendments">Scribd</a></li>
+			<li class="pdf"><a href="http://assets.sunlightfoundation.com.s3.amazonaws.com/policy/lobbying/Sunlight%20Foundation%20Goals%20for%20LDA%20Amendments.pdf">Adobe PDF</a></li>
+			<li class="doc"><a href="http://assets.sunlightfoundation.com.s3.amazonaws.com/policy/lobbying/Sunlight%20Foundation%20Goals%20for%20LDA%20Amendments.docx">Microsoft Word</a></li>
+			<li class="txt"><a href="http://assets.sunlightfoundation.com.s3.amazonaws.com/policy/lobbying/sunlight-foundation-goals-for-lda-amendments.txt">Plain Text (markdown)</a></li>
+		</ul>
+	</div>
+	
+	<p>The downloadable document to the right is a detailed look at our thoughts on what needs to be included in an improved lobbying disclosure law. We’ll be working on this bill through public markup soon, and we’d love to have your thoughts and input during that process.</p>
+	<p><em>It’s time the public knows what the power players behind the scenes in Washington. Be a part of that effort.</em></p>
+			
+{% endblock %}

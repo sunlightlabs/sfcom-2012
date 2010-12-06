@@ -126,6 +126,8 @@ nav.policy li.policy { background: url(../images/nav_arrow.png) top left no-repe
 nav.policy li.policy a { color: #fff; }
 nav.agenda li.agenda { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
 nav.agenda li.agenda a { color: #fff; }
+nav.lobbying li.lobbying { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
+nav.lobbying li.lobbying a { color: #fff; }
 nav.poia li.poia { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
 nav.poia li.poia a { color: #fff; }
 nav.documents li.documents { background: url(../images/nav_arrow.png) top left no-repeat; width: 303px; height: 39px; color: #fff; margin-left: -50px; padding-left: 50px; padding-top: 15px;}
