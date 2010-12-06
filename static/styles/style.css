@@ -154,7 +154,7 @@ nav.logos li.logos a { color: #fff; }
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto; min-height: 800px;}
 #searchform { float: right; margin-top: 40px;}
-#searchform input { width: 220px; float: left; border: 1px solid #aabed5; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 95%; padding:7px 30px 5px 5px;}
+#container #searchform input { background: none; width: 220px; float: left; border: 1px solid #aabed5; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 95%; padding:7px 30px 5px 5px; height: 15px;}
 
 #slogan { text-indent: -9999em; display: block; margin: 0 auto; background: url(../images/featureText.png) top center no-repeat; width: 526px; height: 144px;}
 #sloganBlock { margin-top: 35px; background: url(../images/featureBar.png) center bottom no-repeat; padding-bottom: 50px; margin-bottom: 10px;}
