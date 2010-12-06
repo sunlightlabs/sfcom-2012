@@ -57,7 +57,9 @@ $().ready( function() {
 		ev.preventDefault();
 	});
 	
-	setTimeout(carouselAutoAdvance, 10000);
+	if ($('.carousel').attr('data-autoadvance') == 'autoadvance') {
+		setTimeout(carouselAutoAdvance, 10000);
+	}
 	
 });
 
