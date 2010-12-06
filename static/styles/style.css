@@ -170,8 +170,8 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #outreachBlock span { color: #fefefe;}
 #outreachBlock p { font-size:130%; line-height: 23px; margin-bottom:10px;}
 #events { float: left; width: 444px;}
-#events strong { text-transform: uppercase; font-size: 120%; margin-top: 3px; display: block;}
-#events .morelink { color: #fff; margin-top: 20px;}
+#events strong { text-transform: uppercase; font-size: 120%; margin-top: 3px; }
+#events .morelink { color: #fff; margin-top: 10px;}
 #main { background: #F8F6EC url(../images/below_green_bg.png) top center repeat-x; border-top:3px solid #F3F1EC;}
 .thefoundation #main { border: none; }
 
