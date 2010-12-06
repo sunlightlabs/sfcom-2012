@@ -61,5 +61,14 @@ $().ready( function() {
 		setTimeout(carouselAutoAdvance, 10000);
 	}
 	
+	$('#mailinglistform').submit(function(ev) {
+		var btn = $(this).find('#joinBtn');
+		if (btn.hasClass('disabled')) {
+			ev.preventDefault();
+		} else {
+			btn.addClass('disabled').attr('disabled', 'disabled');
+		}
+	});
+	
 });
 
