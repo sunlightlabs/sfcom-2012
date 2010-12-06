@@ -71,6 +71,12 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^live/$', 'direct_to_template', {"template": "live/live.html"}),
     url(r'^live/feedback$', 'direct_to_template', {"template": "live/feedback.html"}),
 	url(r'^opengovernmentdirective/$', 'direct_to_template', {"template": "opengovernmentdirective.html"}),
+	url(r'^presentations/$', 'direct_to_template', {"template": "presentations.html"}),
+	url(r'^presentations/emillerMITjune2010/$', 'direct_to_template', {"template": "emillerMITjune2010.html"}),
+	url(r'^projects/2009/earmarks/no_disclosure/$', 'direct_to_template', {"template": "projects/2009/earmarks/no_disclosure.html"}),
+	url(r'^projects/2009/expenditures/$', 'direct_to_template', {"template": "projects/2009/expenditures/index.html"}),
+	url(r'^projects/2009/expenditures/committees$', 'direct_to_template', {"template": "projects/2009/expenditures/committees.html"}),
+	url(r'^projects/2009/expenditures/totals', 'direct_to_template', {"template": "projects/2009/expenditures/totals.html"}),
 
 
 )
