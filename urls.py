@@ -74,15 +74,12 @@ urlpatterns += patterns('django.views.generic.simple',
 	url(r'^presentations/$', 'direct_to_template', {"template": "presentations.html"}),
 	url(r'^presentations/emillerMITjune2010/$', 'direct_to_template', {"template": "emillerMITjune2010.html"}),
 	url(r'^projects/2009/earmarks/no_disclosure/$', 'direct_to_template', {"template": "projects/2009/earmarks/no_disclosure.html"}),
-<<<<<<< HEAD
 	url(r'^projects/2009/expenditures/$', 'direct_to_template', {"template": "projects/2009/expenditures/index.html"}),
 	url(r'^projects/2009/expenditures/committees$', 'direct_to_template', {"template": "projects/2009/expenditures/committees.html"}),
 	url(r'^projects/2009/expenditures/totals', 'direct_to_template', {"template": "projects/2009/expenditures/totals.html"}),
 	url(r'^projects/2009/healthcare_lobbyist_complex', 'direct_to_template', {"template": "projects/2009/healthcare_lobbyist_complex.html"}),
 	url(r'^projects/2009/heart_of_the_matter', 'direct_to_template', {"template": "projects/2009/heart_of_the_matter.html"}),
-=======
 
->>>>>>> f403056b8fb5d8173d8adb6389781ca0b0cd23c7
 
 )
 
