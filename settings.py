@@ -109,10 +109,10 @@ INSTALLED_APPS = (
     'thefoundation',
     'thefoundation.funding',
     'feedinator',
-	'wordpress',
-	'disqus',
-	'haystack',
-	'simplepay',
+    'wordpress',
+    'disqus',
+    'haystack',
+    'simplepay',
     'gunicorn',
 )
 
@@ -143,13 +143,13 @@ MEDIASYNC = {
     'AWS_PREFIX': 'site/4.0',
     'AWS_BUCKET_CNAME': True,
     'DOCTYPE': 'html5',
-    'CACHE_BUSTER': 1234567890,
+    'CACHE_BUSTER': 201012061529,
     'JOINED': {
         'styles/thefoundation.css': (
             'styles/style.css',
-			'styles/style-policy.css',
-			'styles/style-press.css',
-			'styles/style-projects.css',
+            'styles/style-policy.css',
+            'styles/style-press.css',
+            'styles/style-projects.css',
             'styles/carousel.css',
             'styles/screen.css',
             'styles/superpacs.css',
@@ -157,6 +157,7 @@ MEDIASYNC = {
         ),
         'scripts/thefoundation.js': (
             'scripts/jquery.placehold-0.3.min.js',
+            'scripts/jquery.simplecarousel-0.1.js',
             'scripts/plugins.js',
             'scripts/script.js',
         ),
