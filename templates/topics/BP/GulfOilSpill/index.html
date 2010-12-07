@@ -1,0 +1,82 @@
+{% extends "base_sidebar.html" %}
+{% load media %}
+{% block bodyclass %}expenditures{% endblock %}
+{% load markup %}
+
+{% block content %}
+
+<div class="module">
+
+	<h2>BP: By The Numbers</h2>
+
+	<p>The worst oil spill in the history of the Gulf of Mexico continues unabated.  Research shows that BP had a dangerous history of incidents and a lack of emergency preparation for the Deepwater Horizon oil platform. What's worse is that further research is stymied by poor government database management.</p>
+	<h3 class="sectionspace">Follow our continuing coverage of BP and its political influence.</h3>
+
+	<ul id="article_link">
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://reporting.sunlightfoundation.com/2010/british-petroleum/">BP blamed in 8,000 spill reports, federal data shows</a></h4>
+	<p>BP and its subsidiaries have been the subject of roughly 8,000 reported incidents of spills, emissions and leaks of oil, chemicals and gases into the environment, according to a government database.</p>
+	</li>
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://reporting.sunlightfoundation.com/2010/Deepwater-Horizon/">BP had no plan for Deepwater Horizon disaster</a></h4>
+	<p>BP did not have an emergency response plan for its Deepwater Horizon drill rig; such plans direct personnel to the proper procedures for responding to incidents like the current spill in the Gulf of Mexico.</p>
+	</li>
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://reporting.sunlightfoundation.com/2010/coast-guard-database-makes-oil-spill-penalties-nearly-impossible/">Coast guard database makes oil spill penalties nearly impossible to track</a></h4>
+	<p>The U.S. government has investigated potentially thousands of BP leaks, spills and other incidents but the information is stored in a Coast Guard database that keeps key details such as investigative findings and penalties out of the public’s reach.</p>
+	</li>
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://blog.politicalpartytime.org/2010/06/22/republicans-cozy-up-with-bp-lobbyist-thursday/">Republicans cozy up with BP lobbyist Thursday</a></h4>
+	<p>On Thursday, June 24, Dan Meyer, a lobbyist for BP, is listed as one of several hosts for a Thursday $1,000-a-plate luncheon at the boutique Hotel George in downtown Washington. Meyer, who’s with the Duberstein Group,  was the Assistant to the President for Legislative Affairs under George W. Bush in 2007-2008.</p>
+	</li>
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://reporting.sunlightfoundation.com/2010/center-public-integrity-coast-guard-logs-contradict-white-house-/">Center for Public Integrity: Coast Guard logs contradict White House Deepwater timeline</a></h4>
+	<p>The Coast Guard grasped the potential threat of a catastrophic spill within hours of the April 20 explosion aboard the Deepwater Horizon drilling rig, estimating that 8,000 barrels a day of crude oil could possibly gush out of the well in the event of a complete blowout, according to Coast Guard logs.</p>
+	</li>
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://reporting.sunlightfoundation.com/2010/oil-spill-wildlife-data/">Wildlife data shows several species may be affected</a></h4>
+	<p>As the millions of gallons of oil continues to spill into the Gulf of Mexico, the Department of Interior’s Fish and Wildlife Services has started an uphill battle with their rescue efforts. The agency has deployed a 200-person workforce in the area who are reviewing the natural habitats affected by the oil spill. </p>
+	</li>
+
+
+	<li class="press_type_icon_print">
+	<h4><a href="http://reporting.sunlightfoundation.com/2010/oil-spill-enforcement-actions-taken-against-bp-pipelines/">Oil spill: BP pipelines trigger safety violations</a></h4>
+	<p>The records show that civil penalties have been levied on BP pipelines for safety violations ten times since 2002 (the earliest year the data is available online), and three more have been proposed, but have not yet been settled. </p>
+	</li>
+
+
+	<br>
+
+	</ul>
+	<a href="http://reporting.sunlightfoundation.com/" onmouseover="document.NAME.src='http://assets.sunlightfoundation.com.s3.amazonaws.com/images/reportingfooterCOLOR.png' " onmouseout="document.NAME.src='http://assets.sunlightfoundation.com.s3.amazonaws.com/images/reportingfooter.png' ">
+	<img name=NAME src="http://assets.sunlightfoundation.com.s3.amazonaws.com/images/reportingfooter.png"></a>
+
+
+
+</div>
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+	<div class="module">
+        <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+        <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+        <ul id="storeSidebar">
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+        </ul>    
+        <div class="clear"></div>
+    </div>
+{% endblock %}

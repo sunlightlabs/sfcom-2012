@@ -1,0 +1,94 @@
+{% extends "base_sidebar.html" %}
+{% load media %}
+{% block bodyclass %}expenditures{% endblock %}
+{% load markup %}
+
+{% block content %}
+
+<div class="module">
+	<h2>Our Open Government List</h2>
+	<p>Shortly after President Obama's inauguration, he issued a memo on <a href="http://blog.sunlightfoundation.com/2009/01/22/memorandum-on-transparency/">Transparency</a> directing top administration officials to develop "recommendations for an Open Government Directive, to be issued by the Director of OMB, that instructs executive departments and agencies to take specific actions implementing the principles set forth in this memorandum."  Those principles are designed to make a government that is transparent, participatory and collaborative.
+	</p>
+	<p>
+	To jump start <a href="http://feedback.sunlightfoundation.com/oogl/">this project</a>, the Sunlight Foundation has also independently developed recommendations.
+	</p>
+
+
+	<h3>Information Audit</h3>
+	<p>Agencies should undertake a comprehensive audit of their information, and the processes they use to collect it. The audit should focus on providing a comprehensive inventory of all data collected by the agency, agency engagement online and electronic record-keeping practices. Since publicizing ethics data promotes trust in government, and transaction-level details allow for citizens to participate in and oversee government's work, we believe special consideration should be given to two
+	categories of agency information:
+	</p>
+	<p>
+	Ethics and Influence Data: campaign contributions, earmarks, lobbying
+	records, personal financial disclosure statements, oversight information
+	and ethics waivers.
+	</p>
+	<p>
+	Transaction Level Details on Government Operations: schedules, meetings,
+	testimony, reports, grants and contracts.
+	</p>
+
+	<h3>Data Handling</h3>
+	<p>Agency databases should serve as the platform on which agencies function, and public access to data is only possible if agencies design their databases with specific outcomes in mind. The processes used to gather, organize and transmit data within agencies, and to the public online, should be examined and upgraded, to increase the reach of vital government information.</p>
+	<p>
+	Paper-based processes should be digitized.
+	</p>
+	<p>
+	Electronic reporting systems should be devised for all filings and the information should be fed directly into online databases.
+	</p>
+	<p>
+	Coordinated metadata standards must be developed to allow for interoperability of all databases within an agency or department, and throughout the government as a whole.
+	</p>
+	<p>
+	Application Programming Interfaces (APIs) and bulk data access must be implemented across all data sets, to allow for advanced analysis and programming.
+	</p>
+	<p>
+	The Eight Open Government Data Principles should be implemented, making all government data: complete, primary, timely, accessible, machine processable, non-discriminatory, non-proprietary and license-free.
+	</p>
+	<p>
+
+	<h3>Electronic Recordkeeping</h3>
+	<p>
+	The official records created by agency employees are the foundation for public information, digital preservation and the operations of each agency. Electronic recordkeeping standards and enforcement have been largely ignored, even as agencies increasingly rely on a growing amount of electronic documents. New standards and enforcement should be developed to govern electronic records management throughout their life cycle.  A rich public record depends on well handled public records and data.
+	</p>
+
+	<h3>Agency Engagement Online</h3>
+	<p>
+	Agencies' Web presence should be considered a strategy for achieving agency goals and to enhance transparency—not just an extension of the communications department. Agencies should consider public interaction and online collaboration as potential strategies for all agency initiatives. Agencies should adopt transparent practices for all agency operations, and this should be pursued in both agency Web sites and in non-agency communities online, where social networks hold immense and largely untapped potential.  Public meetings should be broadcast online, and information regarding agencies' daily operations should also be accessible through the Internet.*
+	</p>
+
+	<p>
+	<h4>Resources:</h4>
+	</p>
+	<p>
+	<a href="http://resource.org/8_principles.html">Open Government Data Principles</a>
+	</p>
+	<p>
+	<a href="http://www.usa.gov/webcontent/documents/Federal_Web_Managers_WhitePaper.pdf">Web 2.0 and Government</a>
+	</p>
+	<p>
+	<a href="http://www.openthegovernment.org/otg/Managing%20The%20Public%27s%20Records%20.pdf">Electronic Recordkeeping Report from OpentheGovernment.org</a>
+	</p>	
+	
+	
+</div>
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+	<div class="module">
+        <h3 class="withTip">Help Open up Your Government and Get Some Great Stuff While You're at It.</h3>
+        <p class="tip">Check out our new tshirts, mug and tote bag on our <a href="http://donate.sunlightfoundation.com/">shopify site</a>.</p>
+        <ul id="storeSidebar">
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug" src={% media_url "images/store_mugSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/caffeinate-me"><img alt="Sunlight Foundation Mug Closeup" src={% media_url "images/store_mugSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt" src={% media_url "images/store_tshirtSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/superhero-shirt"><img alt="Sunlight Foundation T-shirt Closeup" src={% media_url "images/store_tshirtSm2.jpg" %} /></a></li>
+            <li class="withMargin"><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote" src={% media_url "images/store_toteSm.jpg" %} /></a></li>
+            <li><a href="http://donate.sunlightfoundation.com/products/tote"><img alt="Sunlight Foundation Tote Closeup" src={% media_url "images/store_toteSm2.jpg" %} /></a></li>
+        </ul>    
+        <div class="clear"></div>
+    </div>
+{% endblock %}
