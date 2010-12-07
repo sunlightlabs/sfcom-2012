@@ -75,8 +75,7 @@ urlpatterns += patterns('django.views.generic.simple',
 	url(r'^presentations/emillerMITjune2010/$', 'direct_to_template', {"template": "presentations/emillerMITjune2010.html"}),
 	url(r'^projects/2009/earmarks/no_disclosure/$', 'direct_to_template', {"template": "projects/2009/earmarks/no_disclosure.html"}),
 	url(r'^projects/2009/expenditures/$', 'direct_to_template', {"template": "projects/2009/expenditures/index.html"}),
-	url(r'^projects/2009/expenditures/committees$', 'direct_to_template', {"template": "projects/2009/expenditures/committees.html"}),
-	url(r'^projects/2009/expenditures/totals', 'direct_to_template', {"template": "projects/2009/expenditures/totals.html"}),
+
 	url(r'^projects/2009/healthcare_lobbyist_complex', 'direct_to_template', {"template": "projects/2009/healthcare_lobbyist_complex.html"}),
 	url(r'^projects/2009/heart_of_the_matter', 'direct_to_template', {"template": "projects/2009/heart_of_the_matter.html"}),
 	url(r'^projects/2009/oogl', 'direct_to_template', {"template": "projects/2009/oogl.html"}),
@@ -110,9 +109,9 @@ urlpatterns += patterns('django.views.generic.simple',
     url(r'^logos/$', 'redirect_to', {'url': '/press/logos/'}),
     url(r'^projects/2006/earmarks/$', 'direct_to_template', {"template": "projects/2006/earmarks/index.html"}),
     url(r'^projects/2007/punchclockmap/$', 'direct_to_template', {"template": "projects/2007/punchclockmap/punchclock.html"}),
-    url(r'^projects/2009/expenditures/', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
-    url(r'^projects/2009/expenditures/totals', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
-    url(r'^projects/2009/expenditures/committees', 'redirect_to', {'url': '/projects/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/', 'redirect_to', {'url': '/projects/2009/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/totals', 'redirect_to', {'url': '/projects/2009/expenditures/'}), # flatpage
+    url(r'^projects/2009/expenditures/committees', 'redirect_to', {'url': '/projects/2009/expenditures/'}), # flatpage
     url(r'^projects/transparency-timeline/$', 'direct_to_template', {"template": "projects/timeline/timeline.html"}),
     # poia
     url(r'^poia/', 'redirect_to', {'url': '/policy/poia/'}),
