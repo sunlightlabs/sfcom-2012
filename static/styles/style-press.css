@@ -92,3 +92,25 @@ background-repeat:no-repeat;
 #id_month, #id_year{
 	margin-right: 30px;
 }
+
+.logo_downloads li{
+	float: left;
+	display: block;
+	width: 160px;
+	margin:0 10px 50px 25px;
+}
+.logo_link{
+	display: block;
+}
+
+.logo_thumb_container{
+
+}
+
+.logoFor{
+	background: url('../images/logoDownloadHeader.png') top left no-repeat;
+	background-size: 41px 560px;
+	width: 560px;
+	height: 41px;
+	padding: 5px 0 0 25px;
+}

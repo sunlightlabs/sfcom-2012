@@ -430,8 +430,13 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 
 /* table styling */
 
+
 th { text-align: left; padding: 10px 15px;}
 td { padding: 15px;}
+
+.even{
+	background-color: #f2eee2;
+}
 
 .messages li {  padding: 5px 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
 .messages .info { background-color: #f5f5be; border: 2px solid #e4dc06;}
@@ -440,35 +445,26 @@ td { padding: 15px;}
 .messages .error { background-color: #f9cba9; border: 2px solid #ee0f0f;}
 
 
-.logo_downloads li{
-	float: left;
-	display: block;
-	width: 160px;
-	margin:0 10px 0 25px;
-	margin-bottom: 30px;
-
-}
-.logo_link{
-	display: block;
-}
-
-.logo_thumb_container{
-	height: 80px;
-}
-
-.logoFor{
-	background: url('../images/logoDownloadHeader.png') top left no-repeat;
-	background-size: 41px 560px;
-	width: 560px;
-	height: 41px;
-	padding: 5px 0 0 25px;
-}
 .join-social .social-links li{
 	width: 95px;
 }
 #bullet{
 	list-style-type: disc; 
 	margin-left: 40px;
+}
+
+
+
+.no_disclosure{
+	width: 600px;
+}
+
+ol{
+	padding-left: 0;
+}
+
+ol>li{
+	list-style-type: none;
 }
 
 
