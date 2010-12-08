@@ -156,7 +156,7 @@ nav.logos li.logos a { color: #fff; }
 
 header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 940px; margin: 0 auto;}
 #mainContent { padding: 0 0 0 10px; width: 950px; margin: 0 auto; min-height: 800px;}
-#searchform { float: right; margin-top: 40px;}
+#searchform { float: right; margin-top: 40px; width: 258px;}
 #container #searchform input { width: 220px; float: left; border: 1px solid #aabed5; font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; font-size: 95%; padding:7px 30px 5px 5px; height: 15px;}
 
 #slogan { text-indent: -9999em; display: block; margin: 0 auto; background: url(../images/featureText.png) top center no-repeat; width: 526px; height: 144px;}
@@ -180,7 +180,7 @@ header, #featureBox, #outreachBlock, #footerContent { padding: 0 10px; width: 94
 #donateBtn:hover { background: url(../images/btn_donate.png) bottom center no-repeat; }
 #joinBtn { background: url(../images/btn_join.png) top center no-repeat; width: 76px; height: 30px;}
 #joinBtn:hover { background: url(../images/btn_join.png) bottom center no-repeat; }
-#searchform button { background: url(../images/magnifier.png) 1px 6px no-repeat; float: right; margin-left: -30px; position: relative; padding: 5px 10px;}
+#searchform button { background: url(../images/magnifier.png) right 6px no-repeat; float: right; position: relative; padding: 5px 10px; width: 16px; top: -28px; left: -10px;}
 #disqus_thread #dsq-content .dsq-post-footer #dsq-post-button { background: url(../images/btn_comment.png) top center no-repeat; width: 177px; height: 45px; border: none; padding: 0; float: left; margin: 15px 0 50px; text-indent: -9999em; border: none;}
 #disqus_thread #dsq-content .dsq-post-footer #dsq-post-button:hover { background: url(../images/btn_comment.png) bottom center no-repeat;}
 .donatebutton { background: url(../images/btn_donate_google.png) top center no-repeat; width: 240px; height: 54px;}

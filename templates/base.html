@@ -28,6 +28,7 @@
 	<link rel="alternate" type="application/rss+xml" title="Sunlight Foundation Blog" href="http://sunlightfoundation.com/feeds/blog/" />
 	{% css "styles/thefoundation.css" %}
 	{% block css %}{% endblock %}
+	<!--[if IE 7]>{% css "styles/buggy_7.css" %}<![endif]-->
 	{% js "scripts/modernizr-1.6.min.js" %}
 </head>
 <body class="{% block bodyclass %}thefoundation{% endblock %}">
