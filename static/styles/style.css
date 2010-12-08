@@ -392,7 +392,7 @@ article { margin-bottom: 50px;}
 
 /*blog styles*/
 .entry-content ol { list-style-type: decimal; margin-left: 40px;}
-.entry-content ul { list-style-type: disc; margin-left: 40px;}
+.entry-content ul, #bullet { list-style-type: disc; margin-left: 40px;}
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
@@ -434,10 +434,6 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 th { text-align: left; padding: 10px 15px;}
 td { padding: 15px;}
 
-.even{
-	background-color: #f2eee2;
-}
-
 .messages li {  padding: 5px 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
 .messages .info { background-color: #f5f5be; border: 2px solid #e4dc06;}
 .messages .success { background-color: #dce6ce; border: 2px solid #b6c745;}
@@ -448,23 +444,10 @@ td { padding: 15px;}
 .join-social .social-links li{
 	width: 95px;
 }
-#bullet{
-	list-style-type: disc; 
-	margin-left: 40px;
-}
 
+.no_disclosure{ width: 600px; }
 
-
-.no_disclosure{
-	width: 600px;
-}
-
-ol{
-	padding-left: 0;
-}
-
-ol>li{
-	list-style-type: none;
-}
+.noListStyle ol { padding-left: 0; }
+.noListStyle ol>li{ list-style-type: none; }
 
 
