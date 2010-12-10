@@ -86,7 +86,7 @@
     {% disqus_dev %}
     <script> 
         /* <![CDATA[ */
-		var disqus_identifer = '{{ post.get_absolute_url|slice:"5:" }}';
+		var disqus_identifer = '{{ post.id }} http://blog.sunlightfoundation.com/?p={{ post.id }}';
 		var disqus_url = 'http://blog.sunlightfoundation.com{{ post.get_absolute_url|slice:"5:" }}';
         var disqus_shortname = 'sunlightfoundation';
         var disqus_domain = 'disqus.com';
