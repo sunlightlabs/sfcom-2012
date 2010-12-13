@@ -53,7 +53,7 @@ h3.sectionHeader{
 	width: 420px;
 }
 
-.columnOf2 img{
+.columnOf2 a.image{
 	float: left;
 	width: 80px;
 	margin: 0 20px 25px 0;
@@ -62,7 +62,7 @@ h3.sectionHeader{
 .columnOf2 .description{
 	float: left;
 	width: 320px;
-	margin: 0 0 25px 0;
+	margin: 0 0 50px 0;
 	display: block;
 	
 }
