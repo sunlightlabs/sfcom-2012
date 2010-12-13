@@ -431,7 +431,7 @@ footer { padding: 20px; margin-top: 20px; background-color: #f3f2e9; -moz-border
 /* table styling */
 
 
-th { text-align: left; padding: 10px 15px;}
+th { text-align: left; padding: 10px 15px; font-weight: bold;}
 td { padding: 15px;}
 
 .messages li {  padding: 5px 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px;}
@@ -450,4 +450,5 @@ td { padding: 15px;}
 .noListStyle ol { padding-left: 0; }
 .noListStyle ol>li{ list-style-type: none; }
 
+.entry-content table, .entry-content td { border: 1px solid #E5E4DB; background-color: #fff;}
 
