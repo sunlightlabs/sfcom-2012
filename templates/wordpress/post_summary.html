@@ -16,6 +16,7 @@
         <div class="entry-summary">
             {{ post.excerpt|safe|markdown }}
         </div>
+        <a href="{{ post.get_absolute_url }}" class="morelink">Read more</a>
     {% else %}
         <div class="entry-content">
             {{ post.content|safe|markdown }}
