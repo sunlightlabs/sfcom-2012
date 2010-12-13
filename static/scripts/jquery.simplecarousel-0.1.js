@@ -1,9 +1,9 @@
 ;(function($) {
 	
-	$.fn.carousel = function(opts) {
+	$.fn.carousel = function(options) {
 		
-		var opts = opts || {};
-		opts['autoAdvance'] = opts['autoAdvance'] || true;
+		var opts = options || {};
+		opts.autoAdvance = opts.autoAdvance || true;
 		
 		var next = function(carousel) {
 			carousel.find('li:first').animate(
@@ -32,7 +32,7 @@
 			
 			var elem = $(this);
 			var userIntervention = false;
-			var slideWidth = elem.find('li').width()
+			var slideWidth = elem.find('li').width();
 			
 			elem.data('slideWidth', slideWidth);
 			
@@ -42,23 +42,25 @@
 				elem.find('li:last')
 			);
 			
-			var nextElem = opts['nextElem'] || elem.find('a.carousel-next');
+			var nextElem = opts.nextElem || elem.find('a.carousel-next');
 			nextElem.click(function(ev) {
 				next(elem, slideWidth);
 				userIntervention = true;
 				ev.preventDefault();
 			});
 			
-			var previousElem = opts['previousElem'] || elem.find('a.carousel-previous');
+			var previousElem = opts.previousElem || elem.find('a.carousel-previous');
 			previousElem.click(function(ev) {
 				previous(elem, slideWidth);
 				userIntervention = true;
 				ev.preventDefault();
 			});
 			
-			if (opts['autoAdvance']) {
+			if (opts.autoAdvance) {
 				var autoAdvance = function() {
-					if (userIntervention) return;
+					if (userIntervention) {
+					    return;
+				    }
 					next(elem, slideWidth);
 					setTimeout(autoAdvance, 10000);
 				};
