@@ -24,7 +24,7 @@
             <h1 class="entry-title">{{ post.title }}</h1>
             <div class="entryMetaData">
                 <address class="author"><a class="url fn" href="/people/{{ post.author.username }}/">{{ post.author.display_name }}</a></address>
-    		    <time datetime="{{ feature.date_published.isoformat }}" class="published" pubdate>
+    		    <time datetime="{{ post.date_published.isoformat }}" class="published" pubdate>
     		        {{ post.post_date }}
     		    </time>
             </div>
