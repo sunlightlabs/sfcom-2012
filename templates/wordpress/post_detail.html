@@ -24,16 +24,16 @@
             <h1 class="entry-title">{{ post.title }}</h1>
             <div class="entryMetaData">
                 <address class="author"><a class="url fn" href="/people/{{ post.author.username }}/">{{ post.author.display_name }}</a></address>
-    		    <time datetime="{{ post.date_published.isoformat }}" class="published" pubdate>
-    		        {{ post.post_date }}
-    		    </time>
+                <time datetime="{{ post.date_published.isoformat }}" class="published" pubdate>
+                    {% if post.post_date %}{{ post.post_date }}{% else %}unpublished{% endif %}
+                </time>
             </div>
         </header>
         
         <div class="entry-content">
             {{ post.content|safe|markdown }}
         </div>
-    
+        
         <footer>
             
             {% if post.tags %}
@@ -47,37 +47,45 @@
                 <div class="clear"></div>
             </div>
             {% endif %}
-            <div id="share">
-                <span class="smallTitle">Share:</span>
-                <ul class="share-links">
-                    <li class="share-facebook">
-                        <a href="http://www.facebook.com/sharer.php?u={{ post_url|urlencode }}&amp;t={{ post.title|urlencode }}">Facebook</a>
-                    </li>
-                    <li class="share-twitter">
-                        <a href="http://twitter.com/share?url={{ post_url|urlencode }}&amp;via=sunfoundation&amp;text={{ post.title|urlencode }}">Twitter</a>
-                    </li>
-                    <li class="share-reddit">
-                        <a href="http://reddit.com/submit?url={{ post_url|urlencode }}">Reddit</a>
-                    </li>
-                    <li class="share-delicious">
-                        <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Delicious</a>
-                    </li>
-                    <li class="share-digg">
-                        <a href="http://digg.com/submit?url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Digg</a>
-                    </li>
-                    <li class="share-buzz">
-                        <a href="http://www.google.com/buzz/post?url={{ post_url|urlencode }}">Google Buzz</a>
-                    </li>
-                </ul>
-                <div class="clear"></div>
-            </div>
+            
+            {% if not preview %}
+                <div id="share">
+                    <span class="smallTitle">Share:</span>
+                    <ul class="share-links">
+                        <li class="share-facebook">
+                            <a href="http://www.facebook.com/sharer.php?u={{ post_url|urlencode }}&amp;t={{ post.title|urlencode }}">Facebook</a>
+                        </li>
+                        <li class="share-twitter">
+                            <a href="http://twitter.com/share?url={{ post_url|urlencode }}&amp;via=sunfoundation&amp;text={{ post.title|urlencode }}">Twitter</a>
+                        </li>
+                        <li class="share-reddit">
+                            <a href="http://reddit.com/submit?url={{ post_url|urlencode }}">Reddit</a>
+                        </li>
+                        <li class="share-delicious">
+                            <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Delicious</a>
+                        </li>
+                        <li class="share-digg">
+                            <a href="http://digg.com/submit?url={{ post_url|urlencode }}&amp;title={{ post.title|urlencode }}">Digg</a>
+                        </li>
+                        <li class="share-buzz">
+                            <a href="http://www.google.com/buzz/post?url={{ post_url|urlencode }}">Google Buzz</a>
+                        </li>
+                    </ul>
+                
+                    <div class="clear"></div>
+                </div>
+            {% else %}
+                <p>This is a preview of an unpublished blog post.</p>
+            {% endif %}
             
         </footer>
 
     </article>
     
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=">comments powered by Disqus.</a></noscript>
+    {% if not preview %}
+        <div id="disqus_thread"></div>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=">comments powered by Disqus.</a></noscript>
+    {% endif %}
 
 {% endblock %}
 
