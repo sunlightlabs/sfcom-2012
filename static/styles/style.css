@@ -44,6 +44,8 @@ p { margin-bottom: 1em;}
 
 html { overflow-y: scroll; }
 
+iframe { display: block; margin: 10px 0; }
+
 a:hover, a:active { outline: none; }
 a, a:active, a:visited { color: #2f4867; }
 a:hover { color: #15283f; }
