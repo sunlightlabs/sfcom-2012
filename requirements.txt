@@ -5,6 +5,8 @@ django-pagination
 pytz
 django-timezones
 
+django-flatblocks
+
 boto
 slimmer
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=mediasync
@@ -20,8 +22,6 @@ feedparser
 # search
 django-haystack==1.0.2-final
 Whoosh==0.3.18
-
-#-e svn+http://django-morsels.googlecode.com/svn/trunk/#egg=morsels
 
 # blog
 -e git://github.com/arthurk/django-disqus.git#egg=disqus

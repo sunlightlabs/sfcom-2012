@@ -110,6 +110,7 @@ INSTALLED_APPS = (
     'thefoundation.funding',
     'feedinator',
     'wordpress',
+    'flatblocks',
     'disqus',
     'haystack',
     'simplepay',

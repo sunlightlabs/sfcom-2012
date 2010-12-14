@@ -1,4 +1,5 @@
 {% extends "about/base.html" %}
+{% load flatblock_tags %}
 
 {% block title %}Board of Directors and Advisory Board - {{ block.super }}{% endblock %}
 
@@ -6,28 +7,9 @@
 
 {% block content %}
 
-	<h2>Board and Advisory Board</h2>  
-
-	<h3>Sunlight Foundation Board</h3>
-
-	<ul class="indent">
-		<li><a href="/people/mklein"> Michael R. Klein</a>, Chairman</li>
-		<li><a href="/people/emiller">  Ellen S. Miller,</a> Sec-Treasurer</li>
-		<li><a href="http://en.wikipedia.org/wiki/Esther_Dyson">Esther Dyson</a>, ED Venture</li>
-		<li><a href="http://www.omidyar.com/team/matt-halprin">Matt Halprin</a>, Omidyar Network</li>
-		<li><a href="http://en.wikipedia.org/wiki/Craig_Newmark">Craig Newmark</a>, CraigsList </li>
-		<li>Nicholas J. Klein</li>
-	</ul>
-
-	<h3>Advisory Board</h3>
-	<ul class="indent">
-		<li><a href="http://en.wikipedia.org/wiki/Yochai_Benkler">Yochai Benkler</a>, Yale University</li>
-		<li><a href="http://en.wikipedia.org/wiki/Mitch_Kapor">Mitch Kapor</a></li>
-		<li><a href="http://en.wikipedia.org/wiki/Lawrence_Lessig">Lawrence Lessig</a>, Stanford University</li>
-		<li><a href="http://www.publicintegrity.org/about/our_people/founder/">Charles Lewis</a>, former director, Center for Public Integrity</li>
-		<li>Kim Scott, Apple Inc.</li>
-		<li><a href="http://en.wikipedia.org/wiki/Jimmy_Wales">Jimmy Wales</a>, Wikipedia </li>
-	</ul>
+	<h2>Board and Advisory Board</h2>
+	
+	{% flatblock "about.board" %}
 	
 {% endblock %}
 
