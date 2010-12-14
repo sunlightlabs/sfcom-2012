@@ -392,8 +392,8 @@ article { margin-bottom: 50px;}
 .infographicImg { max-width: 940px; border: 1px solid #D1CCBF;}
 
 /*blog styles*/
-.entry-content ol { list-style-type: decimal; margin-left: 40px;}
-.entry-content ul, #bullet { list-style-type: disc; margin-left: 40px;}
+.entry-content ol, .entry-summary ol, .hentry_content ol { list-style-type: decimal; margin-left: 40px;}
+.entry-content ul, .entry-summary ul, .hentry_content ul, #bullet { list-style-type: disc; margin-left: 40px;}
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
