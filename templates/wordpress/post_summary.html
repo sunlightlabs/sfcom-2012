@@ -22,5 +22,10 @@
             {{ post.content|safe|markdown }}
         </div>
     {% endif %}
+    
+    <a href="http://sunlightfoundation.com{{ post.get_absolute_url }}#disqus_thread">Comments</a>
+
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="sunfoundation" data-url="http://sunlightfoundation.com{{ post.get_absolute_url }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http://sunlightfoundation.com{{ post.get_absolute_url|urlencode }}&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
 
 </article>
