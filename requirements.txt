@@ -2,6 +2,9 @@ django==1.2.3
 django-debug-toolbar
 django-pagination
 
+pytz
+django-timezones
+
 boto
 slimmer
 -e git://github.com/sunlightlabs/django-mediasync.git#egg=mediasync
