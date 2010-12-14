@@ -135,6 +135,38 @@
     		})(document, 'script');
     	</script>
 	{% endblock %}
+	
+	<script type="text/javascript">
+    var _sf_async_config={uid:980,domain:"sunlightfoundation.com"};
+    (function(){
+     function loadChartbeat() {
+       window._sf_endpt=(new Date()).getTime();
+       var e = document.createElement('script');
+       e.setAttribute('language', 'javascript');
+       e.setAttribute('type', 'text/javascript');
+       e.setAttribute('src',
+    	  (("https:" == document.location.protocol) ?
+    "https://s3.amazonaws.com/" : "http://") +
+    	  "static.chartbeat.com/js/chartbeat.js");
+       document.body.appendChild(e);
+     }
+     var oldonload = window.onload;
+     window.onload = (typeof window.onload != 'function') ?
+    	loadChartbeat : function() { oldonload(); loadChartbeat(); };
+    })();
+    </script>
+    
+    <!-- Start Quantcast tag -->
+    <script type="text/javascript">
+    _qoptions={
+    qacct:"p-c0SZuTgPkvFC-"
+    };
+    </script>
+    <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+    <noscript>
+    <img src="http://pixel.quantserve.com/pixel/p-c0SZuTgPkvFC-.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/>
+    </noscript>
+    <!-- End Quantcast tag -->
   
 </body>
 </html>
