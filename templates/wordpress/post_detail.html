@@ -52,12 +52,14 @@
                 <div id="share">
                     <span class="smallTitle">Share:</span>
                     <ul class="share-links">
+                        {% comment %}
                         <li class="share-facebook">
                             <a href="http://www.facebook.com/sharer.php?u={{ post_url|urlencode }}&amp;t={{ post.title|urlencode }}">Facebook</a>
                         </li>
                         <li class="share-twitter">
                             <a href="http://twitter.com/share?url={{ post_url|urlencode }}&amp;via=sunfoundation&amp;text={{ post.title|urlencode }}">Twitter</a>
                         </li>
+                        {% endcomment %}
                         <li class="share-reddit">
                             <a href="http://reddit.com/submit?url={{ post_url|urlencode }}">Reddit</a>
                         </li>
@@ -73,6 +75,11 @@
                     </ul>
                 
                     <div class="clear"></div>
+                    
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="sunfoundation" data-url="http://sunlightfoundation.com{{ post.get_absolute_url }}">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                    <iframe src="http://www.facebook.com/plugins/like.php?href=http://sunlightfoundation.com{{ post.get_absolute_url|urlencode }}&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px;" allowTransparency="true"></iframe>
+                    
+                    
                 </div>
             {% else %}
                 <p>This is a preview of an unpublished blog post.</p>
