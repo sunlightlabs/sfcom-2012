@@ -57,7 +57,7 @@ site.register(FlatPage, FlatPageIndex)
 
 class PressArticleIndex(indexes.SearchIndex):
     type = indexes.CharField(default='press_article')
-    text = indexes.CharField(document=True, model_attr='body')
+    text = indexes.CharField(document=True, model_attr='body', use_template=True)
     title = indexes.CharField(model_attr='headline') 
     link = indexes.CharField(model_attr='get_absolute_url')
     summary = indexes.CharField(model_attr='teaser') 

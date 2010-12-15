@@ -1,0 +1,5 @@
+{{ object.publication }}
+
+{{ object.headline }}
+
+{{ object.body }}
