@@ -396,6 +396,7 @@ article { margin-bottom: 50px;}
 /*blog styles*/
 .entry-content ol, .entry-summary ol, .hentry_content ol { list-style-type: decimal; margin-left: 40px;}
 .entry-content ul, .entry-summary ul, .hentry_content ul, #bullet { list-style-type: disc; margin-left: 40px;}
+.entry-content img, .entry-summary img, .hentry_content img { margin-bottom: 15px;}
 #tags { margin-bottom: 15px; }
 #tags li, #share li{ float: left; margin-right: 7px; margin-bottom: 0px; }
 .smallTitle { float: left; margin-right: 15px; font-weight: bold;}
