@@ -22,16 +22,24 @@
 		    <p>Publication: <a href="{{object.url}}">{{ object.publication }}</a></p>
 			<p>{{ object.author }}{% if object.publication_date %}<br />{{ object.publication_date|date:"F j, Y" }}{% endif %}</p>
 		</header>
-
-		{% if object.from_drupal %}
-			{{ object.body|safe }}    
+		
+		{% if object.jerk_mode %}
+		
+		    <div>{{ object.teaser|safe }}</div>
+		
 		{% else %}
-			{% autoescape off %}{{ object.body|linebreaks }}{% endautoescape %}
-		{% endif %}
 
-		<footer>
-			<a href="/presscenter/{{ pub_type }}/{{ object.publication_date|date:"Y/m/d" }}/{{ object.slug }}/print/">print version</a>
-		</footer>
+    		{% if object.from_drupal %}
+    			{{ object.body|safe }}    
+    		{% else %}
+    			{% autoescape off %}{{ object.body|linebreaks }}{% endautoescape %}
+    		{% endif %}
+
+    		<footer>
+    			<a href="/presscenter/{{ pub_type }}/{{ object.publication_date|date:"Y/m/d" }}/{{ object.slug }}/print/">print version</a>
+    		</footer>
+		
+		{% endif %}
 
 	</article>
 
