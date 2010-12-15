@@ -41,7 +41,7 @@
                 <span class="smallTitle">Tags:</span>
                 <ul>
                     {% for tag in post.tags %}
-                        <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name }}</a></li>
+                        <li><a href="{% url wp_taxonomy "term" tag.slug %}" rel="tag">{{ tag.name|safe }}</a></li>
                     {% endfor %}
                 </ul>
                 <div class="clear"></div>
