@@ -456,3 +456,6 @@ td { padding: 15px;}
 
 .entry-content table, .entry-content td { border: 1px solid #E5E4DB; background-color: #fff;}
 
+footer.summaryFooter { padding: 10px 20px;}
+footer.summaryFooter .twitter-share-button, footer.summaryFooter .summaryFacebook { float: left; margin-right: 20px; margin: 0;}
+.commentCount { font-family: Georgia, "Times New Roman", Times, serif; font-style: oblique; float: left; margin-right: 20px; text-decoration: none;}
