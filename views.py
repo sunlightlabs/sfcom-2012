@@ -5,6 +5,7 @@ from django.template import RequestContext
 from postmark import PMMail
 from sunlightfoundation.com.forms import ContactForm
 from sunlightfoundation.com.models import FeaturedPost, FeaturedTopic
+from thefoundation.funding.models import Contribution
 
 def index(request):
     
@@ -25,6 +26,11 @@ def index(request):
     }
     
     return render_to_response('index.html', data, context_instance=RequestContext(request))
+
+
+def funding(request):
+    data = {'contributions': Contribution.objects.all()}
+    return render_to_response('about/funding.html', data, context_instance=RequestContext(request))
 
 
 def contact(request):

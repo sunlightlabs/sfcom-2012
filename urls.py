@@ -9,6 +9,7 @@ from thefoundation.sitemaps import sitemaps
 admin.autodiscover()
 
 urlpatterns = patterns('',
+    url(r'^about/funding/$', 'thefoundation.views.funding', name='funding'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('wordpress.urls')),
     url(r'^contact/', 'thefoundation.views.contact', name='contact'),
@@ -53,7 +54,6 @@ urlpatterns += patterns('sunlightfoundation.com.views',
 urlpatterns += patterns('django.views.generic.simple',
     url(r'^about/$', 'direct_to_template', {"template": "about/index.html"}),
     url(r'^about/board/$', 'direct_to_template', {"template": "about/board.html"}),
-    url(r'^about/funding/$', 'direct_to_template', {"template": "about/funding.html"}),
     url(r'^about/grants/$', 'direct_to_template', {"template": "about/grants.html"}),
     url(r'^about/history/$', 'direct_to_template', {"template": "about/history.html"}),
     url(r'^policy/poia/about/$', 'direct_to_template', {"template": "policy/poia_about.html"}),
