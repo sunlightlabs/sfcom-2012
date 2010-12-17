@@ -10,9 +10,11 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^about/funding/$', 'thefoundation.views.funding', name='funding'),
+    url(r'^admin/django-lean/', include('django_lean.experiments.admin_urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include('wordpress.urls')),
     url(r'^contact/', 'thefoundation.views.contact', name='contact'),
+    url(r'^django-lean/', include('django_lean.experiments.urls')),
     url(r'^donate/payment/', include('simplepay.urls')),
     url(r'^donate/', include('sunlightfoundation.donations.urls')),
     url(r'^earmarkdisclosures/', include('sunlightfoundation.earmarkdisclosures.urls')),

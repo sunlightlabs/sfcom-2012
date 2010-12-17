@@ -1,4 +1,5 @@
 {% extends "base_sidebar.html" %}
+{% load experiments %}
 {% load feeds %}
 {% load markup %}
 {% load media %}
@@ -9,7 +10,12 @@
 	        <p id="slogan">Making government transparent &amp; accountable</p>
         </div>
 		<div id="donateBlock">
-			<p>Open up your government and help us reach our annual goal of 1,500 donors.</p>
+		    {% experiment index_donate_plea control  %}
+                <p>Open up your government and help us reach our annual goal of 1,500 donors.</p>
+            {% endexperiment %}
+            {% experiment index_donate_plea test  %}
+                <p>We need your help! Make a contribution to the cause.</p>
+            {% endexperiment %}
 			<a class="buttonLink" id="donateBtn" href="/donate/">Donate now</a>
 		</div>
 		<div id="carouselBlock">
