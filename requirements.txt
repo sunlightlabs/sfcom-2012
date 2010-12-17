@@ -1,5 +1,6 @@
 django==1.2.3
 django-debug-toolbar
+django_lean
 django-pagination
 
 pytz
