@@ -5,16 +5,14 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Jeremy Carbaugh', 'jcarbaugh@sunlightfoundation.com'),
-)
+ADMINS = ()
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'thefoundation.db',
+        'NAME': '',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -59,7 +57,7 @@ MEDIA_URL = '/static/'
 ADMIN_MEDIA_PREFIX = 'http://assets.sunlightfoundation.com/admin/1.2.3/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '***REMOVED***'
+SECRET_KEY = ''
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -139,10 +137,10 @@ DEBUG_TOOLBAR_CONFIG = {
 
 MEDIASYNC = {
     'BACKEND': 'mediasync.backends.s3',
-    'AWS_KEY': '***REMOVED***',
-    'AWS_SECRET': '***REMOVED***',
-    'AWS_BUCKET': 'assets.sunlightfoundation.com',
-    'AWS_PREFIX': 'site/4.0',
+    'AWS_KEY': '',
+    'AWS_SECRET': '',
+    'AWS_BUCKET': '',
+    'AWS_PREFIX': '',
     'AWS_BUCKET_CNAME': True,
     'DOCTYPE': 'html5',
     'CACHE_BUSTER': 201012161717,
@@ -170,32 +168,32 @@ MEDIASYNC = {
 
 EMAIL_BACKEND = 'postmark.django_backend.EmailBackend'
 
-POSTMARK_API_KEY = '***REMOVED***'
-POSTMARK_SENDER = 'contact@sunlightfoundation.com'
+POSTMARK_API_KEY = ''
+POSTMARK_SENDER = ''
 
 MAILINGLIST_SUBSCRIBED_URL = "/join/thankyou/"
 MAILINGLIST_REQUIRED_FIELDS = {
     "email": u"A valid email address is required",
 }
 
-SIGNUPS_FROM_EMAIL = 'contact@sunlightfoundation.com'
+SIGNUPS_FROM_EMAIL = ''
 
 # other stuff
 
-WP_TABLE_PREFIX = 'sf' 
+WP_TABLE_PREFIX = 'sf'
 WP_PER_PAGE = 10
 
-DISQUS_API_KEY = '***REMOVED***'
-DISQUS_WEBSITE_SHORTNAME = 'sunlightfoundation'
+DISQUS_API_KEY = ''
+DISQUS_WEBSITE_SHORTNAME = ''
 
-HAYSTACK_SITECONF = 'thefoundation.search_sites'
+HAYSTACK_SITECONF = ''
 HAYSTACK_SEARCH_ENGINE = 'whoosh'
 HAYSTACK_WHOOSH_PATH = os.path.join(PROJECT_ROOT, 'index_whoosh')
 
 SF_PRESSRELEASE_LIFETIME = 14
 
-CONTACT_FORM_RECIPIENTS = ['contact@sunlightfoundation.com',]
-GRANT_APPLICATION_RECIPIENTS = ['swells@sunlightfoundation.com','jcarbaugh@sunlightfoundation.com','habdullah@sunlightfoundation.com']
+CONTACT_FORM_RECIPIENTS = []
+GRANT_APPLICATION_RECIPIENTS = []
 
 try:
     from local_settings import *
